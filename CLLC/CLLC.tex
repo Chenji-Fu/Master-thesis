@@ -1,0 +1,120 @@
+\documentclass{article}
+
+\special{dvipdfmx:config z 0}
+
+\usepackage{amsmath,amssymb,amsfonts,amsthm,extarrows}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{stmaryrd}
+\usepackage{tikz-cd} 
+\usepackage{bbm}
+
+\usepackage{color}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+
+\usepackage{nameref}
+
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+\usepackage{soul}
+
+%%%% todo notes %%%%
+\usepackage[colorinlistoftodos,textsize=footnotesize]{todonotes}
+\setlength{\marginparwidth}{2.5cm}
+\newcommand{\leftnote}[1]{\reversemarginpar\marginnote{\footnotesize #1}}
+\newcommand{\rightnote}[1]{\normalmarginpar\marginnote{\footnotesize #1}\reversemarginpar}
+
+
+\usepackage[colorlinks]{hyperref}
+
+\newtheorem*{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{question}{Question}
+\newtheorem{answer}{Answer}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{exer}{Exercise}
+\newtheorem{corollary}{Corollary}
+\newtheorem{example}{Example}
+\newtheorem{warning}{Warning}
+
+\DeclareMathOperator{\cInd}{\operatorname{c-Ind}}
+\DeclareMathOperator{\Ind}{\operatorname{Ind}}
+\newcommand{\Res}{\operatorname{Res}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Rep}{\operatorname{Rep}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\Mod}{\operatorname{Mod}}
+\newcommand{\Irr}{\operatorname{Irr}}
+\newcommand{\Modr}{\operatorname{Mod-}}
+\newcommand{\Modl}{\operatorname{-Mod}}
+\newcommand{\Perf}{\operatorname{Perf}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\Ob}{\operatorname{Ob}}
+\newcommand{\Fr}{\operatorname{Fr}}
+\newcommand{\coker}{\operatorname{coker}}
+\newcommand{\Cont}{\operatorname{Cont}}
+
+
+
+\begin{document}
+	In this file, I prove the categorical local Langlands conjecture for depth-zero supercuspidal part of $G=GL_n$.
+	
+	\section{$\Lambda=\overline{\mathbb{Q}_{\ell}}$}
+	
+	\red{Let's first do the $\overline{\mathbb{Q}_{\ell}}$-case, and then see what should be modified to get the general case.}
+	
+	Let $\varphi \in Z^1(W_E, \hat{G}(\overline{\mathbb{Q}_{\ell}}))$ be an irreducible tame $L$-parameter. Let $C_{\varphi}$ be the connected component of $Z^1(W_E, \hat{G})_{\overline{\mathbb{Q}_{\ell}}}$ containing $\varphi$. 
+	
+	The goal is to show that there is an equivalence
+	$$D_{lis}^{C_{\varphi}}(Bun_G, \overline{\mathbb{Q}_{\ell}})^{\omega} \cong D^{b, qc}_{Coh, Nilp}(C_{\varphi})$$
+	of derived categories (it is even expected to be an equivalence as stable $\infty$-categories).
+	
+	Let's spell out both sides of the correspondence explicitly.
+	
+	Let's unravel the left hand side. By \cite[Section X.2]{fargues2021geometrization},
+	$$D_{lis}^{C_{\varphi}}(Bun_G, \overline{\mathbb{Q}_{\ell}})^{\omega} \cong \bigoplus_{b \in B(G)_{basic}}D^{C_{\varphi}}(G_b(F), \overline{\mathbb{Q}_{\ell}})^{\omega}.$$
+	For $G=GL_n$, $B(G)_{basic} \simeq \mathbb{Z}$, and $G_b(F)=GL_n(F)$ for $b=1$ (corresponds to $0 \in \mathbb{Z}$). Moreover, for $b=1$, 
+	$$D^{C_{\varphi}}(G_b(F), \overline{\mathbb{Q}_{\ell}})^{\omega}=D^{C_{\varphi}}(GL_n(F), \overline{\mathbb{Q}_{\ell}})^{\omega}=D(\Rep_{\overline{\mathbb{Q}_{\ell}}}\left(GL_n(F)\right)_{[\pi]})^{\omega},$$
+	where $\pi$ is any irreducible representation with $L$-parameter $\varphi_{\pi}=\varphi$, and $\Rep_{\overline{\mathbb{Q}_{\ell}}}(GL_n(F))_{[\pi]}$ is the block of $\Rep_{\overline{\mathbb{Q}_{\ell}}}\left(GL_n(F)\right)$ containing $\pi$. And we've computed (\red{See ?}) that
+	$$\Rep_{\overline{\mathbb{Q}_{\ell}}}(GL_n(F))_{[\pi]} \simeq \overline{\mathbb{Q}_{\ell}}[t, t^{-1}]\Modl.$$ So we have
+	$$D^{C_{\varphi}}(GL_n(F), \overline{\mathbb{Q}_{\ell}})^{\omega} \simeq \Perf(\overline{\mathbb{Q}_{\ell}}[t, t^{-1}]).$$ For $b \neq 1$, we could take care of it using the spectral action (\red{See ?}).
+	
+	Now let's unravel the right hand side. We first notice that the decorations $qc$ and $Nilp$ goes away in our case. Since we are focusing on one component, the quasi-compact support condition goes away. (\red{Need explain Nilp.}) So 
+	$$D^{b, qc}_{Coh, Nilp}(C_{\varphi}) \simeq D^b_{Coh, \{0\}}(C_{\varphi}) \simeq \Perf(C_{\varphi}).$$
+	By our computation before,
+	$$C_{\varphi} \simeq [\mathbb{G}_m/\mathbb{G}_m] \simeq \mathbb{G}_m \times [*/\mathbb{G}_m]$$
+	where $\mathbb{G}_m$ acts on $\mathbb{G}$ via the trivial action. So
+	$$\Perf(C_{\varphi}) \simeq \Perf(\mathbb{G}_m \times [*/\mathbb{G}_m]) \simeq \Perf(\mathbb{G}_m) \otimes \Perf([*/\mathbb{G}_m]).$$
+	Here 
+	$$\Perf([*/\mathbb{G}_m]) \simeq \bigoplus_{\chi}\Perf(\overline{\mathbb{Q}_{\ell}})\chi \simeq \bigoplus_{\chi}\Perf(\overline{\mathbb{Q}_{\ell}}),$$
+	where $\chi \in \{t \mapsto t^n | n \in \mathbb{Z}\}$ runs over all (algebraic) characters of $\mathbb{G}_m$.
+	
+	In conclusion, both sides are isomorphic to $\mathbb{Z}$ copies of $\Perf(\mathbb{G}_m)$, where $\mathbb{Z}$ corresponds to $B(G)_{basic}$ for left hand side and $\mathbb{Z}$ corresponds to the set of algebraic character's of $\mathbb{G}_m$ in the right hand side.
+	
+	The $\mathbb{Z}$-grading on both sides match in the following sense. (\red{Need explain})
+	
+	Therefore, we are reduced to the degree zero case. But this we know from compatibility of Spectral action with the maps between Bernstein centers, and that the maps between Bernstein centers are isomorphism for $GL_n$.
+	
+	
+	\section{$\Lambda=\overline{\mathbb{Z}_{\ell}}$}
+	\begin{enumerate}
+		\item Step 1: Both sides are isomorphic abstractly, as $\mathbb{Z}$ copies of $\Perf(C_{\varphi})$. Here for the $Bun_G$ side, we could argue using the spectral action.
+	    \item Step 2: By compatibility with central character, we are reduced to the degree $0$ part.
+	    \item Step 3: The degree $0$ part follows from compatibility of Spectral action with the maps between Bernstein centers and Helm-Moss (we could even avoid using Helm Moss).
+	\end{enumerate}
+
+    A technical point: the Nilp condition. I claim again $Nilp=\{0\}$. This boils down to compote 
+    $$H^0(W_E, Ad(\varphi)) \cap Nilp(\mathfrak{g})=\{0\}.$$
+	
+
+	
+	
+\bibliographystyle{plain}
+\bibliography{reference}
+\end{document}
