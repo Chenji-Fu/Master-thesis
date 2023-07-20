@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.1.12)  8 JUL 2023 23:17
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/W32TeX) (preloaded format=xelatex 2021.1.12)  20 JUL 2023 15:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -701,143 +701,132 @@ File: l3backend-xdvipdfmx.def 2020-03-12 L3 backend support: xdvipdfmx
 (./CLLC.aux)
 \openout1 = `CLLC.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 65.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 66.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 6
-5.
+6.
  (c:/texlive/2020/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 66.
+LaTeX Font Info:    ... okay on input line 66.
 
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box62
-Package hyperref Info: Link coloring ON on input line 65.
-LaTeX Info: Redefining \ref on input line 65.
-LaTeX Info: Redefining \pageref on input line 65.
-LaTeX Info: Redefining \nameref on input line 65.
+Package hyperref Info: Link coloring ON on input line 66.
+LaTeX Info: Redefining \ref on input line 66.
+LaTeX Info: Redefining \pageref on input line 66.
+LaTeX Info: Redefining \nameref on input line 66.
  (./CLLC.out) (./CLLC.out)
 \@outlinefile=\write4
 \openout4 = `CLLC.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 66.
-
+LaTeX Font Info:    Trying to load font information for U+msa on input line 121
+.
 
 (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 66.
-
+LaTeX Font Info:    Trying to load font information for U+msb on input line 121
+.
 
 (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 6
-6.
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 1
+21.
 
 (c:/texlive/2020/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 68.
+(hyperref)                removing `math shift' on input line 125.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Lambda' on input line 68.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@@overline' on input line 68.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 68.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\ell' on input line 68.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 68.
+(hyperref)                removing `math shift' on input line 125.
 
 (c:/texlive/2020/texmf-dist/tex/generic/stringenc/se-ascii-print.def
 File: se-ascii-print.def 2019/11/29 v1.12 stringenc: Printable ASCII characters
 
 )
-Overfull \hbox (44.64406pt too wide) in paragraph at lines 83--85
-\TU/lmr/m/n/10 where $\OML/cmm/m/it/10 ^^Y$ \TU/lmr/m/n/10 is any irreducible r
-epresentation with $\OML/cmm/m/it/10 L$\TU/lmr/m/n/10 -parameter $\OML/cmm/m/it
-/10 '[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 '$\TU/lmr/m/n/10 , and $[][]\OT1/cmr
-/m/n/10 (\OML/cmm/m/it/10 GL[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 F\OT1/cmr/m/n/1
-0 ))[]$
+Overfull \hbox (20.1619pt too wide) in paragraph at lines 126--131
+\TU/lmr/m/n/10 Let $\OML/cmm/m/it/10 ' \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 Z[]\
+OT1/cmr/m/n/10 (\OML/cmm/m/it/10 W[]; []\OT1/cmr/m/n/10 ([]))$ \TU/lmr/m/n/10 b
+e an irreducible tame $\OML/cmm/m/it/10 L$\TU/lmr/m/n/10 -parameter. Let $\OML/
+cmm/m/it/10   \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 Z[]\OT1/cmr/m/n/10 (\OML/cmm/
+m/it/10 W[]; []\OT1/cmr/m/n/10 ([]))$
  []
 
 [1
 
-]
+] [2]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 105.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Lambda' on input line 105.
+(hyperref)                removing `math shift' on input line 205.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@@overline' on input line 105.
+(hyperref)                removing `math shift' on input line 205.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 105.
+(hyperref)                removing `math shift' on input line 228.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\ell' on input line 105.
+(hyperref)                removing `subscript' on input line 228.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 105.
+(hyperref)                removing `math shift' on input line 228.
 
-LaTeX Font Info:    Trying to load font information for U+euf on input line 113
+[3]
+Overfull \hbox (8.36337pt too wide) in paragraph at lines 258--259
+[]\TU/lmr/m/it/10 The restriction of the spectral action by $\OMS/cmsy/m/n/10 L
+[]$ \TU/lmr/m/it/10 to $\OML/cmm/m/it/10 D\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 G[]
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 F\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ; []\OT1/c
+mr/m/n/10 )$
+ []
+
+[4]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 285
 .
-(c:/texlive/2020/texmf-dist/tex/latex/amsfonts/ueuf.fd
+ (c:/texlive/2020/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) (./CLLC.bbl) [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 120.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 120.
-
-(./CLLC.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 120.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 120.
+) [5] (./CLLC.bbl
+[6]) [7]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 356.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 356.
+ (./CLLC.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 356.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 356.
 Package rerunfilecheck Info: File `CLLC.out' has not changed.
-(rerunfilecheck)             Checksum: 0F05785015FA1550939E6D2A064AB2C2;74.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 120.
+(rerunfilecheck)             Checksum: C6AB720BAA9549853DD45D637D5BF651;737.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 356.
  ) 
 Here is how much of TeX's memory you used:
- 22613 strings out of 479418
- 415676 string characters out of 5888105
- 661565 words of memory out of 5000000
- 39709 multiletter control sequences out of 15000+600000
- 537811 words of font info for 51 fonts, out of 8000000 for 9000
+ 22790 strings out of 479418
+ 419495 string characters out of 5888105
+ 664582 words of memory out of 5000000
+ 39873 multiletter control sequences out of 15000+600000
+ 543092 words of font info for 75 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 67i,7n,86p,473b,316s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,15n,86p,769b,1125s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on CLLC.pdf (2 pages).
+Output written on CLLC.pdf (7 pages).
