@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2020/W32TeX)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: LaTeX_template.aux
+A level-1 auxiliary file: contents.aux
+A level-1 auxiliary file: MoLP.aux
+A level-1 auxiliary file: Rep.aux
+A level-1 auxiliary file: CLLC.aux
+The style file: plain.bst
+Database file #1: reference.bib
+Warning--empty year in bernsteindraft
+Warning--empty journal in dat2022ihes
+Warning--empty year in dat2022ihes
+Warning--empty journal in michel1989bloc
+You've used 19 entries,
+            2118 wiz_defined-function locations,
+            608 strings with 6569 characters,
+and the built_in function-call counts, 4912 in all, are:
+= -- 480
+> -- 190
+< -- 4
++ -- 80
+- -- 58
+* -- 291
+:= -- 871
+add.period$ -- 56
+call.type$ -- 19
+change.case$ -- 82
+chr.to.int$ -- 0
+cite$ -- 23
+duplicate$ -- 212
+empty$ -- 398
+format.name$ -- 58
+if$ -- 998
+int.to.chr$ -- 0
+int.to.str$ -- 19
+missing$ -- 21
+newline$ -- 97
+num.names$ -- 38
+pop$ -- 88
+preamble$ -- 1
+purify$ -- 67
+quote$ -- 0
+skip$ -- 146
+stack$ -- 0
+substring$ -- 236
+swap$ -- 30
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 70
+warning$ -- 4
+while$ -- 51
+width$ -- 21
+write$ -- 199
+(There were 4 warnings)

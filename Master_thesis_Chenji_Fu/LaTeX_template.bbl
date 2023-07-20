@@ -1,0 +1,101 @@
+\begin{thebibliography}{10}
+
+\bibitem{bernsteindraft}
+Joseph Bernstein.
+\newblock Draft of: Representations of p-adic groups. lectures at harvard
+  university, fall 1992.
+\newblock {\em Notes by Karl E. Rumelhart}.
+
+\bibitem{bonnafe2010representations}
+C{\'e}dric Bonnaf{\'e}.
+\newblock {\em Representations of SL2 (Fq)}, volume~13.
+\newblock Springer Science \& Business Media, 2010.
+
+\bibitem{brochard2014autour}
+S~Brochard, B~Conrad, and J~Oesterl{\'e}.
+\newblock Autour des sch{\'e}mas en groupes.
+\newblock {\em PANORAMAS ET SYNTH{\`E}SES}, 42:43, 2014.
+
+\bibitem{broue1990isometries}
+Michel Brou{\'e}.
+\newblock Isom{\'e}tries de caract{\`e}res et {\'e}quivalences de morita ou
+  d{\'e}riv{\'e}es.
+\newblock {\em Publications Math{\'e}matiques de l'IH{\'E}S}, 71:45--63, 1990.
+
+\bibitem{carter1985finite}
+Roger~William Carter.
+\newblock Finite groups of lie type: Conjugacy classes and complex characters.
+\newblock {\em Pure Appl. Math.}, 44, 1985.
+
+\bibitem{conrad2014reductive}
+Brian Conrad.
+\newblock Reductive group schemes.
+\newblock {\em Autour des sch{\'e}mas en groupes}, 1(93-444):24, 2014.
+
+\bibitem{dat2022ihes}
+Jean-Fran{\c{c}}ois Dat.
+\newblock Moduli spaces of local langlands parameters.
+
+\bibitem{dat2009finitude}
+Jean-Fran{\c{c}}ois Dat.
+\newblock Finiteness of smooth representations of {{\(p\)}}-adic groups.
+\newblock {\em J. Inst. Math. Jussieu}, 8(2):261--333, 2009.
+
+\bibitem{dhkm2020moduli}
+Jean-Fran{\c{c}}ois Dat, David Helm, Robert Kurinczuk, and Gilbert Moss.
+\newblock Moduli of langlands parameters.
+\newblock {\em arXiv preprint arXiv:2009.06708}, 2020.
+
+\bibitem{debacker2009depth}
+Stephen DeBacker and Mark Reeder.
+\newblock Depth-zero supercuspidal l-packets and their stability.
+\newblock {\em Annals of mathematics}, pages 795--901, 2009.
+
+\bibitem{deligne1976representations}
+Pierre Deligne and George Lusztig.
+\newblock Representations of reductive groups over finite fields.
+\newblock {\em Annals of Mathematics}, 103(1):103--161, 1976.
+
+\bibitem{digne2020representations}
+Fran{\c{c}}ois Digne and Jean Michel.
+\newblock {\em Representations of finite groups of Lie type}, volume~95.
+\newblock Cambridge University Press, 2020.
+
+\bibitem{edixhoven1992neron}
+Bas Edixhoven.
+\newblock N{\'e}ron models and tame ramification.
+\newblock {\em Compositio Mathematica}, 81(3):291--306, 1992.
+
+\bibitem{fargues2021geometrization}
+Laurent Fargues and Peter Scholze.
+\newblock Geometrization of the local langlands correspondence.
+\newblock {\em arXiv preprint arXiv:2102.13459}, 2021.
+
+\bibitem{michel1989bloc}
+Jean Michel and Michel Brou{\'e}.
+\newblock Bloc et s{\'e}ries de lusztig dans un groupe r{\'e}ductif fini.
+\newblock 1989.
+
+\bibitem{rabinoff2003bruhat}
+Joseph Rabinoff.
+\newblock {\em The Bruhat-Tits building of a p-adic Chevalley group and an
+  application to representation theory}.
+\newblock PhD thesis, Citeseer, 2003.
+
+\bibitem{vakil2017rising}
+Ravi Vakil.
+\newblock The rising sea: Foundations of algebraic geometry.
+\newblock {\em preprint}, 2017.
+
+\bibitem{vigneras1996representations}
+Marie-France Vign{\'e}ras.
+\newblock {\em {{\(l\)}}-modular representations of a {{\(p\)}}-adic reductive
+  group with {{\(l \neq p\)}}.}, volume 137 of {\em Prog. Math.}
+\newblock Boston, MA: Birkh{\"a}user, 1996.
+
+\bibitem{zou2022categorical}
+Konrad Zou.
+\newblock The categorical form of fargues' conjecture for tori.
+\newblock {\em arXiv preprint arXiv:2202.13238}, 2022.
+
+\end{thebibliography}
