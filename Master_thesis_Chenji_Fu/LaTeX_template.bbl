@@ -22,6 +22,12 @@ Michel Brou{\'e}.
   d{\'e}riv{\'e}es.
 \newblock {\em Publications Math{\'e}matiques de l'IH{\'E}S}, 71:45--63, 1990.
 
+\bibitem{bushnell2006local}
+Colin~J. Bushnell and Guy Henniart.
+\newblock {\em The local Langlands conjecture for {$\operatorname{GL}(2)$}},
+  volume 335.
+\newblock Springer Science \& Business Media, 2006.
+
 \bibitem{carter1985finite}
 Roger~William Carter.
 \newblock Finite groups of lie type: Conjugacy classes and complex characters.
@@ -70,6 +76,16 @@ Bas Edixhoven.
 Laurent Fargues and Peter Scholze.
 \newblock Geometrization of the local langlands correspondence.
 \newblock {\em arXiv preprint arXiv:2102.13459}, 2021.
+
+\bibitem{helm2016whittaker}
+David Helm.
+\newblock Whittaker models and the integral bernstein center for gl n.
+\newblock 2016.
+
+\bibitem{helm2018converse}
+David Helm and Gilbert Moss.
+\newblock Converse theorems and the local langlands correspondence in families.
+\newblock {\em Inventiones mathematicae}, 214:999--1022, 2018.
 
 \bibitem{michel1989bloc}
 Jean Michel and Michel Brou{\'e}.

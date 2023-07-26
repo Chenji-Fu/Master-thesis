@@ -1,31 +1,39 @@
-\BOOKMARK [0][-]{chapter.1}{MoLP}{}% 1
-\BOOKMARK [1][-]{section.1.1}{Description\040of\040the\040connected\040component\040X\040containing\040a\040TRSELP\040}{chapter.1}% 2
-\BOOKMARK [2][-]{subsection.1.1.1}{Recollections\040on\040the\040moduli\040space\040of\040Langlands\040parameters}{section.1.1}% 3
-\BOOKMARK [2][-]{subsection.1.1.2}{Tame\040regular\040semisimple\040elliptic\040L-parameters}{section.1.1}% 4
-\BOOKMARK [2][-]{subsection.1.1.3}{Description\040of\040the\040component}{section.1.1}% 5
-\BOOKMARK [2][-]{subsection.1.1.4}{The\040T-action\040on\040\(\040T\040\)}{section.1.1}% 6
-\BOOKMARK [2][-]{subsection.1.1.5}{Some\040lemmas}{section.1.1}% 7
-\BOOKMARK [1][-]{section.1.2}{Main\040Theorem:\040description\040of\040[X/]}{chapter.1}% 8
-\BOOKMARK [0][-]{chapter.2}{Rep}{}% 9
-\BOOKMARK [1][-]{section.2.1}{Proof\040of\040the\040Main\040Theorem\0402.1.2\040modulo\040Theorem\0402.1.3\0402.1.4\0402.1.5}{chapter.2}% 10
-\BOOKMARK [2][-]{subsection.2.1.1}{Lemmas}{section.2.1}% 11
-\BOOKMARK [1][-]{section.2.2}{Proof\040of\040Theorem\0402.1.3}{chapter.2}% 12
-\BOOKMARK [2][-]{subsection.2.2.1}{Regular\040blocks\040and\040regular\040cuspidal\040representations\040of\040a\040finite\040group\040of\040Lie\040type}{section.2.2}% 13
-\BOOKMARK [2][-]{subsection.2.2.2}{Pure\040Cuspidality}{section.2.2}% 14
-\BOOKMARK [2][-]{subsection.2.2.3}{Proof\040of\040Theorem\0402.1.3}{section.2.2}% 15
-\BOOKMARK [1][-]{section.2.3}{Proof\040of\040Theorem\0402.1.4}{chapter.2}% 16
-\BOOKMARK [2][-]{subsection.2.3.1}{Lemmas}{section.2.3}% 17
-\BOOKMARK [1][-]{section.2.4}{Proof\040of\040Theorem\0402.1.5}{chapter.2}% 18
-\BOOKMARK [2][-]{subsection.2.4.1}{Lemmas}{section.2.4}% 19
-\BOOKMARK [0][-]{chapter.3}{Example:\040GLn\(F\)}{}% 20
-\BOOKMARK [1][-]{section.3.1}{L-parameter\040side}{chapter.3}% 21
-\BOOKMARK [1][-]{section.3.2}{Representation\040side}{chapter.3}% 22
-\BOOKMARK [0][-]{chapter.4}{The\040categorical\040local\040Langlands\040conjecture}{}% 23
-\BOOKMARK [1][-]{section.4.1}{Unraveling\040definitions}{chapter.4}% 24
-\BOOKMARK [2][-]{subsection.4.1.1}{L-parameter\040side}{section.4.1}% 25
-\BOOKMARK [2][-]{subsection.4.1.2}{BunG\040side}{section.4.1}% 26
-\BOOKMARK [2][-]{subsection.4.1.3}{Proof\040of\040Lemma\0404.1.1}{section.4.1}% 27
-\BOOKMARK [1][-]{section.4.2}{The\040spectral\040action\040induces\040an\040equivalence\040of\040categories}{chapter.4}% 28
-\BOOKMARK [2][-]{subsection.4.2.1}{Definition\040of\040the\040functor}{section.4.2}% 29
-\BOOKMARK [2][-]{subsection.4.2.2}{Equivalence\040on\040degree\040zero\040part}{section.4.2}% 30
-\BOOKMARK [2][-]{subsection.4.2.3}{The\040full\040equivalence}{section.4.2}% 31
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.1.1}{L-parameter side}{chapter.1}% 2
+\BOOKMARK [2][-]{subsection.1.1.1}{Heuristics on the component [X/]}{section.1.1}% 3
+\BOOKMARK [2][-]{subsection.1.1.2}{Ingredients of the computation}{section.1.1}% 4
+\BOOKMARK [1][-]{section.1.2}{Representation side}{chapter.1}% 5
+\BOOKMARK [2][-]{subsection.1.2.1}{Equivalence to the block of a finite group of Lie type}{section.1.2}% 6
+\BOOKMARK [2][-]{subsection.1.2.2}{Proof of the main theorem for the representation side}{section.1.2}% 7
+\BOOKMARK [1][-]{section.1.3}{The example of GLn}{chapter.1}% 8
+\BOOKMARK [1][-]{section.1.4}{The categorical local Langlands conjecture for GLn}{chapter.1}% 9
+\BOOKMARK [1][-]{section.1.5}{Acknowledgements}{chapter.1}% 10
+\BOOKMARK [0][-]{chapter.2}{TRSELP components of the stack of L-parameters}{}% 11
+\BOOKMARK [1][-]{section.2.1}{The connected component X containing a TRSELP }{chapter.2}% 12
+\BOOKMARK [2][-]{subsection.2.1.1}{Recollections on the moduli space of Langlands parameters}{section.2.1}% 13
+\BOOKMARK [2][-]{subsection.2.1.2}{Tame regular semisimple elliptic L-parameters}{section.2.1}% 14
+\BOOKMARK [2][-]{subsection.2.1.3}{Description of the component}{section.2.1}% 15
+\BOOKMARK [2][-]{subsection.2.1.4}{The T-action on \( T \)}{section.2.1}% 16
+\BOOKMARK [2][-]{subsection.2.1.5}{Some lemmas}{section.2.1}% 17
+\BOOKMARK [1][-]{section.2.2}{Main Theorem: description of [X/]}{chapter.2}% 18
+\BOOKMARK [0][-]{chapter.3}{Depth-zero regular supercuspidal blocks}{}% 19
+\BOOKMARK [1][-]{section.3.1}{The compact induction induces an equivalence}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.2}{Regular cuspidal blocks for finite groups of Lie type}{chapter.3}% 21
+\BOOKMARK [2][-]{subsection.3.2.1}{The definition of regular cuspidal blocks}{section.3.2}% 22
+\BOOKMARK [2][-]{subsection.3.2.2}{Pure Cuspidality}{section.3.2}% 23
+\BOOKMARK [2][-]{subsection.3.2.3}{Proof of Theorem 3.1.3 on cuspidal reduction}{section.3.2}% 24
+\BOOKMARK [1][-]{section.3.3}{`39`42`"613A``45`47`"603AHom between compact inductions}{chapter.3}% 25
+\BOOKMARK [1][-]{section.3.4}{x,1 is a projective generator}{chapter.3}% 26
+\BOOKMARK [1][-]{section.3.5}{Application: description of the block `39`42`"613A``45`47`"603ARep\(G\(F\)\)[]}{chapter.3}% 27
+\BOOKMARK [0][-]{chapter.4}{Example: GLn\(F\)}{}% 28
+\BOOKMARK [1][-]{section.4.1}{L-parameter side}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.2}{Representation side}{chapter.4}% 30
+\BOOKMARK [0][-]{chapter.5}{The categorical local Langlands conjecture}{}% 31
+\BOOKMARK [1][-]{section.5.1}{Unraveling definitions}{chapter.5}% 32
+\BOOKMARK [2][-]{subsection.5.1.1}{L-parameter side}{section.5.1}% 33
+\BOOKMARK [2][-]{subsection.5.1.2}{BunG side}{section.5.1}% 34
+\BOOKMARK [2][-]{subsection.5.1.3}{The nilpotent singular support condition}{section.5.1}% 35
+\BOOKMARK [1][-]{section.5.2}{The spectral action induces an equivalence of categories}{chapter.5}% 36
+\BOOKMARK [2][-]{subsection.5.2.1}{Definition of the functor}{section.5.2}% 37
+\BOOKMARK [2][-]{subsection.5.2.2}{Equivalence on degree zero part}{section.5.2}% 38
+\BOOKMARK [2][-]{subsection.5.2.3}{The full equivalence}{section.5.2}% 39

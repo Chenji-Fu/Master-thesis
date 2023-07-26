@@ -1,5 +1,5 @@
 
-%	In this file, I prove the categorical local Langlands conjecture for depth-zero supercuspidal part of $G=GL_n$.
+%	In this file, we prove the categorical local Langlands conjecture for depth-zero supercuspidal part of $G=GL_n$.
 %	
 %	\section{$\Lambda=\overline{\mathbb{Q}_{\ell}}$}
 %	
@@ -45,30 +45,30 @@
 %	    \item Step 3: The degree $0$ part follows from compatibility of Spectral action with the maps between Bernstein centers and Helm-Moss (we could even avoid using Helm Moss).
 %	\end{enumerate}
 %
-%    A technical point: the Nilp condition. I claim again $Nilp=\{0\}$. This boils down to compote 
+%    A technical point: the Nilp condition. we claim again $Nilp=\{0\}$. This boils down to compote 
 %    $$H^0(W_E, Ad(\varphi)) \cap Nilp(\mathfrak{g})=\{0\}.$$
 
 
 
 
-\chapter{Example: $GL_n(F)$}
+\chapter{Example: $GL_n(F)$}\label{Chapter GL_n}
 
 Let's apply the theories in the previous chapters to the example of $GL_n(F)$. Throughout this chapter, $G:=GL_n$.
 
-That said, there is a little mismatch between the theories before and the example here, namely, we assumed for simplicity in the theories that $G$ is simply connected (and in particular, semisimple), while this is not the case for $G=GL_n$. However, there is only some minor difference due to the center $\mathbb{G}_m$ of $GL_n$. I leave it as an exercise for the readers to figure out the details.
+That said, there is a little mismatch between the theories before and the example here. Namely, we assumed for simplicity in the theories that $G$ is simply connected (and in particular, semisimple), while this is not the case for $G=GL_n$. However, there is only some minor difference due to the center $\mathbb{G}_m$ of $GL_n$. Let us leave it as an exercise for the readers to figure out the details.
 
-\section{$L$-parameter side}
-Let $\varphi \in Z^1(W_F, \hat{G}(\overline{\mathbb{F}_{\ell}}))$ be an irreducible tame $L$-parameter. Let $\psi \in Z^1(W_F, \hat{G}(\overline{\mathbb{Z}_{\ell}}))$ be any lift of $\varphi$. Let $C_{\varphi}$ be the connected component of $Z^1(W_F, \hat{G})_{\overline{\mathbb{Z}_{\ell}}}$ containing $\varphi$. By \textcolor{red}{Need ref?}, we compute that
+\section{$L$-parameter side} \label{Example Lparam}
+Let $\varphi \in Z^1(W_F, \hat{G}(\overline{\mathbb{F}_{\ell}}))$ be an irreducible tame $L$-parameter. Let $\psi \in Z^1(W_F, \hat{G}(\overline{\mathbb{Z}_{\ell}}))$ be any lift of $\varphi$. Let $C_{\varphi}$ be the connected component of $[Z^1(W_F, \hat{G})_{\overline{\mathbb{Z}_{\ell}}}/\hat{G}]$ containing $\varphi$. By Proposition \ref{T times mu/T}, we compute that
 %$$C_{\varphi} \cong \left(\hat{G} \times Z^1(W_F, N_{\hat{G}}(\psi_{\ell}))_{\psi_{\ell}, \overline{\psi}}\right)/C_{\hat{G}}(\psi_{\ell})_{\overline{\psi}}.$$
 %Here 
 %$$Z^1(W_F, N_{\hat{G}}(\psi_{\ell}))_{\psi_{\ell}, \overline{\psi}} \cong Z^1_{Ad(\psi)}(W_F, N_{\hat{G}}(\psi_{\ell})^0)_{1_{I_F^{\ell}}}.$$
 %In our case, $N_{\hat{G}}(\psi_{\ell})^0$ is the diagonal torus $T$ of $GL_n$.
 $$C_{\varphi} \cong [T/T] \times \mu,$$
-where $T=C_{\hat{G}}(\psi_{\ell})$ is a maximal torus of $GL_n$, and $\mu=(T^{Fr=(-)^q})^0$, and the $T$-action on $T$ is specified in \textcolor{red}{Need ref?}. To go further, let's choose a nice basis of the Weil group representations $\varphi$ and $\psi$.
+where $T=C_{\hat{G}}(\psi_{\ell})$ is a maximal torus of $GL_n$, and $\mu=(T^{Fr=(-)^q})^0$, and the $T$-action on $T$ is specified in Proposition \ref{T times mu/T}. To go further, let's choose a nice basis of the Weil group representations $\varphi$ and $\psi$.
 
-Indeed, every irreducible tame $L$-parameter with $\overline{\mathbb{F}_{\ell}}$-coefficients $\varphi$ of $GL_n$ are of the form $\varphi=Ind_{W_E}^{W_F}\eta$, where $E$ is a degree $n$ unramified extension of $F$, $W_E \cong I_F \rtimes \left<\Fr^n\right>$ is the Weil group of $E$, and $\eta: W_E \to \overline{\mathbb{F}_{\ell}}^*$ is a tame (i.e., trivial on $P_E=P_F$) character of $W_E$ such that $\{\eta, \eta^q, ..., \eta^{q^{n-1}}\}$ are distinct. To find a lift of it with $\overline{\mathbb{Z}_{\ell}}$-coefficients, we let $\tilde{\eta}: W_E \to \overline{\mathbb{Z}_{\ell}}^*$, and let $\psi:=Ind_{W_E}^{W_F}\tilde{\eta}$. Then under a nice basis, we could specify the matrices corresponds to the topological generater $s_0$ and $Fr$:
+Indeed, every irreducible tame $L$-parameter with $\overline{\mathbb{F}_{\ell}}$-coefficients $\varphi$ of $GL_n$ are of the form $\varphi=\Ind_{W_E}^{W_F}\eta$, where $E$ is a degree $n$ unramified extension of $F$, $W_E \cong I_F \rtimes \left<\Fr^n\right>$ is the Weil group of $E$, and $\eta: W_E \to \overline{\mathbb{F}_{\ell}}^*$ is a tame (i.e., trivial on $P_E=P_F$) character of $W_E$ such that $\{\eta, \eta^q, ..., \eta^{q^{n-1}}\}$ are distinct. To find a lift of it with $\overline{\mathbb{Z}_{\ell}}$-coefficients, we let $\tilde{\eta}: W_E \to \overline{\mathbb{Z}_{\ell}}^*$ be any lift of $\eta$, and let $\psi:=\Ind_{W_E}^{W_F}\tilde{\eta}$. Then under a nice basis, we could specify the matrices correspond to the topological generator $s_0$ and $\Fr$:
 $$\psi(s_0)=
-\begin{bmatrix}
+\begin{bmatrix}\label{Matrices}
 	\tilde{\eta}(s_0) & 0                   & 0      & \dots  & 0 \\
 	0                 & \tilde{\eta}(s_0)^q & 0      & \dots  & 0 \\
 	\vdots            & \vdots              & \vdots & \ddots & \vdots \\
@@ -85,7 +85,7 @@ $$\psi(\Fr)=
 \end{bmatrix}
 .$$
 Under this basis, $T=C_{\hat{G}}(\psi_{\ell})$ is the diagonal torus of $GL_n$, with $\Fr$ acting by conjugacy via $\psi$, i.e., 
-$$\Fr. \diag(t_1, t_1, ..., t_{n-1}, t_{n}) = \diag(t_{2}, t_{3}, ..., t_{n}, t_{1}).$$
+$$\Fr. \diag(t_1, t_2, ..., t_{n-1}, t_{n}) = \diag(t_{2}, t_{3}, ..., t_{n}, t_{1}).$$
 So one could compute that 
 $$T^{\Fr=(-)^q}\cong \mu_{q^n-1},$$
 and that
@@ -107,32 +107,32 @@ where $\mathbb{G}_m$ acts trivially on $\mathbb{G}_m$, and $k \in \mathbb{Z}$ is
 
 \section{Representation side}
 
-By modular Deligne-Lusztig theory, the block $\mathcal{A}_{x,1}$ of $GL_n(\mathbb{F}_q)$ containing a cuspidal representation $\sigma$ is equivalent to the block of an elliptic torus, which is isomorphic to $\mathbb{F}_{q^n}^*$. So this block is equivalent to $\overline{\mathbb{Z}_{\ell}}[s]/(s^{\ell^k}-1)$, where $k \in \mathbb{Z}$ is maximal such that $\ell^k$ divides $q^n-1$.
+By modular Deligne-Lusztig theory, the block $\mathcal{A}_{x,1}$ of $GL_n(\mathbb{F}_q)$ containing a cuspidal representation $\sigma$ is equivalent to the block of an elliptic torus. Such an elliptic torus is isomorphic to $\mathbb{F}_{q^n}^*$. So this block is equivalent to $\overline{\mathbb{Z}_{\ell}}[s]/(s^{\ell^k}-1)\Modl$, where $k \in \mathbb{Z}$ is maximal such that $\ell^k$ divides $q^n-1$.
 
-$\mathcal{A}_{x,1}$ inflats to a block of $K:=GL_n(\mathcal{O}_F)$ containing the inflation $\tilde{\sigma}$ of $\sigma$, and further corresponds to a block $\mathcal{B}_{x,1}$ of $KZ$ containing $\rho$, a extension of $\tilde{\sigma}$ to $KZ$, where $Z$ is the center of $GL_n(F)$. We have
+$\mathcal{A}_{x,1}$ inflats to a block of $K:=GL_n(\mathcal{O}_F)$ containing the inflation $\tilde{\sigma}$ of $\sigma$, and further corresponds to a block $\mathcal{B}_{x,1}$ of $KZ$ containing $\rho$, an extension of $\tilde{\sigma}$ to $KZ$, where $Z$ is the center of $GL_n(F)$. We have
 $$\mathcal{B}_{x,1} \cong \mathcal{A}_{x,1} \otimes \Rep_{\overline{\mathbb{Z}_{\ell}}}(\mathbb{Z}) \cong \overline{\mathbb{Z}_{\ell}}[s]/(s^{\ell^k}-1) \otimes \overline{\mathbb{Z}_{\ell}}[t, t^{-1}]\Modl,$$
 because
-$$KZ \cong K \times \{\diag(\pi^m, ..., \pi^m | m \in \mathbb{Z})\} \cong K \times \mathbb{Z}.$$
-Argue as before (\textcolor{red}{See ?}) we see that the compact induction $\cInd_{KZ}^G$ induces an equivalence of categories
+$$KZ \cong K \times \{\diag(\pi^m, ..., \pi^m) \;|\; m \in \mathbb{Z}\} \cong K \times \mathbb{Z}.$$
+Argue as in the proof of Theorem \ref{Thm Main} we see that the compact induction $\cInd_{KZ}^G$ induces an equivalence of categories
 $$\mathcal{B}_{x,1} \cong \mathcal{C}_{x,1},$$
 where $\mathcal{C}_{x,1}$ is the block of $\Rep_{\overline{\mathbb{Z}_{\ell}}}(G(F))$ containing $\pi:=\cInd_{KZ}^G\rho$.
 
-Since every depth-zero supercuspidal representation $\pi$ arises as above, we have that the block containing $\pi$ satisfies
+Since every irreducible depth-zero supercuspidal representation $\pi$ arises as above, we have that the block containing an irreducible depth-zero supercuspidal representation $\pi$ satisfies
 $$\Rep_{\overline{\mathbb{Z}_{\ell}}}(G(F))_{[\pi]} \cong \mathcal{C}_{x,1} \cong \overline{\mathbb{Z}_{\ell}}[s]/(s^{\ell^k}-1) \otimes \overline{\mathbb{Z}_{\ell}}[t, t^{-1}]\Modl.$$
 
 
 
-\chapter{The categorical local Langlands conjecture}
+\chapter{The categorical local Langlands conjecture} \label{Chapter CLLC}
 
-In this chapter, I prove the categorical local Langlands conjecture for depth-zero supercuspidal part of $G=GL_n$ with coefficients $\Lambda=\overline{\mathbb{Z}_{\ell}}$.
+In this chapter, we prove the categorical local Langlands conjecture for depth-zero supercuspidal part of $G=GL_n$ with coefficients $\Lambda=\overline{\mathbb{Z}_{\ell}}$ in Fargues-Scholze's form (See \cite[Conjecture X.3.5]{fargues2021geometrization}).
 
-Let $\varphi \in Z^1(W_E, \hat{G}(\overline{\mathbb{F}_{\ell}}))$ be an irreducible tame $L$-parameter. Let $C_{\varphi}$ be the connected component of $Z^1(W_E, \hat{G})_{\overline{\mathbb{Z}_{\ell}}}$ containing $\varphi$. 
+Let $\varphi \in Z^1(W_F, \hat{G}(\overline{\mathbb{F}_{\ell}}))$ be an irreducible tame $L$-parameter. Let $C_{\varphi}$ be the connected component of $[Z^1(W_F, \hat{G})_{\overline{\mathbb{Z}_{\ell}}}/\hat{G}]$ containing $\varphi$. 
 
 The goal is to show that there is an equivalence
 $$D_{lis}^{C_{\varphi}}(Bun_G, \overline{\mathbb{Z}_{\ell}})^{\omega} \cong D^{b, qc}_{Coh, Nilp}(C_{\varphi})$$
 of derived (\textcolor{red}{?}) categories.
 
-As a first step, let's unravel the definition of both sides and describe them explicitly.
+As a first step, let's unravel the definitions of both sides and describe them explicitly.
 
 \section{Unraveling definitions}
 
@@ -151,12 +151,12 @@ $$\Perf(C_{\varphi}) \cong \Perf(\mathbb{G}_m \times [*/\mathbb{G}_m] \times \mu
 Here,
 $$\Perf([*/\mathbb{G}_m]) \cong \bigoplus_{\chi}\Perf(\overline{\mathbb{Z}_{\ell}})\chi \cong \bigoplus_{\chi}\Perf(\overline{\mathbb{Z}_{\ell}}),$$
 where $\chi$ runs over characters of $\mathbb{G}_m$ 
-$$X^*(\mathbb{G}_m)=\{t \mapsto t^m | m \in \mathbb{Z}\} \cong \mathbb{Z}.$$
+$$X^*(\mathbb{G}_m)=\{t \mapsto t^m \;|\; m \in \mathbb{Z}\} \cong \mathbb{Z}.$$
 
 In conclusion, we have 
 $$\Perf(C_{\varphi}) \cong \bigoplus_{\chi}\Perf(\mathbb{G}_m \times \mu_{\ell^k}),$$
 where $\chi$ runs over characters of $\mathbb{G}_m$ 
-$$X^*(\mathbb{G}_m)=\{t \mapsto t^m | m \in \mathbb{Z}\} \cong \mathbb{Z}.$$
+$$X^*(\mathbb{G}_m)=\{t \mapsto t^m \;|\; m \in \mathbb{Z}\} \cong \mathbb{Z}.$$
 
 
 \subsection{$Bun_G$ side}
@@ -170,12 +170,12 @@ we have
 $$D^{C_{\varphi}}_{lis}(Bun_G^{ss}, \overline{\mathbb{Z}_{\ell}})^{\omega} \cong \bigoplus_{b \in B(G)_{basic}}D^{C_{\varphi}}(G_b(F), \overline{\mathbb{Z}_{\ell}})^{\omega}.$$
 
 Let's look closer into each direct summand. In our case $G=GL_n$, 
-$$B(G)_{basic} \cong \pi_1(G)_{\Gamma} \cong \mathbb{Z}$$. 
+$$B(G)_{basic} \cong \pi_1(G)_{\Gamma} \cong \mathbb{Z}.$$ 
 
 Let's first look at the summand for $b=1$ (corresponding to $0 \in \mathbb{Z} \cong B(G)_{basic}$). For $b=1$, $G_b \cong GL_n$, and 
 $$D^{C_{\varphi}}(G_b(F), \overline{\mathbb{Z}_{\ell}})^{\omega} \cong D^{C_{\varphi}}(GL_n(F), \overline{\mathbb{Z}_{\ell}})^{\omega} \cong D(\Rep_{\overline{\mathbb{Z}_{\ell}}}(GL_n(F))_{[\pi]})^{\omega},$$
 where $\pi \in \Rep_{\overline{\mathbb{F}_{\ell}}}(GL_n(F))$ is the representation with $L$-parameter $\varphi$, and $\Rep_{\overline{\mathbb{Z}_{\ell}}}(GL_n(F))_{[\pi]}$ is the block of $\Rep_{\overline{\mathbb{Z}_{\ell}}}(GL_n(F))$ containing $\pi$.
-And we've computed that
+And we've computed in Chapter \ref{Chapter GL_n} that
 $$\Rep_{\overline{\mathbb{Z}_{\ell}}}(GL_n(F))_{[\pi]} \cong \overline{\mathbb{Z}_{\ell}}[t, t^{-1}] \otimes \overline{\mathbb{Z}_{\ell}}[s]/(s^{\ell^k}-1)\Modl \cong \QCoh(\mathbb{G}_m \times \mu_{\ell^k}),$$
 where $k \in \mathbb{Z}_{\geq 0}$ is again maximal such that $\ell^k$ divides $p^n-1$. So we have
 $$D^{C_{\varphi}}(GL_n(F), \overline{\mathbb{Z}_{\ell}})^{\omega} \cong D(\QCoh(\mathbb{G}_m \times \mu_{\ell^k}))^{\omega} \cong \Perf(\mathbb{G}_m \times \mu_{\ell^k}).$$
@@ -183,8 +183,8 @@ $$D^{C_{\varphi}}(GL_n(F), \overline{\mathbb{Z}_{\ell}})^{\omega} \cong D(\QCoh(
 We could get a similar description of $D^{C_{\varphi}}(G_b(F), \overline{\mathbb{Z}_{\ell}})$ for free by the spectral action and the compatibility of Fargues-Scholze with $\pi_1(G)_{\Gamma}$-grading. For this, we consider the composition
 $$q: C_{\varphi} \cong \mathbb{G}_m \times [*/\mathbb{G}_m] \times \mu_{\ell^k} \to [*/\mathbb{G}_m].$$
 Recall that 
-$$\Perf([*/\mathbb{G}_m]) \cong \bigoplus_{\chi}\Perf(\overline{\mathbb{Z}_{\ell}})\chi,$$
-we denote by $\mathcal{M}_{\chi}$ the corresponding simple object in $\Perf([*/\mathbb{G}_m])$. Moreover, $\mathcal{M}_{\chi}$ pullbacks to a line bundle
+$$\Perf([*/\mathbb{G}_m]) \cong \bigoplus_{\chi}\Perf(\overline{\mathbb{Z}_{\ell}})\chi.$$
+For any $\chi$, we denote by $\mathcal{M}_{\chi}$ the corresponding simple object in $\Perf([*/\mathbb{G}_m])$. Moreover, $\mathcal{M}_{\chi}$ pullbacks to a line bundle on $C_{\varphi}$
 $$\mathcal{L}_{\chi}:=q^*\mathcal{M}_{\chi}.$$
 We could now state the key proposition that allows us to get to arbitrary $b \in B(G)_{basic}$ from the $b=1$ case, using the spectral action.
 \begin{proposition}\label{Prop Spectral action}
@@ -208,21 +208,25 @@ We could now state the key proposition that allows us to get to arbitrary $b \in
 	For the first assertion, see \cite[Lemma 5.3.2]{zou2022categorical}. For the second assertion, note that $\mathcal{L}_{\chi}$ and $\mathcal{L}_{\chi^{-1}}$ are clearly inverse to each other once they are well-defined, since $q^*$ preserves tensor product.
 \end{proof}
 So we have 
-$$D^{C_{\varphi}}(Bun_G, \overline{\mathbb{Z}_{\ell}})^{\omega} \cong \bigoplus_{b \in B(G)_{basic}}D^{C_{\varphi}}(G_b(F), \overline{\mathbb{Z}_{\ell}}) \cong \bigoplus_{b \in B(G)_{basic}}\Perf(\mathbb{G}_m \times \mu_{\ell^k}).$$
+$$D^{C_{\varphi}}(Bun_G, \overline{\mathbb{Z}_{\ell}})^{\omega} \cong \bigoplus_{b \in B(G)_{basic}}D^{C_{\varphi}}(G_b(F), \overline{\mathbb{Z}_{\ell}})^{\omega} \cong \bigoplus_{b \in B(G)_{basic}}\Perf(\mathbb{G}_m \times \mu_{\ell^k}).$$
 
-\subsection{Proof of Lemma \ref{Lemma 1}}
+\subsection{The nilpotent singular support condition}
 Now we prove Lemma \ref{Lemma 1}. 
 
 The first isomorphism is because $C_{\varphi}$ is connected, hence the quasicompact support condition $qc$ is automatic. 
 
-The second isomorphism needs some computation. For the definition and properties of the nilpotent singular support condition $Nilp$, I refer to \cite[Section VIII.2]{fargues2021geometrization}. At the end of the day, it boils to the fact that
-$$H^0(W_F, \hat{\mathfrak{g}}^*\otimes_{\mathbb{Z}_{\ell}}\Lambda(1)) \cap Nilp(\hat{\mathfrak{g}}^*)=\{0\}.$$ (\textcolor{red}{Maybe elaborate more.})
+The second isomorphism needs some computation. For the definition and properties of the nilpotent singular support condition $Nilp$, we refer to \cite[Section VIII.2]{fargues2021geometrization}. At the end of the day, it boils to the fact that
+$$H^0(W_F, \hat{\mathfrak{g}}^*\otimes_{\mathbb{Z}_{\ell}}\Lambda(1)) \cap \left(\mathcal{N}_{\hat{G}}^*\otimes _{\mathbb{Z}_{\ell}}\Lambda\right)=\{0\},$$
+where $\hat{\mathfrak{g}}^*$ is the dual of the adjoint representation of $\hat{G}$, and $\mathcal{N}_{\hat{G}}^* \subset \hat{\mathfrak{g}}^*$ is the nilpotent cone.
+
+In our case, $\hat{G}=GL_n$, $\hat{\mathfrak{g}}=M_{n\times n}$ is the set of $n \times n$ matrices. And $W_F$ acts by conjugacy on $\hat{\mathfrak{g}}=M_{n\times n}$ through $\psi$, hence induces an action of $W_F$ on the dual space with Tate twist $\hat{\mathfrak{g}}^*\otimes_{\mathbb{Z}_{\ell}}\Lambda(1)$. One could use the explicit matrices \ref{Matrices} of $s_0$ to compute that the fixed points $H^0(W_F, \hat{\mathfrak{g}}^*\otimes_{\mathbb{Z}_{\ell}}\Lambda(1))$ is contained in the (dual of) diagonal torus of $M_{n\times n}^*$, the dual Lie algebra $\hat{\mathfrak{g}}^*$. On the other hand, the nilpotnet cone $\mathcal{N}_{\hat{G}}^*$ is nothing else than the (dual of) nilpotent matrices in $M_{n\times n}^*$. So we conclude that 
+$$H^0(W_F, \hat{\mathfrak{g}}^*\otimes_{\mathbb{Z}_{\ell}}\Lambda(1)) \cap \left(\mathcal{N}_{\hat{G}}^*\otimes _{\mathbb{Z}_{\ell}}\Lambda\right)=\{0\}.$$
 
 
 \section{The spectral action induces an equivalence of categories}
-To summarize, we have (abstract) equivalence of categories
+To summarize, we have (abstract) equivalences of categories
 $$D^{b, qc}_{Coh, Nilp}(C_{\varphi}) \cong \bigoplus_{\chi \in \mathbb{Z}}\Perf(\mathbb{G}_m \times \mu_{\ell^k}) \cong \bigoplus_{b \in \mathbb{Z}}\Perf(\mathbb{G}_m \times \mu_{\ell^k}) \cong D^{C_{\varphi}}_{lis}(Bun_G, \overline{\mathbb{Z}_{\ell}})^{\omega},$$
-where I identified both $X^*(\mathbb{G}_m) \cong X^*(Z(\hat{G}))$ and $B(G)_{basic} \cong \pi_1(G)_{\Gamma}$ with $\mathbb{Z}$. The next goal is to show that the spectral action induces an equivalence of categories
+where we identified both $X^*(\mathbb{G}_m) \cong X^*(Z(\hat{G}))$ and $B(G)_{basic} \cong \pi_1(G)_{\Gamma}$ with $\mathbb{Z}$. The next goal is to show that the spectral action induces an equivalence of categories
 \begin{equation}\label{Equiv}
 	D_{lis}^{C_{\varphi}}(Bun_G, \overline{\mathbb{Z}_{\ell}})^{\omega} \cong D^{b, qc}_{Coh, Nilp}(C_{\varphi}).
 \end{equation}
@@ -235,7 +239,7 @@ where I identified both $X^*(\mathbb{G}_m) \cong X^*(Z(\hat{G}))$ and $B(G)_{bas
 %is an equivalence of categories. For this, we could refer to \cite{helm2018converse} (\textcolor{red}{?}). 
 %
 %\subsection{The full equivalence}
-%Now we could use the compatibility of the spectral action with the $\pi_1(G)_{\Gamma}$-grading to get the full equivalence \ref{Equiv}. For this, I refer to \cite{zou2022categorical}.
+%Now we could use the compatibility of the spectral action with the $\pi_1(G)_{\Gamma}$-grading to get the full equivalence \ref{Equiv}. For this, we refer to \cite{zou2022categorical}.
 
 %For this, we argue as in \cite[Section 5, 6]{zou2022categorical}.
 %
@@ -250,7 +254,7 @@ where I identified both $X^*(\mathbb{G}_m) \cong X^*(Z(\hat{G}))$ and $B(G)_{bas
 
 %Let's first define the functor. Recall the notation from the previous Chapter \textcolor{red}{?} that $\mathcal{C}_{x, 1}$ is the block of $\Rep_{\overline{\mathbb{Z}_{\ell}}}(G(F))$ containing $\pi$, and we have a projective generator $\Pi_{x, 1}=\cInd_{G_x}^G\sigma_{x, 1}$ of it. We define the functor by spectral acting on $\Pi_{x, 1}$:
 %$$\Theta: D^{b, qc}_{Coh, Nilp}(C_{\varphi}) \cong \Perf(C_{\varphi}) \longrightarrow D_{lis}^{C_{\varphi}}(Bun_G, \overline{\mathbb{Z}_{\ell}})^{\omega}, \qquad A \mapsto A*\Pi_{x, 1},$$
-%where I abuse the notation and see $\Pi_{x, 1}$ as an element in $D_{lis}^{C_{\varphi}}(Bun_G, \overline{\mathbb{Z}_{\ell}})^{\omega}$ via 
+%where we abuse the notation and see $\Pi_{x, 1}$ as an element in $D_{lis}^{C_{\varphi}}(Bun_G, \overline{\mathbb{Z}_{\ell}})^{\omega}$ via 
 %$$(i_1)_*: D(GL_n(F), \overline{\mathbb{Z}_{\ell}}) \to D_{lis}(Bun_G, \overline{\mathbb{Z}_{\ell}})^{\omega}.$$
 %
 %\begin{remark}
@@ -269,14 +273,36 @@ $$\Theta: D^{b, qc}_{Coh, Nilp}(C_{\varphi}) \cong \Perf(C_{\varphi}) \longright
 
 \subsection{Equivalence on degree zero part}
 
-We now show that $\Theta$ induces an equivalence on degree zero part. At the end of the day, this is similar to the following fact: If I have a functor $F: R\Modl \to R\Modl$, which is $(R\Modl)$-linear and sends $R$ to $R$, then $F$ is an equivalence of category. 
+We now show that $\Theta$ induces an equivalence on degree zero part. At the end of the day, this is similar to the following fact: If we have a functor $F: R\Modl \to R\Modl$, which is $(R\Modl)$-linear and sends $R$ to $R$, then $F$ is an equivalence of categories. 
 
-By compatibility with $\pi_1(G)_{\Gamma}$-grading, $\Theta$ restricts to a map
+By compatibility with $\pi_1(G)_{\Gamma}$-grading \ref{Prop Spectral action} (\textcolor{red}{problem with the hyperlink}), $\Theta$ restricts to a map between degree-$0$ parts of both sides
 $$\Theta_0:=\Theta|_{\Perf(C_{\varphi})_{\chi=0}}: \Perf(C_{\varphi})_{\chi=0} \longrightarrow D_{lis}^{C_{\varphi}}(Bun_G, \overline{\mathbb{Z}_{\ell}})^{\omega}_{b=0},$$
 where $\Perf(C_{\varphi})_{\chi=0} \cong \Perf(\mathbb{G}_m \times \mu_{\ell^k})$ and 
-$$D_{lis}^{C_{\varphi}}(Bun_G, \overline{\mathbb{Z}_{\ell}})^{\omega}_{b=0} \cong D(\Rep_{\overline{\mathbb{Z}_{\ell}}}(G(F))_{[\pi]})^{\omega} \cong D(\End(W_{\vartheta, [\pi]})\Modl)^{\omega}.$$
-By tracking the definition, the structure sheaf $\mathcal{O} \in \Perf(\mathbb{G}_m \times \mu_{\ell^k})$ goes to the Whittaker representation $W_{\vartheta, [\pi]} \in D(\Rep_{\overline{\mathbb{Z}_{\ell}}}(G(F))_{[\pi]})^{\omega}$, and further goes to $\End(W_{\vartheta, [\pi]}) \in D(\End(W_{\vartheta, [\pi]})\Modl)$. Moreover, by local Langlands in family (\textcolor{red}{See ?}), 
+$$D_{lis}^{C_{\varphi}}(Bun_G, \overline{\mathbb{Z}_{\ell}})^{\omega}_{b=0} \cong D(\Rep_{\overline{\mathbb{Z}_{\ell}}}(G(F))_{[\pi]})^{\omega} \cong D(\End(W_{\vartheta, [\pi]})\Modl)^{\omega},$$
+where
+$$\Rep_{\overline{\mathbb{Z}_{\ell}}}(G(F))_{[\pi]} \cong \End(W_{\vartheta, [\pi]})\Modl, \pi' \mapsto \Hom_G(W_{\vartheta, [\pi]}, \pi')$$
+(\textcolor{red}{shouldn't it be right module?}) is an equivalence since $W_{\vartheta, [\pi]}$ is a projective generator of $\Rep_{\overline{\mathbb{Z}_{\ell}}}(G(F))_{[\pi]}$ (See Lemma \ref{Lem Whit}).
+
+By tracking the definition, the structure sheaf $\mathcal{O} \in \Perf(\mathbb{G}_m \times \mu_{\ell^k})$ goes to the Whittaker representation $W_{\vartheta, [\pi]} \in D(\Rep_{\overline{\mathbb{Z}_{\ell}}}(G(F))_{[\pi]})^{\omega}$, and further goes to $\End(W_{\vartheta, [\pi]}) \in D(\End(W_{\vartheta, [\pi]})\Modl)$. Moreover, by local Langlands in families (See \cite{helm2018converse}), 
 $$\End(W_{\vartheta, [\pi]}) \cong \mathcal{Z}(G)_{[\pi]} \cong \mathcal{O}(C_{\varphi}) \cong \mathcal{O}(\mathbb{G}_m \times \mu_{\ell^k}).$$ Therefore, we have a functor $\Theta_0: \Perf(\mathbb{G}_m \times \mu_{\ell^k}) \to \Perf(\mathbb{G}_m \times \mu_{\ell^k})$ which is $\Perf(\mathbb{G}_m \times \mu_{\ell^k})$-linear and sends the structure sheaf to the structure sheaf, hence an equivalence of categories.
+
+\begin{lemma}\label{Lem Whit}
+	$W_{\vartheta, [\pi]}$ is a projective generator of $\Rep_{\overline{\mathbb{Z}_{\ell}}}(G(F))_{[\pi]}$.
+\end{lemma}
+
+\begin{proof}
+	By \cite[Chapter 3]{helm2016whittaker}, $W_{\vartheta, [\pi]}$ is projective. 
+%	To see it is a generator, it is well known that every supercuspidal representation occur as a subrepresentation of $W_{\vartheta}$ (see for example \cite[Chapter 36]{bushnell2006local}), by taking the smooth dual, we see they also occur as a quotient of $W_{\vartheta}$ (\textcolor{red}{Check carefully!}), we win!
+    \textcolor{red}{To see it's a generator, ...}
+%    we first note that $\End_G(W_{\vartheta, [\pi]})$ is isomorphic to the Bernstein center 
+%    $\mathcal{Z}(\Rep_{\overline{\mathbb{Z}_{\ell}}}(G(F))_{[\pi]})$, hence $\End_G(W_{\vartheta, [\pi]})$ is a projective generator. So to see $W_{\vartheta, [\pi]}$ is a generator, it suffices to construct a surjective morphism of $G(F)$-representations
+%    $$W_{\vartheta, [\pi]} \to \End_G(W_{\vartheta, [\pi]}).$$
+%    Indeed, for any $V \in \Rep_{\overline{\mathbb{Z}_{\ell}}}(G(F))_{[\pi]}$, we could construct a surjective morphism of $\Lambda$-modules
+%    $$V \to \Hom_G(W_{\vartheta, [\pi]}, V) \cong \Hom_U(\vartheta, V|_U) \qquad v \longmapsto (1 \mapsto v),$$
+%    where the last isomorphism is Frobenius reciprocity.
+%    One can check that in the case of $V=W_{\vartheta, [\pi]}$, this map is moreover a morphism of $G(F)$-representations (\textcolor{red}{check carefully}). We win!
+\end{proof}
+
 
 \subsection{The full equivalence}	
 

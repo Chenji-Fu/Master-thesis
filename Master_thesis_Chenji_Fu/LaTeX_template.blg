@@ -10,46 +10,47 @@ Database file #1: reference.bib
 Warning--empty year in bernsteindraft
 Warning--empty journal in dat2022ihes
 Warning--empty year in dat2022ihes
+Warning--empty journal in helm2016whittaker
 Warning--empty journal in michel1989bloc
-You've used 19 entries,
+You've used 22 entries,
             2118 wiz_defined-function locations,
-            608 strings with 6569 characters,
-and the built_in function-call counts, 4912 in all, are:
-= -- 480
-> -- 190
-< -- 4
-+ -- 80
-- -- 58
-* -- 291
-:= -- 871
-add.period$ -- 56
-call.type$ -- 19
-change.case$ -- 82
+            625 strings with 6940 characters,
+and the built_in function-call counts, 5716 in all, are:
+= -- 558
+> -- 223
+< -- 5
++ -- 94
+- -- 68
+* -- 338
+:= -- 1010
+add.period$ -- 65
+call.type$ -- 22
+change.case$ -- 95
 chr.to.int$ -- 0
-cite$ -- 23
-duplicate$ -- 212
-empty$ -- 398
-format.name$ -- 58
-if$ -- 998
+cite$ -- 27
+duplicate$ -- 245
+empty$ -- 464
+format.name$ -- 68
+if$ -- 1162
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 21
-newline$ -- 97
-num.names$ -- 38
-pop$ -- 88
+int.to.str$ -- 22
+missing$ -- 25
+newline$ -- 112
+num.names$ -- 44
+pop$ -- 105
 preamble$ -- 1
-purify$ -- 67
+purify$ -- 78
 quote$ -- 0
-skip$ -- 146
+skip$ -- 169
 stack$ -- 0
-substring$ -- 236
-swap$ -- 30
-text.length$ -- 4
+substring$ -- 280
+swap$ -- 33
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 70
-warning$ -- 4
-while$ -- 51
-width$ -- 21
-write$ -- 199
-(There were 4 warnings)
+type$ -- 80
+warning$ -- 5
+while$ -- 59
+width$ -- 24
+write$ -- 230
+(There were 5 warnings)
