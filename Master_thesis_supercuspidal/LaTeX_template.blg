@@ -4,7 +4,7 @@ The top-level auxiliary file: LaTeX_template.aux
 A level-1 auxiliary file: contents.aux
 A level-1 auxiliary file: Introduction.aux
 A level-1 auxiliary file: MoLP.aux
-A level-1 auxiliary file: Rep.aux
+A level-1 auxiliary file: Supercuspidal.aux
 A level-1 auxiliary file: CLLC.aux
 The style file: alpha2.bst
 Database file #1: reference.bib
@@ -14,45 +14,45 @@ Repeated entry---line 403 of file reference.bib
 I'm skipping whatever remains of this entry
 Warning--empty journal in bernsteindraft
 Warning--empty journal in dat2022ihes
-You've used 24 entries,
+You've used 23 entries,
             2549 wiz_defined-function locations,
-            705 strings with 8501 characters,
-and the built_in function-call counts, 8242 in all, are:
-= -- 817
-> -- 320
-< -- 19
-+ -- 101
-- -- 97
-* -- 542
-:= -- 1362
-add.period$ -- 76
-call.type$ -- 24
-change.case$ -- 129
-chr.to.int$ -- 24
-cite$ -- 26
-duplicate$ -- 352
-empty$ -- 657
-format.name$ -- 134
-if$ -- 1677
+            695 strings with 8389 characters,
+and the built_in function-call counts, 7951 in all, are:
+= -- 784
+> -- 329
+< -- 17
++ -- 105
+- -- 102
+* -- 525
+:= -- 1320
+add.period$ -- 72
+call.type$ -- 23
+change.case$ -- 126
+chr.to.int$ -- 23
+cite$ -- 25
+duplicate$ -- 336
+empty$ -- 624
+format.name$ -- 136
+if$ -- 1615
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 26
-newline$ -- 126
-num.names$ -- 72
-pop$ -- 141
+missing$ -- 25
+newline$ -- 120
+num.names$ -- 69
+pop$ -- 140
 preamble$ -- 1
-purify$ -- 157
+purify$ -- 153
 quote$ -- 0
-skip$ -- 281
+skip$ -- 272
 stack$ -- 0
-substring$ -- 421
-swap$ -- 37
-text.length$ -- 19
-text.prefix$ -- 13
+substring$ -- 382
+swap$ -- 36
+text.length$ -- 17
+text.prefix$ -- 11
 top$ -- 0
-type$ -- 172
+type$ -- 164
 warning$ -- 2
-while$ -- 79
-width$ -- 28
-write$ -- 309
+while$ -- 76
+width$ -- 26
+write$ -- 294
 (There was 1 error message)

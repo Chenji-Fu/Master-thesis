@@ -1,0 +1,361 @@
+\documentclass{article}
+
+\usepackage{amsmath,amssymb,amsfonts,amsthm,extarrows}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{stmaryrd}
+\usepackage{tikz-cd} 
+
+\usepackage{hyperref}
+\usepackage{color}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+
+\usepackage{nameref}
+
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+\usepackage{soul}
+
+\newtheorem*{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{question}{Question}
+\newtheorem{answer}{Answer}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{exer}{Exercise}
+\newtheorem{corollary}{Corollary}
+\newtheorem{example}{Example}
+\newtheorem{warning}{Warning}
+
+\usepackage{blindtext}
+\title{Description of the connected component of the stack of $L$-parameters containing a TRSELP}
+\date{2022\\ November}
+\author{Chenji Fu\\ Mathematics Department, University of Bonn}
+
+
+\begin{document}
+	\maketitle
+	
+	%\red{Should be aware of which results hold for $\overline{\mathbb{Z}_{\ell}}$, and which for $W(\overline{\mathbb{F}_{\ell}})$}.
+	
+	Let $F$ be a non-Archimedean local field, $G$ be a split reductive group over $F$. This paper studies when an irreducible object of $QCoh([X/\hat{G}])$ -- the category of quasi-coherent sheaves on a certain connected component $[X/\hat{G}]$ of the stack of $L$-parameters $[Z^1(W_F, \hat{G})/\hat{G}]_{\overline{\mathbb{Z}_\ell}}$ can be lifted from $\overline{\mathbb{F}_\ell}$ to $\overline{\mathbb{Z}_\ell}$. A main result shows that if $X$ is the connected component of $Z^1(W_F, \hat{G})_{\overline{\mathbb{Z}_\ell}}$ containing a tame regular semisimple elliptic $L$-parameter over $\overline{\mathbb{F}_{\ell}}$ ("TRSELP" for short), then at least under some mild condition, any irreducible object in $QCoh([X/\hat{G}]_{\overline{\mathbb{F}_\ell}})$ is liftable to $QCoh([X/\hat{G}])=QCoh([X/\hat{G}]_{\overline{\mathbb{Z}_\ell}})$. This is done by an explicit description of this component $[X/\hat{G}]$ as a stack.
+	
+	\section{Introduction}
+	
+	It's a long-standing question in modular representation theory that when a representation with $\overline{\mathbb{F}_\ell}$-coefficients can be lifted to a representation with $\overline{\mathbb{Z}_\ell}$-coefficients. For a $p$-adic group $G$, it is conjectured that its supercuspidal representations are liftable. However, this is a hard question in general, especially when $\ell$ is non-banal.
+	
+	One idea to attack this problem is to use the categorical local Langlands conjectures, which roughly conjecture that for any $\mathbb{Z}_{\ell}$-algebra $\Lambda$ there is a natural fully faithful embedding 
+	$$Rep_{\Lambda}(G) \to QCoh([Z^1(W_F, \hat{G})/\hat{G}]_{\Lambda})$$
+	from the category of representations of $G$ with $\Lambda$-coefficients to the category of quasi-coherent sheaves on the stack of $L$-parameters over $\Lambda$. This leads us to consider the mirror problem on the $L$-parameter side: when a quasi-coherent sheaf on $[Z^1(W_F, \hat{G})/\hat{G}]_{\overline{\mathbb{F}_\ell}}$ can be lifted to $[Z^1(W_F, \hat{G})/\hat{G}]_{\overline{\mathbb{Z}_\ell}}$?
+	
+	Why does this help? Certain connected components of $[Z^1(W_F, \hat{G})/\hat{G}]_{\overline{\mathbb{Z}_\ell}}$ admit an easy description, hence we can understand $QCoh([Z^1(W_F, \hat{G})/\hat{G}]_{\overline{\mathbb{Z}_\ell}})$ explicitly. For example, for $G=GL_2$ and $\ell$ not dividing $q^2-1$, one component of $[Z^1(W_F, \hat{G})/\hat{G}]_{\overline{\mathbb{Z}_\ell}}$ is isomorphic to $[\mathbb{G}_m/\mathbb{G}_m],$ where $\mathbb{G}_m$ acts trivially on $\mathbb{G}_m$. Using this explicit description, one could show that irreducible coherent sheaves on this component are liftable. Then if you believe in the categorical local Langlands conjecture, the corresponding representations of the $p$-adic group $G$ should also be liftable. %(\red{I cheat a bit here. In general, one need to pass to the derived category.})
+	
+	In this paper, we focus on the connected component of $[Z^1(W_F, \hat{G})/\hat{G}]_{\overline{\mathbb{Z}_\ell}}$ containing a tame regular semisimple elliptic $L$-parameter over $\overline{\mathbb{F}_\ell}$ (TRSELP for short).  One nice thing to work with such a $L$-parameter is that it corresponds roughly to a torus, and its connected component $[X/\hat{G}]$ has an easy description in terms of this torus.
+	
+	
+	
+	\section{Description of the connected component $X$ containing a TRSELP}
+	
+	\subsection{Tame regular semisimple elliptic $L$-parameters}
+	
+	Let $F$ be a non-Archimedean local field, $W_F$ be the Weil group, $I_F \subset W_F$ be the inertia subgroup, $P_F$ be the wild inertia subgroup. Let $Fr \in W_F$ be any lift of the arithmetic Frobenius. Let $I_F^\ell$ be the prime-to-$\ell$ inertia of $W_F$, i.e., $I_F^\ell:=ker(t_\ell)$, where 
+	$$t_\ell: I_F \to I_F/P_F \simeq \prod_{p' \neq p}\mathbb{Z}_{p'} \to \mathbb{Z}_\ell$$ 
+	is the composition. In other words, it is the maximal subgroup of $I_F$ with pro-order prime to $\ell$. This property makes $I_F^\ell$ important for determining the connected components of $Z^1(W_F, \hat{G})$ over $\overline{\mathbb{Z}_{\ell}}$ (See [dat.pdf, Theorem 4.2 and subsection 4.6]). I assume the readers to be familiar with the moduli space of Langlands parameters, see for example section 3 and 4 of [dat.pdf], or section 2 and 4 of [DHKM20]. Let $G$ be a connected reductive $F$-group which is $F$-split. Let $\hat{G}$ be its dual group. 
+	
+	Let me define a TRSELP over $\overline{\mathbb{F}_{\ell}}$, roughly in the sense of [DR09] but with $\overline{\mathbb{F}_\ell}$-coefficients instead of $\mathbb{C}$-coefficients.
+	
+	\begin{definition}
+		A \textbf{tame regular semisimple elliptic $L$-parameter (TRSELP) over $\overline{\mathbb{F}_\ell}$} is a homomorphism $\phi: W_F \to \hat{G}(\overline{\mathbb{F}_\ell})$ such that:
+		\begin{enumerate}
+			\item (smooth) $\phi(I_F)$ is a finite subgroup of $\hat{G}(\overline{\mathbb{F}_\ell})$. 	 
+			\item ($Frob$-semisimple) $\phi(Fr)$ is a semisimple element of $\hat{G}(\overline{\mathbb{F}_\ell})$.
+			\item (tame) The restriction of $\phi$ to $P_F$ is trivial.
+			\item (elliptic) The identity component of the centralizer $C_{\hat{G}(\overline{\mathbb{F}_\ell})}(\phi(W_F))^0$ is equal to the identity component of the center $Z(\hat{G})^0$.
+			\item (regular semisimple) The centralizer of the inertia $C_{\hat{G}(\overline{\mathbb{F}_\ell})}(\phi(I_F))$ is a torus.
+		\end{enumerate}
+	\end{definition}
+	
+	Concretely, a TRSELP consists of the following data:
+	\begin{enumerate}
+		\item The restriction $\phi|_{I_F}$, which is a direct sum of characters of a finite group since $I_F/P_F \simeq \varprojlim\mathbb{F}_{q^n}^*$. In particular, it factors through some maximal torus, say $S$. Then regular semisimple means $C_{\hat{G}(\overline{\mathbb{F}_\ell})}(\phi(I_F))=S$.
+		\item The image of Frobenius $\phi(Fr)$, which turns out to be an element of the normalizer  $N_{\hat{G}(\overline{\mathbb{F}_\ell})}(S)$. (Since $Fr.\tau.Fr^{-1}=\tau^q$ implies $\phi(Fr)$ normalizes $C_{\hat{G}(\overline{\mathbb{F}_\ell})}(\phi(I_F))=S$.) Denote by $n$ the image of $\phi(Fr)$ in the Weyl group $W_{\hat{G}(\overline{\mathbb{F}_\ell})}(S):=N_{\hat{G}(\overline{\mathbb{F}_\ell})}(S)/S$. And "elliptic" means that the center $Z(\hat{G}(\overline{\mathbb{F}_\ell}))$ has finite index in the centralizer $C_{\hat{G}(\overline{\mathbb{F}_\ell})}(\phi(W_F))$. Ellipticity implies that $\hat{G}(\overline{\mathbb{F}_\ell})$ acts transitively on the connected component $X(\overline{\mathbb{F}_\ell})$, which is essential for the description $[X/\hat{G}] \simeq [*/\underline{C_{\hat{G}(\overline{\mathbb{F}_\ell})}(\phi(W_F))}]$ as we will see later. 
+	\end{enumerate}
+	
+	\begin{remark}
+		\begin{enumerate}
+			\item It is important for my purpose to distinguish between the set-theoretic centralizer $C_{\hat{G}(\overline{\mathbb{F}_\ell})}(\phi(I_F))$ and the schematic centralizer $C_{\hat{G}}(\phi)$ (to be defined after the remark). However, I might still use $G$ to mean $G(\overline{\mathbb{F}_{\ell}})$ sometimes by abuse of notation, for which I hope the readers could recognize.
+			\item As we will see later, $S=C_{\hat{G}(\overline{\mathbb{F}_\ell})}(\phi(I_F))$ turns out to be the $\overline{\mathbb{F}_\ell}$-points of the split torus $T=C_{\hat{G}}(\psi|_{I_F^\ell})$ over $\overline{\mathbb{Z}_\ell}$.
+		\end{enumerate} 
+	\end{remark}
+	
+	\begin{definition}[schematic centralizer]
+		Let $H$ be an affine algebraic group over a ring $R$, $\Gamma$ be a finite group. Let $u \in Z^1(\Gamma, H(R'))$ be a $1$-cocycle for some $R$-algebra $R'$. Let $\alpha_u: H_{R'} \to Z^1(\Gamma, H)_{R'}, h \mapsto hu(-)h^{-1}$ be the orbit morphism. Then the schematic centralizer $C_H(u)$ is defined to be the fiber of $\alpha_u$ at $u$.
+		
+		\begin{tikzcd}
+			{C_H(u)} \arrow[r, ""] \arrow[d, ""] & {H_{R'}} \arrow[d, "{\alpha_u}"] \\
+			{R'} \arrow[r, "u"]                & {Z^1(\Gamma, H)_{R'}}               
+		\end{tikzcd}
+		
+	\end{definition}
+	
+	One can show that $C_H(u)(R'')=C_{H(R'')}(u)$ is the set-theoretic centralizer for all $R'$-algebra $R''$, see for example Appendix A.1 of [DHKM20].
+	
+	
+	
+	
+	
+	\subsection{Description of the component}
+	
+	Now given a TRSELP $\phi \in Z^1(W_F, \hat{G}(\overline{\mathbb{F}_\ell}))$. Pick any lift $\psi \in Z^1(W_F, \hat{G}(\overline{\mathbb{Z}_\ell}))$ of $\phi$, whose existence is ensured by the flatness of $Z^1(W_F, \hat{G})_{\overline{\mathbb{Z}_\ell}}$ %(\red{proof?}) 
+	. Let $I_F^{\ell} \subset I_F$ be the prime-to-$\ell$ inertia, i.e., the maximal subgroup of $I_F$ with pro-order prime to $\ell$. Let $\psi_{\ell}$ denotes the restriction $\psi|_{I_F^{\ell}}$, and $\overline{\psi}$ denotes the image of $\psi$ in $Z^1(W_F, \pi_0(N_{\hat{G}}(\psi_{\ell})))$ (recall $\psi$ factors through $N_{\hat{G}}(\psi_{\ell})$, hence can be pushed forward to $\pi_0(N_{\hat{G}}(\psi_{\ell}))$.). Let $X$ be the connected component of $Z^1(W_F, \hat{G})_{\overline{\mathbb{Z}_\ell}}$ containing $\phi$ (hence $X$ also contains $\psi$). 
+	
+	\begin{theorem}\label{Theorem: X}
+		Let $\phi \in Z^1(W_F, \hat{G}(\overline{\mathbb{F}_\ell}))$ be a TRSELP over $\overline{\mathbb{F}_\ell}$. Let $\psi \in Z^1(W_F, \hat{G}(\overline{\mathbb{Z}_\ell}))$ be any lifting of $\phi$. Then at least when the center $Z(\hat{G})$ is smooth over $\overline{\mathbb{Z}_\ell}$, the connected component $X$ of $Z^1(W_F, \hat{G})_{\overline{\mathbb{Z}_\ell}}$ containing $\phi$ is isomorphic to $$(\hat{G} \times C_{\hat{G}}(\psi_{\ell})^0 \times \mu)/C_{\hat{G}}(\psi_{\ell})_{\overline{\psi}},$$ where \begin{enumerate}
+			\item $C_{\hat{G}}(\psi_{\ell})^0$ is the identity component of the schematic centralizer $C_{\hat{G}}(\psi_{\ell})$, which turns out to be a split torus $T$ over $\overline{\mathbb{Z}_\ell}$ with $\overline{\mathbb{F}_\ell}$-points $S=C_{\hat{G}(\overline{\mathbb{F}_\ell})}(\phi(I_F))$.
+			\item $\mu$ is the connected component of $T^{^{Fr}(-)=(-)^q}$ containing $1$ (see Example 3.14 of [dat.pdf]), which is a product of some $\mu_{\ell^{k_i}}$ (the group scheme of ${\ell^{k_i}}$-th roots of unity over $\overline{\mathbb{Z}_\ell}$), $k_i \in \mathbb{Z}_{\geq 0}$. ($\mu$ could be trivial, depending on $\hat{G}$ and some congruence relations between $q, \ell, n$.)
+			\item $C_{\hat{G}}(\psi_{\ell})_{\overline{\psi}}$ is the (schematic) stabilizer %(\red{definition?}\blue{Should be similar to the definition of schematic centralizer.}) 
+			of $\overline{\psi}$ in $C_{\hat{G}}(\psi_{\ell})$.
+		\end{enumerate}  
+		
+		In other words, we have the following isomorphism of schemes over $\overline{\mathbb{Z}_\ell}$:
+		$$X \simeq (\hat{G} \times T \times \mu)/T.$$ And we will specify after the proof what the $T$-action on $(\hat{G} \times T \times \mu)$ is.
+	\end{theorem}
+	
+	\begin{proof}
+		
+		
+		First, recall by [dat.pdf, subsection 4.6], 
+		$$X \simeq (\hat{G} \times Z^1(W_F, N_{\hat{G}}(\psi_{\ell}))_{\psi_{\ell}, \overline{\psi}})/C_{\hat{G}}(\psi_{\ell})_{\overline{\psi}} \simeq (\hat{G} \times Z^1_{Ad(\psi)}(W_F, N_{\hat{G}}(\psi_{\ell})^0)_1)/C_{\hat{G}}(\psi_{\ell})_{\overline{\psi}},$$
+		where $Z^1(W_F, N_{\hat{G}}(\psi_{\ell}))_{\psi_{\ell}, \overline{\psi}}$ denotes the space of cocycles whose restriction to $I_F^\ell$ equals $\psi_{\ell}$ and whose image in $Z^1(W_F, \pi_0(N_{\hat{G}}(\psi_{\ell})))$ is $\overline{\psi}$, and $Z^1_{Ad(\psi)}(W_F, N_{\hat{G}}(\psi_{\ell})^0)_1$ denotes the space of cocycles with $W_F$ acting on $N_{\hat{G}}(\psi_{\ell})^0$ via $Ad(\psi)$, and the subscript $1$ in $Z^1_{Ad(\psi)}(W_F, N_{\hat{G}}(\psi_{\ell})^0)_1$ means the cocycles whose restriction to $I_F^\ell$ is trivial.
+		
+		
+		Next, we show that $C_{\hat{G}}(\psi_{\ell})$ is a split torus over $\overline{\mathbb{Z}_\ell}$. By [dat.pdf, subsection 3.1], the centralizer $C_{\hat{G}}(\psi_{\ell})$ is generalized reductive hence split over $\overline{\mathbb{Z}_\ell}$, and $N_{\hat{G}}(\psi_{\ell})^0=C_{\hat{G}}(\psi_{\ell})^0$. So we can determine $C_{\hat{G}}(\psi_{\ell})$ by computing its $\overline{\mathbb{F}_\ell}$-points. Indeed, $$C_{\hat{G}}(\psi_{\ell})(\overline{\mathbb{F}_\ell})=C_{\hat{G}(\overline{\mathbb{F}_\ell})}(\psi(I_F^\ell))=C_{\hat{G}(\overline{\mathbb{F}_\ell})}(\phi(I_F^\ell))=C_{\hat{G}(\overline{\mathbb{F}_\ell})}(\phi(I_F)),$$
+		where the last equality follows since $I_F/I_F^\ell$ doesn't contributes to the image of $\phi$ by 
+		$$Hom_{Cont}(I_F/I_F^\ell, \overline{\mathbb{F}_\ell}^*)=Hom_{Cont}(\mathbb{Z}_\ell, \overline{\mathbb{F}_\ell}^*)=\varinjlim_mHom_{Cont}(\mathbb{Z}/\ell^m\mathbb{Z}, \overline{\mathbb{F}_\ell}^*)=\{1\}.$$ Hence $C_{\hat{G}}(\psi_{\ell})$ is a split torus over $\overline{\mathbb{Z}_\ell}$ with $\overline{\mathbb{F}_\ell}$-points $S=C_{\hat{G}(\overline{\mathbb{F}_\ell})}(\phi(I_F))$, denote $T=C_{\hat{G}}(\psi_{\ell})$. In particular, $C_{\hat{G}}(\psi_{\ell})$ is connected, hence 
+		$$N_{\hat{G}}(\psi_{\ell})^0=C_{\hat{G}}(\psi_{\ell})^0=C_{\hat{G}}(\psi_{\ell})=T.$$
+		
+		So we compute
+		$$Z^1_{Ad(\psi)}(W_F/P_F, N_{\hat{G}}(\psi_{\ell})^0)=Z^1_{Ad(\psi)}(W_F/P_F, T) \simeq Z^1_{Ad(\psi)}(W_F^0/P_F, T) \simeq T \times T^{Fr=(-)^q},$$
+		where the middle isomorphism holds since any cocycle over $\mathbb{Z}_\ell$ from the discretization $W_F^0/P_F$ extends to $W_F/P_F$ (see [dat.pdf, Prop 3.9]) and the last isomorphism is $\eta \mapsto (\eta(Fr), \eta(s_0))$, where $s_0 \in W_F^0$ is a topological generator.
+		
+		Then we show that the identity component of $T^{Fr=(-)^q}$ gives $\mu$ in the statement of the theorem. Note $T^{Fr=(-)^q}$ is a diagonalizable group scheme over $\overline{\mathbb{Z}_\ell}$ of dimension zero (This can be seen either by $dimZ^1(W_F/P_F, T)=dimT$, or by noticing that $\eta(s_0) \in T^{Fr=(-)^q}$ is semisimple with finitely many possible eigenvalues), hence of the form $\prod_i\mu_{n_i}$ for some $n_i \in \mathbb{Z}_{\geq 0}$. Hence its connected component $(T^{Fr=(-)^q})^0$ over $\overline{\mathbb{Z}_{\ell}}$ is of the form $\prod_i\mu_{\ell^{k_i}},$ with $k_i$ maximal such that $\ell^{k_i}$ divides $n_i$. Therefore, 
+		$$Z^1_{Ad(\psi)}(W_F, N_{\hat{G}}(\psi_{\ell})^0)_1 \simeq (T \times T^{Fr=(-)^q})^0 \simeq T \times (T^{Fr=(-)^q})^0 \simeq T \times \mu,$$
+		where $\mu$ is of the form $\prod_i\mu_{\ell^{k_i}}$.
+		
+		Finally, we show that $C_{\hat{G}}(\psi_{\ell})_{\overline{\psi}}=C_{\hat{G}}(\psi_{\ell})$. Recall $C_{\hat{G}}(\psi_{\ell})$ acts on $Z^1(W_F, N_{\hat{G}}(\psi_{\ell}))$ by conjugation, inducing an action of $C_{\hat{G}}(\psi_{\ell})$ on $Z^1(W_F, \pi_0(N_{\hat{G}}(\psi_{\ell}))).$ And $C_{\hat{G}}(\psi_{\ell})_{\overline{\psi}}$ is by definition the stabilizer of $\overline{\psi} \in Z^1(W_F, \pi_0(N_{\hat{G}}(\psi_{\ell})))$ in $C_{\hat{G}}(\psi_{\ell})$. Now $C_{\hat{G}}(\psi_{\ell})=T$ is connected, hence acts trivially on the component group $\pi_0(N_{\hat{G}}(\psi_{\ell}))$, hence also acts trivially on $Z^1(W_F, \pi_0(N_{\hat{G}}(\psi_{\ell})))$. Therefore, the stabilizer $C_{\hat{G}}(\psi_{\ell})_{\overline{\psi}}=C_{\hat{G}}(\psi_{\ell})$.
+		
+		Above all, we have 
+		$$X \simeq (\hat{G} \times Z^1_{Ad(\psi)}(W_F, N_{\hat{G}}(\psi_{\ell})^0)_1)/C_{\hat{G}}(\psi_{\ell})_{\overline{\psi}} \simeq (\hat{G} \times T \times \mu)/T.$$
+		
+	\end{proof}
+	
+	\subsection{the $T$-action on $(\hat{G} \times T \times \mu)$}
+	
+	For later use, let me make it explicit the $T$-action on $(\hat{G} \times T \times \mu)$.
+	
+	Recall (see [dat.pdf], subsection 4.6) first this component $X$ morally consists of $L$-parameters whose restriction to $I_F^\ell$ is $\hat{G}$-conjugate to $\psi_{\ell}$ and whose image in $Z^1(W_F, \pi_0(N_{\hat{G}}(\psi_{\ell})))$ is $\hat{G}$-conjugate to $\overline{\psi}$. Hence $X$ is isomorphic to $(\hat{G} \times Z^1(W_F, N_{\hat{G}}(\psi_{\ell}))_{\psi_{\ell}, \overline{\psi}})/C_{\hat{G}}(\psi_{\ell})_{\overline{\psi}}$ via $g\eta(-)g^{-1} \mapsfrom (g, \eta),$ with $C_{\hat{G}}(\psi_{\ell})_{\overline{\psi}}$ acting on $(\hat{G} \times Z^1(W_F, N_{\hat{G}}(\psi_{\ell}))_{\psi_{\ell}, \overline{\psi}})$ by $(t, (g, \psi')) \mapsto (gt^{-1}, t\psi'(-)t^{-1})$, where $t \in C_{\hat{G}}(\psi_{\ell})_{\overline{\psi}} \simeq T$ and $(g, \psi') \in (\hat{G} \times Z^1(W_F, N_{\hat{G}}(\psi_{\ell}))_{\psi_{\ell}, \overline{\psi}})$.
+	
+	Next, recall that 
+	$$Z^1(W_F, N_{\hat{G}}(\psi_{\ell}))_{\psi_{\ell}, \overline{\psi}} \simeq Z^1_{Ad\psi}(W_F, N_{\hat{G}}(\psi_{\ell})^0)_1 \simeq T \times \mu, \psi.\eta \mapsfrom \eta \mapsto (\eta(Fr), \eta(s_0)).$$
+	
+	Hence in $(\hat{G} \times T \times \mu)/T$, we compute by tracking the above isomorphisms that
+	\begin{enumerate}
+		\item $T$ acts on $\hat{G}$ via $(t, g) \mapsto gt^{-1}$.
+		\item $T$ acts on $T$ (corresponding to $\eta(Fr)$) by twisted conjugacy (due to the isomorphisms $\psi.\eta \mapsfrom \eta \mapsto (\eta(Fr), \eta(s_0))$), i.e., via 
+		$$(t, t') \mapsto n^{-1}t(nt')t^{-1}=(n^{-1}tn)t't^{-1}=(t^{-1}n^{-1}tn)t',$$
+		where $n$ is the image of $\psi(Fr)$ 
+		%(\red{Or $\phi(Fr)$? Be careful here! Maybe also involve some rigidity property of the action so that it's completed determined by the action on the special fiber.}) 
+		in the Weyl group $N_{\hat{G}}(T)/T$. ($n$ can also be identified with the image of $\phi(Fr)$ in the Weyl group $N_{\hat{G}}(S)/S$, see the Remark below.)
+		In other word, $T$ acts on $T$ via multiplication by $(t^{-1}n^{-1}tn)$.
+		\item $T$ acts trivially on $\mu$.
+	\end{enumerate}
+	
+	\begin{remark}
+		%Could you explain better?%
+		
+		Note $n$ comes from the $\psi(Fr)$-conjugacy action on $T$, we view it as an element in $Aut_{\overline{\mathbb{Z}_{\ell}}-Grp Sch}(T)$. It doesn't matter to define $n$ as the image of $\psi(Fr)$ in the Weyl group $N_{\hat{G}}(T)/T$, or the image of $\phi(Fr)$ in the Weyl group $N_{\hat{G}}(S)/S$. This is basically because $T$ is split over $\overline{\mathbb{Z}_{\ell}}$. Indeed, $Aut_{\overline{\mathbb{Z}_{\ell}}-Grp Sch}(T) \simeq Aut_{\overline{\mathbb{F}_{\ell}}-Grp Sch}(T)$ using the equivalence of category between the category of diagonalizable group $R$-schemes and the category of abelian groups, for any ring $R$. So the $\psi(Fr)$-conjugacy action on $T$ is determined by the action on the special fiber (even determined by the action on $\overline{\mathbb{F}_\ell}$-points).
+	\end{remark}
+	
+	On the other hand, recall we have the natural $\hat{G}$-action on $Z^1(W_F, \hat{G})$ by conjugation, hence the $\hat{G}$-action on this component $X$. Under the isomorphism 
+	$X \simeq (\hat{G} \times T \times \mu)/T,$ the $\hat{G}$-action becomes
+	$$g'.(g, t, m) \mapsto (g'g, t, m), \forall (g, t, m) \in (\hat{G} \times T \times \mu)/T.$$
+	
+	Note the $T$-action and the $\hat{G}$-action on $(\hat{G} \times T \times \mu)$ commute with each other, we thus have the following
+	
+	\begin{lemma}
+		$[X/\hat{G}] = ((\hat{G} \times T \times \mu)/T)/\hat{G} \simeq ((\hat{G} \times T \times \mu)/\hat{G})/T \simeq (T \times \mu)/T, $ with $T$ acting on $T$ via multiplication by $(t^{-1}n^{-1}tn)$, and $T$ acting on $\mu$ trivially.
+	\end{lemma}
+	
+	
+	
+	\section{Main Theorem: description of $[X/\hat{G}]$}
+	Let $F$ be a non-Archimedean local field, $G$ be a split reductive group over $F$. Let $\phi \in Z^1(W_F, \hat{G}(\overline{\mathbb{F}_{\ell}}))$ be a tame regular semisimple elliptic Langlands parameter (TRSELP for short). Recall this means that the centralizer $C_{\hat{G}}(\phi(I_F))=S \subset \hat{G}$ is a maximal torus, and $\phi(Fr) \in N_{\hat{G}}(S)$ gives rise to an element $n \in N_{\hat{G}}(S)/S$ in the Weyl group (and $\phi$ is tame and elliptic). Assume that
+	\begin{enumerate}
+		\item The center $Z(\hat{G})$ is smooth over $\overline{\mathbb{Z}_{\ell}}.$
+		\item $Z(\hat{G})$ is finite.
+		\item $\ell$ doesn't divide the order of $n$ (in the Weyl group $N_{\hat{G}}(S)/S$). 
+	\end{enumerate}
+	Let $\psi \in Z^1(W_F, \hat{G}(\overline{\mathbb{Z}_{\ell}}))$ be any lifting of $\phi$. Let $\psi_{\ell}$ denotes the restriction $\psi|_{I_F^{\ell}}$, and $\overline{\psi}$ denotes the image of $\psi$ in $Z^1(W_F, \pi_0(N_{\hat{G}}(\psi_{\ell})))$. Recall the schematic centralizer $T=C_{\hat{G}}(\psi_{\ell})$ is a split torus over $\overline{\mathbb{Z}_{\ell}}$ with $\overline{\mathbb{F}_{\ell}}$-points $S$. Our main result is the following.
+	
+	\begin{theorem}
+		Let $X=X_{\psi_{\ell}, \overline{\psi}}$ be the connected component of $Z^1(W_F, \hat{G})_{\overline{\mathbb{Z}_{\ell}}}$ containing $\phi$ (hence also containing $\psi$). Then we have isomorphisms of quotient stacks
+		$$[X/\hat{G}] \simeq [(T \times \mu)/T] \simeq [*/\underline{C_{\phi}}] \times \mu,$$
+		where $\underline{C_{\phi}}:=\underline{C_{\hat{G}(\overline{\mathbb{F}_{\ell}})}(\phi(W_F))}$ is the constant group scheme associated to the finite abelian group $C_{\phi}=C_{\hat{G}(\overline{\mathbb{F}_{\ell}})}(\phi(W_F))$, and $\mu=\prod_{i=1}^m\mu_{\ell^{k_i}}$ for some $k_i \in \mathbb{Z}_{\geq 1}$, $m \in \mathbb{Z}_{\geq 0}$ is a product of group schemes of roots of unity.
+		
+	\end{theorem}
+	
+	\begin{proof}
+		Recall $X$ is isomorphic to the contracted product 
+		$$(\hat{G} \times Z^1(W_F, N_{\hat{G}}(\psi_{\ell}))_{\psi_{\ell}, \overline{\psi}})/C_{\hat{G}}(\psi_{\ell})_{\overline{\psi}},$$ 
+		where
+		$$Z^1(W_F, N_{\hat{G}}(\psi_{\ell}))_{\psi_{\ell}, \overline{\psi}} \simeq Z^1_{Ad\psi}(W_F, N_{\hat{G}}(\psi_{\ell})^0)_1 \simeq T \times \mu, \psi.\eta \mapsfrom \eta \mapsto (\eta(Fr), \eta(s_0)).$$
+		This implies that $[X/\hat{G}] \simeq [(T \times \mu)/T]$ with $T$ acting on $T$ by twisted conjugacy:
+		$$T \times T \to T, (t, t') \mapsto n^{-1}(t(nt')t^{-1})=(n^{-1}tn)t't^{-1}=(t^{-1}n^{-1}tn)t',$$ where $n$ denotes the image (\red{$\phi(Fr)$ or $\psi(Fr)$?} \blue{Should be the same in $N_{\hat{G}}(T)/T$.})
+		of $Fr$ in the Weyl group $N_{\hat{G}}(T)/T$.
+		In other words, $T$ acts on $T$ via multiplication by $t^{-1}n^{-1}tn$. And $T$ acts trivially on $\mu$. So we are really reduced to compute $[T/T]$ with respect to a nice action of the split torus $T$ on $T$, which should be and turns out to be very explicit.
+		
+		Consider the morphism
+		$$f: T^{(1)}=T \to T=T^{(2)}, s \mapsto s^{-1}n^{-1}sn.$$
+		This is surjective on $\overline{\mathbb{F}_{\ell}}$-points by our assumption that $Z(\hat{G})$ is finite and $\phi$ elliptic (See Lemma 2 %(\red{maybe need renumbering})
+		below.). Hence $f$ is an epimorphism in the category of diagonalizable $\overline{\mathbb{Z}_{\ell}}$-group schemes (See Lemma 2 %(\red{maybe need renumbering}) 
+		below). Therefore, $f$ induces an isomorphism 
+		$$T^{(1)}/ker(f) \simeq T^{(2)},$$
+		as diagonalizable $\overline{\mathbb{Z}_{\ell}}$-group schemes. Moreover, if we let $T$ acts on $T^{(1)}$ by left multiplication by $t$ and on $T^{(2)}$ via multiplication by $(t^{-1}n^{-1}tn)$, this isomorphism induced by $f$ is even $T$-equivariant.
+		
+		Note $T^{(1)}=T$ is commutative, so the $T$-action (via multiplication by $(t^{-1}n^{-1}tn)$) and the $ker(f)$-action (via left multiplication) on $T$ commute with each other. Hence by the $T$-equivariant isomorphism $T^{(1)}/ker(f) \simeq T^{(2)}$ above,
+		$$T/T = T^{(2)}/T \simeq (T^{(1)}/ker(f))/T \simeq (T^{(1)}/T)/ker(f) \simeq [*/ker(f)].$$ 
+		
+		Moreover, by assumption 3 --  $\ell$ doesn't divide the order of $n$ (in the Weyl group $N_{\hat{G}}(T)/T$) -- $ker(f) \simeq \underline{C_{\phi}}$ is the constant group scheme of the finite abelian group $C_{\phi}=C_{\hat{G}(\overline{\mathbb{F}_{\ell}})}(\phi(W_F))$, see Lemma 3 below. %(\red{maybe need renumbering}) 
+		We win!
+	\end{proof}
+	
+	\begin{lemma}
+		The morphism
+		$f: T^{(1)}=T \to T=T^{(2)}, s \mapsto s^{-1}n^{-1}sn$
+		is epimorphic in the category of diagonalizable $\overline{\mathbb{Z}_{\ell}}$-group schemes. And it induces an isomorphism $T^{(1)}/ker(f) \simeq T^{(2)}$ as diagonalizable $\overline{\mathbb{Z}_{\ell}}$-group schemes.
+	\end{lemma}
+	
+	\begin{proof}
+		Recall $T$ is a split torus over $\overline{\mathbb{Z}_{\ell}}$, hence a diagonalizable $\overline{\mathbb{Z}_{\ell}}$-group scheme. Notice $f$ is a morphism of $\overline{\mathbb{Z}_{\ell}}$-group schemes, hence a morphism of diagonalizable $\overline{\mathbb{Z}_{\ell}}$-group schemes. Recall that the category of diagonalizable $\overline{\mathbb{Z}_{\ell}}$-group schemes is equivalent to the category of abelian groups (c.f. [Oesterlé] or [Con14]) via $D \mapsto Hom_{\overline{\mathbb{Z}_{\ell}}-Grp Sch}(D, \mathbb{G}_m)$, and the inverse is given by $\overline{\mathbb{Z}_{\ell}}[M] \mapsfrom M$, where $\overline{\mathbb{Z}_{\ell}}[M]$ is the group algebra of $M$ with $\overline{\mathbb{Z}_{\ell}}$-coefficients. 
+		
+		Therefore, we could argue in the category of abelian groups via the category equivalence: $f$ is epimorphic if and only if the corresponding map $f^*$ in the category of abelian groups is monomorphic. Note ellipticity and $Z(\hat{G})$ finite imply that $C_{\phi}$ is finite, hence $ker(f)=C_T(n)=C_{\phi}$ is finite, hence $coker(f^*)$ is finite. Therefore, $f^*: Hom(T^{(2)}, \mathbb{G}_m) \to Hom(T^{(1)}, \mathbb{G}_m)$ is injective (i.e. monomorphic), since otherwise $ker(f^*)$ would be a sub-$\mathbb{Z}$-module of the finite free $\mathbb{Z}$-module $Hom(T^{(2)}, \mathbb{G}_m)$, hence a free $\mathbb{Z}$-module of positive rank, which contradicts with $Coker(f^*)$ is finite.
+		
+		The statement on the quotient follows from the corresponding result in the category of abelian groups: $f^*$ induces an isomorphism 
+		$$Hom(T^{(1)}, \mathbb{G}_m)/Hom(T^{(2)}, \mathbb{G}_m) \simeq coker(f^*).$$ (c.f. [Oesterlé], p71, subsection 5.3)
+		
+		%I claim that to show $f: T^{(1)}=T \to T=T^{(2)}$ is epimorphic, it suffices to show that $f$ is surjective on $\overline{\mathbb{F}_{\ell}}$-points. Assume otherwise $f$ is surjective on $\overline{\mathbb{F}_{\ell}}$-points but not epimorphic, then the corresponding morphism on character groups $f^*: Hom(T^{(2)}, \mathbb{G}_m) \to Hom(T^{(1)}, \mathbb{G}_m)$ is not injective, i.e., its kernel $ker(f^*) \to Hom(T^{(2)}, \mathbb{G}_m)$ is non-trivial. Then the corresponding homomorphism $T^{(2)} \to coker(f)$ is non-zero, hence the induced map on $\overline{\mathbb{F}_{\ell}}$-points $T^{(2)}(\overline{\mathbb{F}_{\ell}}) \to coker(f)(\overline{\mathbb{F}_{\ell}})$ is non-zero, which contradicts with $f$ is surjective on $\overline{\mathbb{F}_{\ell}}$-points.
+		
+		%Now let's show that $f$ is surjective on $\overline{\mathbb{F}_{\ell}}$-points. First notice that $C_{\hat{G}(\overline{\mathbb{F}_{\ell}})}(\phi(W_F))$ is a finite group , under our assumption that $Z(\hat{G})$ is finite and $\phi$ is elliptic. To show $f$ is surjective, it's equivalent to show that $T(\overline{\mathbb{F}_{\ell}})$ acts transitively on $T^{(2)}(\overline{\mathbb{F}_{\ell}})$ via multiplication by $(t^{-1}n^{-1}tn)$, which is equivalent to show that $\hat{G}(\overline{\mathbb{F}_{\ell}})$ acts transitively on $X(\overline{\mathbb{F}_{\ell}})$. Otherwise $X(\overline{\mathbb{F}_{\ell}})=\sqcup_{i \in I}\hat{G}(\overline{\mathbb{F}_{\ell}}).\phi_i$ is a disjoint union of $\hat{G}(\overline{\mathbb{F}_{\ell}})$-orbits. Note the component $X({\overline{\mathbb{F}_{\ell}}})$ consists only of semisimple $L$-parameters, so each orbit $\hat{G}(\overline{\mathbb{F}_{\ell}}).\phi_i$ is closed. On the other hand, since $Stab_{\hat{G}}(\phi_i)=C_T(n)=C_{\hat{G}}(\phi(W_F))$ is finite, $dim(\hat{G}.\phi_i)=dim(\hat{G})=dim(X)$. So the index set $I$ is finite, and hence a singleton by connectedness of $X$.
+		
+	\end{proof}
+	
+	\begin{lemma}
+		$ker(f) \simeq \underline{C_{\phi}}$ is the constant group scheme of the finite abelian group $C_{\phi}=C_{\hat{G}(\overline{\mathbb{F}_{\ell}})}(\phi(W_F))$.
+	\end{lemma}
+	
+	\begin{proof}
+		This is true because of assumption 3 -- $\ell$ doesn't divide the order of $n$ (in the Weyl group $N_{\hat{G}}(T)/T$), and the following:
+		
+		Fact: Let $H$ be a smooth affine group scheme over some ring $R$, let $\Gamma$ be a finite group whose order is invertible in $R$. Then the fixed point functor $H^{\Gamma}$ is representable and is smooth over $R$.
+		
+		For a proof of the above fact, see Prop 3.4 of Edixhoven's paper "Néron models and tame ramification", or see [DHKM20, Lemma A.1, A.13].
+		
+		In our case, let $H=T, \Gamma=<n>$ the subgroup of the Weyl group $W_{\hat{G}}(T)$ generated by $n$. Hence $ker(f)=C_{T}(n)=H^{\Gamma}$ is smooth over $\overline{\mathbb{Z}_{\ell}}$. Therefore, $ker(f)$ is finite etale over $\overline{\mathbb{Z}_{\ell}}$. Hence $ker(f)$ is a constant group scheme over $\overline{\mathbb{Z}_{\ell}}$, since $\overline{\mathbb{Z}_{\ell}}$ has no non-trivial finite etale cover. 
+		
+		Since $ker(f)$ is constant, we can determine it by computing its $\overline{\mathbb{F}_{\ell}}$-points: $$ker(f)(\overline{\mathbb{F}_{\ell}})=C_{T(\overline{\mathbb{F}_{\ell}})}(n)=C_{C_{\hat{G}(\overline{\mathbb{F}_{\ell}})}(\phi(I_F))}(\phi(Fr))=C_{\hat{G}(\overline{\mathbb{F}_{\ell}})}(\phi(W_F))=C_{\phi}.$$
+		
+		Finally, note by our TRSELP assumption, $C_{\hat{G}(\overline{\mathbb{F}_{\ell}})}(\phi(I_F))$ is (the $\overline{\mathbb{F}_{\ell}}$-points of) a torus. Hence $C_\phi=C_{\hat{G}(\overline{\mathbb{F}_{\ell}})}(\phi(W_F)) \subset C_{\hat{G}(\overline{\mathbb{F}_{\ell}})}(\phi(I_F))$ is abelian, hence finite abelian as we've noticed in the proof of the previous lemma that $C_{\phi}$ is finite (by ellipticity and $Z(\hat{G})$ finite).
+	\end{proof}
+	
+	\section{Corollary: lifting irreducible coherent sheaves on $[X/\hat{G}]$}
+	\begin{corollary}
+		Same assumption as the last section. Any irreducible object in $QCoh([X/\hat{G}]_{\overline{\mathbb{F}_{\ell}}})$ lifts to $QCoh([X/\hat{G}])=QCoh([X/\hat{G}]_{\overline{\mathbb{Z}_{\ell}}})$.
+	\end{corollary}
+	
+	\begin{proof}
+		%Note the centralizer $C_{\hat{G}}(\psi(W_F))$ is commutative by TRSELP assumption (indeed, $C_{\hat{G}}(\psi(W_F)) \subset C_{\hat{G}}(\psi(I_F))$, which is a torus). And $C_{\hat{G}}(\psi(W_F))$ is finite by ellipticity and the assumption that $Z(\hat{G})$ is finite. Hence $C_{\hat{G}}(\psi(W_F))$ is a finite abelian group (more precisely, a finite abelian constant group scheme over $\overline{\mathbb{Z}_{\ell}}$, since generalized reductive group scheme splits over $\overline{\mathbb{Z}_{\ell}}$, cf [dat.pdf, Lemma 3.2]). 
+		
+		Recall $[X/\hat{G}] \simeq [*/\underline{C_\phi}] \times \mu$ with $C_\phi=C_{\hat{G}(\overline{\mathbb{F}_{\ell}})}(\phi(W_F))$ a finite abelian group, and $\mu=\prod_{i=1}^m\mu_{\ell^{k_i}}$. Using the fact that any irreducible $\overline{\mathbb{F}_{\ell}}$-representation of a finite abelian group lifts to $\overline{\mathbb{Z}_{\ell}}$, we see irreducible objects in $QCoh([*/\underline{C_\phi}]_{\overline{\mathbb{F}_{\ell}}})=Rep_{\overline{\mathbb{F}_{\ell}}}(C_\phi)$ are liftable. So the result follows by noticing that $\mu$ doesn't affect liftability of irreducible objects, since the only irreducible object in $QCoh(\mu_{\ell^{k}, \overline{\mathbb{F}_{\ell}}})$ is the $\mathcal{O}(\mu_{\ell^{k}, \overline{\mathbb{F}_{\ell}}})=\overline{\mathbb{F}_{\ell}}[y]/(y^{\ell^k}-1)$-module $\overline{\mathbb{F}_{\ell}}[y]/(y-1) \simeq \overline{\mathbb{F}_{\ell}}$, which clearly lifts to $\overline{\mathbb{Z}_{\ell}}[y]/(y-1) \in QCoh(\mu_{\ell^{k}, \overline{\mathbb{Z}_{\ell}}})$.
+		
+		%More precisely, let $\rho$ be an irreducible object in $$QCoh([X/\hat{G}]_{\overline{\mathbb{F}_{\ell}}}) \simeq QCoh([*/C_{\hat{G}}(\psi(W_F))]_{\overline{\mathbb{F}_{\ell}}} \times \mu_{\overline{\mathbb{F}_{\ell}}}) \simeq Rep_{\overline{\mathbb{F}_{\ell}}}(C_{\hat{G}}(\psi(W_F))) \otimes QCoh(\mu_{\overline{\mathbb{F}_{\ell}}}).$$ Then $\rho$ is of the form $\rho_1 \otimes \rho_2,$ with $\rho_1$ an irreducible objects of $Rep_{\overline{\mathbb{F}_{\ell}}}(C_{\hat{G}}(\psi(W_F)))$, $\rho_2$ an irreducible objects of $QCoh(\mu_{\overline{\mathbb{F}_{\ell}}})$. 
+		
+		%$\rho_1$ is essentially a $\overline{\mathbb{F}_{\ell}}$-representation of the finite abelian group $C_{\hat{G}}(\psi(W_F))$, hence lifts to $\overline{\mathbb{Z}_{\ell}}$ (more precisely, lifts to a \textbf{free} $\overline{\mathbb{Z}_{\ell}}$-module with a $C_{\hat{G}}(\psi(W_F))$-action, viewed as an object in $QCoh([X/\hat{G}]_{\overline{\mathbb{Z}_{\ell}}})$).
+		
+		%$\rho_2$, as an irreducible object of $QCoh(\mu_{\overline{\mathbb{F}_{\ell}}})$, with $\mu$ a product of $\mu_{\ell^{k_i}}$'s, is also liftable (to a free $\overline{\mathbb{Z}_{\ell}}$-module in $QCoh(\mu_{\overline{\mathbb{Z}_{\ell}}})$).
+		
+		%Above all, $\rho=\rho_1 \otimes \rho_2$ is liftable.
+	\end{proof}
+	
+	
+	\section{Example}
+	
+	Assume $\ell \neq 2$. Let $G=PGL_2$, then $\hat{G}=SL_2$ has center $\mu_2 \simeq \mathbb{Z}/2\mathbb{Z}$, which is finite. To get a TRSELP, we can take any TRSELP for $GL_2$ which factors through $SL_2$. For example, let $p=q=11, \ell=5$, let $\phi$ be the $L$-parameter over $\overline{\mathbb{F}_{\ell}}$ such that $$\phi(s_0)=\begin{pmatrix} 
+		\zeta_3 & 0 \\
+		0 & \zeta_3^2 \\
+	\end{pmatrix}, \phi(Fr)=\begin{pmatrix} 
+		0 & -1 \\
+		1 & 0 \\
+	\end{pmatrix},$$
+	where $\zeta_3$ is a $3^{th}$ root of unity in $\overline{\mathbb{F}_{\ell}}$. Note $\phi(Fr)$ and $\phi(s_0)$ satisfy the relation $Frs_0Fr^{-1}=s_0^q$, hence extends to a $L$-parameter $W_F \to \hat{G}(\overline{\mathbb{F}_{\ell}})$ (by Theorem 3.9 of [dat.pdf]), %\blue{
+		which can be made explicit in this example (Exercise)%}
+	. The same expression gives a lift $\psi$ of $\phi$ over $\overline{\mathbb{Z}_{\ell}}$, except this time $\zeta_3$ denotes the corresponding $3^{th}$ root of unity in $\overline{\mathbb{Z}_{\ell}}$.
+	
+	\begin{remark}
+		We can also construct $\phi$ as an induced representation, without appealing to Theorem 3.9 of [dat.pdf]. Choosing a non-trivial character $\chi: \mathbb{Z}/3\mathbb{Z} \to \overline{\mathbb{F}_5}^*.$ Let $$\eta: I_F \to I_F/P_F \simeq \prod_{\ell' \neq 11}\mathbb{Z}_{\ell'} \to \mathbb{Z}_3 \to \mathbb{Z}/3\mathbb{Z} \to \overline{\mathbb{F}_5}^*$$ be the composition, where the last map is $\chi$. Extends $\eta$ from $I_F$ to 
+		$$\tilde{\eta}: W_{F_2}:= (I_F \rtimes <Fr^2>) \to \overline{\mathbb{F}_{\ell}}^*$$ 
+		by letting $\tilde{\eta}(Fr^2):=-1$. Then we can define $\phi:=Ind_{W_{F_2}}^{W_F}\tilde{\eta}.$ Under a suitable basis, the matrices of $\phi(s_0)$ and $\phi(Fr)$ are as above.
+	\end{remark}
+	
+	It's not hard to see 
+	$$C_{\hat{G}}(\phi(I_F))=\{\begin{pmatrix} 
+		t & 0 \\
+		0 & t^{-1} \\
+	\end{pmatrix}| t \in \overline{\mathbb{F}_{\ell}}^*\},
+	C_{\hat{G}}(\phi(W_F))=\{\pm\begin{pmatrix} 
+		1 & 0 \\
+		0 & 1 \\
+	\end{pmatrix}\}.$$
+	Hence $\phi$ is a TRSELP over $\overline{\mathbb{F}_{\ell}}$. And $C_{\hat{G}}(\psi_{\ell})$ is a split torus over $\overline{\mathbb{Z}_{\ell}}$ with $\overline{\mathbb{F}_{\ell}}$-points $C_{\hat{G}}(\phi(I_F))=\{\begin{pmatrix} 
+		t & 0 \\
+		0 & t^{-1} \\
+	\end{pmatrix}| t \in \overline{\mathbb{F}_{\ell}}^*\}$, denote $T=C_{\hat{G}}(\psi_{\ell})$.
+	
+	By our computation before, its connected component $[X/\hat{G}] \simeq (T \times \mu)/T$, with $T$ acts on $T$ via $(s, s^{-1}).(t, t^{-1})=(s^{-2}t, s^2t^{-1})$. Note this action is transitive over $\overline{\mathbb{Z}_{\ell}}$, with stabilizer $\{\pm{diag(1, 1)}\}$. And $T$ acts trivially on $\mu=\mu_{\ell}$. So $(T \times \mu)/T \simeq [*/(\mathbb{Z}/2\mathbb{Z})] \times \mu_{\ell}.$ Then $QCoh([X/\hat{G}]) \simeq Rep(\mathbb{Z}/2\mathbb{Z}) \otimes QCoh(\mu_{\ell})$, whose irreducible objects are clearly liftable from $\overline{\mathbb{F}_{\ell}}$ to $\overline{\mathbb{Z}_{\ell}}$.
+	
+	%\begin{remark}(\red{optional})
+	%Indeed, this time, we can spot the isomorphism on the ring of functions explicitly. We have the following morphism of group schemes
+	%$$Spec\overline{\mathbb{Z}_{\ell}}[s, s^{-1}]=\mathbb{G}_m^{(1)} \to \mathbb{G}_m^{(2)}=Spec\overline{\mathbb{Z}_{\ell}}[t, t^{-1}], s^{-2}=s^{-1}n^{-1}sn \mapsfrom t,$$
+	%with kernel $\mu_2 \subset \mathbb{G}_m^{(1)}$, inducing an isomorphism $$\mathcal{O}(\mathbb{G}_m^{(2)})=\overline{\mathbb{Z}_{\ell}}[t, t^{-1}] \simeq \overline{\mathbb{Z}_{\ell}}[s^2, s^{-2}]=\overline{\mathbb{Z}_{\ell}}[s, s^{-1}]^{S_2}=\mathcal{O}(\mathbb{G}_m^{(1)})^{S_2}=\mathcal{O}(\mathbb{G}_m^{(1)}/\mu_2),$$
+	%where $S_2$ is the symmetric group with two elements, with the non-trivial element acting on $\overline{\mathbb{Z}_{\ell}}[t, t^{-1}]$ by $t \mapsto -t$.
+	%Hence $$T^{(2)}=\mathbb{G}_m^{(2)} \simeq \mathbb{G}_m^{(1)}/\mu_2 \simeq \mathbb{G}_m^{(1)}/(\mathbb{Z}/2\mathbb{Z})=T^{(1)}/(\mathbb{Z}/2\mathbb{Z}).$$
+	%Hence $$T^{(2)}/T \simeq (T^{(1)}/(\mathbb{Z}/2\mathbb{Z}))/T \simeq (T^{(1)}/T)/(\mathbb{Z}/2\mathbb{Z}) \simeq [*/(\mathbb{Z}/2\mathbb{Z})].$$
+	%\end{remark}
+	See \ref{Theorem: X}
+	
+	\footnotesize
+	\begin{thebibliography}{99}
+		\bibitem[Con14]{Con14} B. Conrad, Reductive Group Schemes, 2014.
+		\bibitem[dat.pdf]{dat.pdf} J. F. Dat's unpublished lecture notes at the IHES Langlands program summer school, 2022.
+		\bibitem[DHKM20]{DHKM20} J.-F. Dat, D. Helm, R. Kurinczuk, G. Moss, Moduli space of Langlands parameters, 2020.
+		\bibitem[DR09]{DR09} S. DeBacker \& M. Reeder, Depth-zero supercuspidal L-packets and their stability, 2009.
+		\bibitem[Edixhoven]{Edixhoven} B. Edixhoven, Néron models and tame ramification, 1992.
+		\bibitem[FS]{FS} L. Fargues, P. Scholze, Geometrization of the local Langlands correspondence, preprint,
+		arXiv:2102.13459 [math.RT].
+		\bibitem[Kal19]{Kal19} T. Kaletha, Supercuspidal $L$-packets, 2019.
+		
+		\bibitem[Vig97]{Vig97} M.-F. Vigneras, A propos d'une conjecture de Langlands modulaire, 1997.
+		
+		
+		
+		
+		
+		
+		%M.Demazure, A.Grothendieck, Schemas en groupes I, II, III, Lecture Notes in Math 151, 152, 153, Springer-Verlag, New York (1970).
+	\end{thebibliography}
+	
+	
+	
+\end{document}

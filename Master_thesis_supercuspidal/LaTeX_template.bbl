@@ -1,5 +1,11 @@
 \begin{thebibliography}{DHKM20}
 
+\bibitem[ABS22]{aizenbud2022strong}
+Avraham Aizenbud, Joseph Bernstein, and Eitan Sayag.
+\newblock Strong density of spherical characters attached to unipotent
+  subgroups.
+\newblock {\em arXiv preprint arXiv:2202.04984}, 2022.
+
 \bibitem[BCO14]{brochard2014autour}
 Sylvain Brochard, Brian Conrad, and Joseph Oesterl{\'e}.
 \newblock {\em Autour des sch{\'e}mas en groupes. {\'E}cole d'{\'E}t{\'e}
@@ -102,12 +108,6 @@ Laurent Fargues and Peter Scholze.
 \newblock Geometrization of the local {L}anglands correspondence.
 \newblock {\em arXiv preprint arXiv:2102.13459}, 2021.
 
-\bibitem[Hel16]{helm2016whittaker}
-David Helm.
-\newblock Whittaker models and the integral {Bernstein} center for
-  {{\(\mathrm{GL}_n\)}}.
-\newblock {\em Duke Math. J.}, 165(9):1597--1628, 2016.
-
 \bibitem[HM18]{helm2018converse}
 David Helm and Gilbert Moss.
 \newblock Converse theorems and the local {Langlands} correspondence in
@@ -126,13 +126,6 @@ The Stacks Project~Authors.
 \newblock Stacks project.
 \newblock url:
   \url{https://webusers.imj-prg.fr/~jean-francois.dat/recherche/publis/ihes.pdf}.
-
-\bibitem[Vak17]{vakil2017rising}
-Ravi Vakil.
-\newblock The rising sea: Foundations of algebraic geometry.
-\newblock {\em preprint}, 2017.
-\newblock url:
-  \url{https://math.stanford.edu/~vakil/216blog/FOAGnov1817public.pdf}.
 
 \bibitem[Vig96]{vigneras1996representations}
 Marie-France Vign{\'e}ras.

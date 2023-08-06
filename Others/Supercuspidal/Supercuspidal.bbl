@@ -1,11 +1,4 @@
-\begin{thebibliography}{DHKM20}
-
-\bibitem[BCO14]{brochard2014autour}
-Sylvain Brochard, Brian Conrad, and Joseph Oesterl{\'e}.
-\newblock {\em Autour des sch{\'e}mas en groupes. {\'E}cole d'{\'E}t{\'e}
-  ``{Sch{\'e}mas} en groupes''. {Volume} {I}}, volume 42-43 of {\em Panor.
-  Synth.}
-\newblock Paris: Soci{\'e}t{\'e} Math{\'e}matique de France (SMF), 2014.
+\begin{thebibliography}{Rab03}
 
 \bibitem[Ber92]{bernsteindraft}
 Joseph Bernstein.
@@ -14,17 +7,6 @@ Joseph Bernstein.
 \newblock 1992.
 \newblock url:
   \url{http://www.math.tau.ac.il/~bernstei/Unpublished_texts/unpublished_texts/Bernstein93new-harv.lect.from-chic.pdf}.
-
-\bibitem[BH03]{bushnell2003generalized}
-Colin~J. Bushnell and Guy Henniart.
-\newblock Generalized {W}hittaker models and the bernstein center.
-\newblock {\em American journal of mathematics}, 125(3):513--547, 2003.
-
-\bibitem[BH06]{bushnell2006local}
-Colin~J. Bushnell and Guy Henniart.
-\newblock {\em The local {Langlands} conjecture for {{\(\text{GL}(2)\)}}.},
-  volume 335 of {\em Grundlehren Math. Wiss.}
-\newblock Berlin: Springer, 2006.
 
 \bibitem[BM89]{michel1989bloc}
 Michel Brou{\'e} and Jean Michel.
@@ -52,29 +34,10 @@ Roger~W. Carter.
   {Publication}. {Chichester}-{New} {York} etc.: {John} {Wiley} and {Sons}.
   {XII}, 544 p. {{\textsterling}} 42.50 (1985)., 1985.
 
-\bibitem[Con14]{conrad2014reductive}
-Brian Conrad.
-\newblock Reductive group schemes.
-\newblock In {\em Autour des sch\'emas en groupes. \'Ecole d'\'Et\'e
-  ``Sch\'emas en groupes''. Volume I}, pages 93--444. Paris: Soci{\'e}t{\'e}
-  Math{\'e}matique de France (SMF), 2014.
-
 \bibitem[Dat09]{dat2009finitude}
 Jean-Fran{\c{c}}ois Dat.
 \newblock Finiteness of smooth representations of {{\(p\)}}-adic groups.
 \newblock {\em J. Inst. Math. Jussieu}, 8(2):261--333, 2009.
-
-\bibitem[Dat22]{dat2022ihes}
-Jean-Fran{\c{c}}ois Dat.
-\newblock Moduli spaces of local {L}anglands parameters.
-\newblock 2022.
-\newblock url:
-  \url{https://webusers.imj-prg.fr/~jean-francois.dat/recherche/publis/ihes.pdf}.
-
-\bibitem[DHKM20]{dhkm2020moduli}
-Jean-Fran{\c{c}}ois Dat, David Helm, Robert Kurinczuk, and Gilbert Moss.
-\newblock Moduli of {L}anglands parameters.
-\newblock {\em arXiv preprint arXiv:2009.06708}, 2020.
 
 \bibitem[DL76]{deligne1976representations}
 Pierre Deligne and G.~Lusztig.
@@ -87,45 +50,12 @@ Fran{\c{c}}ois Digne and Jean Michel.
   {\em Lond. Math. Soc. Stud. Texts}.
 \newblock Cambridge: Cambridge University Press, 2nd edition edition, 2020.
 
-\bibitem[DR09]{debacker2009depth}
-Stephen DeBacker and Mark Reeder.
-\newblock Depth-zero supercuspidal {{\(L\)}}-packets and their stability.
-\newblock {\em Ann. Math. (2)}, 169(3):795--901, 2009.
-
-\bibitem[Edi92]{edixhoven1992neron}
-Bas Edixhoven.
-\newblock N{\'e}ron models and tame ramification.
-\newblock {\em Compos. Math.}, 81(3):291--306, 1992.
-
-\bibitem[FS21]{fargues2021geometrization}
-Laurent Fargues and Peter Scholze.
-\newblock Geometrization of the local {L}anglands correspondence.
-\newblock {\em arXiv preprint arXiv:2102.13459}, 2021.
-
-\bibitem[Hel16]{helm2016whittaker}
-David Helm.
-\newblock Whittaker models and the integral {Bernstein} center for
-  {{\(\mathrm{GL}_n\)}}.
-\newblock {\em Duke Math. J.}, 165(9):1597--1628, 2016.
-
-\bibitem[HM18]{helm2018converse}
-David Helm and Gilbert Moss.
-\newblock Converse theorems and the local {Langlands} correspondence in
-  families.
-\newblock {\em Invent. Math.}, 214(2):999--1022, 2018.
-
 \bibitem[Rab03]{rabinoff2003bruhat}
 Joseph Rabinoff.
 \newblock The {B}ruhat-{T}its building of a $p$-adic {C}hevalley group and an
   application to representation theory, 2003.
 \newblock url:
   \url{https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=20a8858ebcb1f2c6c424f9699d241bfa1216302f}.
-
-\bibitem[SP]{stacks-project}
-The Stacks Project~Authors.
-\newblock Stacks project.
-\newblock url:
-  \url{https://webusers.imj-prg.fr/~jean-francois.dat/recherche/publis/ihes.pdf}.
 
 \bibitem[Vak17]{vakil2017rising}
 Ravi Vakil.
@@ -139,10 +69,5 @@ Marie-France Vign{\'e}ras.
 \newblock {\em {{\(l\)}}-modular representations of a {{\(p\)}}-adic reductive
   group with {{\(l \neq p\)}}.}, volume 137 of {\em Prog. Math.}
 \newblock Boston, MA: Birkh{\"a}user, 1996.
-
-\bibitem[Zou22]{zou2022categorical}
-Konrad Zou.
-\newblock The categorical form of {F}argues' conjecture for tori.
-\newblock {\em arXiv preprint arXiv:2202.13238}, 2022.
 
 \end{thebibliography}

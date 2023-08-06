@@ -35,10 +35,11 @@ The computation follows the theory of moduli space of Langlands parameters devel
 To compute the component $[X_{\varphi}/\hat{G}]$ over $\overline{\mathbb{Z}_{\ell}}$, let us fix a lift $\psi \in Z^1(W_F, \hat{G}(\overline{\mathbb{Z}_{\ell}}))$ of $\varphi \in Z^1(W_F, \hat{G}(\overline{\mathbb{F}_{\ell}}))$.
 
 Recall by \cite[Subsection 4.6]{dat2022ihes},
-$$X_{\varphi}=X_{\psi} \simeq \left(\hat{G} \times Z^1(W_F, N_{\hat{G}}(\psi_{\ell}))_{\psi_{\ell}, \overline{\psi}}\right)/C_{\hat{G}}(\psi_{\ell})_{\overline{\psi}},$$
+$$X_{\varphi}=X_{\psi} \cong \left(\hat{G} \times Z^1(W_F, N_{\hat{G}}(\psi_{\ell}))_{\psi_{\ell}, \overline{\psi}}\right)/C_{\hat{G}}(\psi_{\ell})_{\overline{\psi}},$$
 where $Z^1(W_F, N_{\hat{G}}(\psi_{\ell}))_{\psi_{\ell}, \overline{\psi}}$  denotes the space of cocycles whose restriction to $I_F^{\ell}$ equals $\psi_{\ell}$ and whose image in $Z^1(W_F, \pi_0(N_{\hat{G}}(\psi_{\ell})))$ is $\overline{\psi}$. 
 
-Here, $Z^1(W_F, N_{\hat{G}}(\psi_{\ell}))_{\psi_{\ell}, \overline{\psi}}$ is essentially the space of cocycles of the torus $T:=N_{\hat{G}}(\psi_{\ell})^0=C_{\hat{G}}(\psi_{\ell})$ by our TRSELP assumption (See Definition \ref{Def TRSELP}) and that $C_{\hat{G}}(\psi_{\ell})$ is generalized reductive, hence split over $\overline{\mathbb{Z}_{\ell}}$ (See Lemma \ref{Lem gen red}). Since it's not hard to compute the space of tame cocycles of a commutative group scheme using the explicit presentation of the tame Weil group (See \ref{Equation presentation of the tame Weil group} and \ref{Equation space of tame cocycle}), we obtain that 
+Here, $Z^1(W_F, N_{\hat{G}}(\psi_{\ell}))_{\psi_{\ell}, \overline{\psi}}$ is essentially the space of cocycles of the torus $$T:=N_{\hat{G}}(\psi_{\ell})^0=C_{\hat{G}}(\psi_{\ell})$$
+by our TRSELP assumption (See Definition \ref{Def TRSELP}) and that $C_{\hat{G}}(\psi_{\ell})$ is generalized reductive, hence split over $\overline{\mathbb{Z}_{\ell}}$ (See Lemma \ref{Lem gen red}). Since it's not hard to compute the space of tame cocycles of a commutative group scheme using the explicit presentation of the tame Weil group (See \ref{Equation presentation of the tame Weil group} and \ref{Equation space of tame cocycle}), we obtain that 
 $$Z^1(W_F, N_{\hat{G}}(\psi_{\ell}))_{\psi_{\ell}, \overline{\psi}} \cong T \times \mu,$$
 where $\mu$ is a product of $\mu_{\ell^{k_i}}$'s (See Theorem \ref{Thm X} for details).
 And it is not hard to see 
@@ -57,14 +58,14 @@ In this section, we explain Chapter \ref{Chapter Rep} on how to compute $\Rep_{\
 
 Recall that a depth-zero regular supercuspidal representation is of the form
 $$\pi=\cInd_{G_x}^{G(F)}\rho$$
-for some representation $\rho$ of the parahoric subgroup $G_x$ corresponding to a vertex $x$ in the Bruhat-Tits building of $G$ over $F$. Moreover, $\rho$ is the inflation of some regular cuspidal representation $\overline{\rho}$ of the finite group of Lie type $\overline{G_x}:=G_x/G_x^+$.
+for some representation $\rho$ of the parahoric subgroup $G_x$ corresponding to a vertex $x$ in the Bruhat-Tits building of $G$ over $F$. Moreover, $\rho$ is the inflation of some regular supercuspidal representation $\overline{\rho}$ of the finite group of Lie type $\overline{G_x}:=G_x/G_x^+$.
 
 Let $\mathcal{A}_{x,1}$ denote the block $\Rep_{\Lambda}(\overline{G_x})_{[\overline{\rho}]}$ of $\Rep_{\Lambda}(\overline{G_x})$ containing $\overline{\rho}$. Similarly, let 
 $$\mathcal{B}_{x,1}:=\Rep_{\Lambda}(G_x)_{[\rho]},\qquad \mathcal{C}_{x,1}:=\Rep_{\Lambda}(G(F))_{[\pi]}.$$
 
-$\mathcal{A}_{x,1}$ admits an explicit description as being equivalent to a block of a finite torus via Broué's equivalence \ref{Thm Broué}. And it is not hard to show that the inflation induces an equivalence of categories $\mathcal{A}_{x,1} \cong \mathcal{B}_{x,1}$.
+Assume that the residue field of $F$ is $\mathbb{F}_q$. For simplicity, we assume that $q$ is greater than the Coxeter number of $G$ (See Theorem \ref{Thm Broué} for reason). Then $\mathcal{A}_{x,1}$ admits an explicit description as being equivalent to a block of a finite torus via Broué's equivalence \ref{Thm Broué}. And it is not hard to show that the inflation induces an equivalence of categories $\mathcal{A}_{x,1} \cong \mathcal{B}_{x,1}$.
 
-The main theorem we proved for the representation side is Theorem \ref{Thm Main}: the compact induction induces an equivalence of categories
+The main theorem we will prove for the representation side is Theorem \ref{Thm Main}: Assume $q$ is greater than the Coxeter number of $\overline{G_x}$. Then the compact induction induces an equivalence of categories
 $$\cInd_{G_x}^{G(F)}: \mathcal{B}_{x,1} \to \mathcal{C}_{x,1}.$$
 Once this is proven, then $\mathcal{C}_{x,1} \cong \mathcal{A}_{x,1}$, hence admits an explicit description. The proof of the Theorem \ref{Thm Main} occupies the most of Chapter \ref{Chapter Rep}. 
 
@@ -76,11 +77,15 @@ The fully faithfulness of
 $$\cInd_{G_x}^{G(F)}: \mathcal{B}_{x,1} \to \mathcal{C}_{x,1}$$
 is a usual computation by Frobenius reciprocity and Mackey's formula. Since a similar computation will be used later, we record it as a Theorem \ref{Thm Hom}. The key point is that 
 $$\Hom_G(\cInd_{G_x}^{G(F)}\rho_1, \cInd_{G_y}^{G(F)}\rho_2)$$
-could be computed explicitly assuming one of $\rho_1, \rho_2$ has cuspidal reduction. 
+could be computed explicitly assuming one of $\rho_1, \rho_2$ has cuspidal reduction (i.e. $\overline{\rho_1}$ or $\overline{\rho_2}$ is cuspidal, see Definition \ref{Def Cuspidal}). 
 
 There is a little subtlety that we want not only $\rho$ to have cuspidal reduction, but also any representation $\rho' \in \mathcal{B}_{x,1}$ to have cuspidal reduction. This is the content of Theorem \ref{Thm Cusp Red}. And this is why we need the \textbf{regular} supercuspidal assumption. To prove Theorem \ref{Thm Cusp Red}, we make a digression on regular cuspidal blocks of finite groups of Lie type in Section \ref{Sec Reg Cusp}. As the \textbf{regular} assumption is impulsed here on purpose to make the result to hold, the readers are welcome to skip Section \ref{Sec Reg Cusp} and accept Theorem \ref{Thm Cusp Red} in a first reading.
 
-The difficulty lies in proving
+\begin{remark}
+	Although supercuspidal representations of $G(F)$ come from \textbf{supercuspidal} representation $\overline{\rho}$ of the finite group of Lie type $\overline{G_x}$, only the \textbf{cuspidality} of $\overline{\rho}$ is relevant in our proof of Theorem \ref{Thm Hom}. That's why we analyze cuspidality instead of supercuspidality in detail for finite group of Lie types in Chapter \ref{Chapter Rep}.
+\end{remark}
+
+The difficulty for proving Theorem \ref{Thm Main} lies in proving
 $$\cInd_{G_x}^{G(F)}: \mathcal{B}_{x,1} \to \mathcal{C}_{x,1}$$
 is essentially surjective. For this, we prove that an explicit compact induction $$\Pi_{x,1}:=\cInd_{G_x}^{G(F)}\sigma_{x,1}$$ 
 is a projective generator of $\mathcal{C}_{x,1}$. 
@@ -100,10 +105,16 @@ The above two keys allow us to conclude that $\Pi_{x,1}$ is a projective generat
 
 \section{The example of $GL_n$}
 
-To illustrate the theory, we do the example of $GL_n$ in Chapter \ref{Chapter GL_n}. It is quite concise once we have the theories developed in Chapter \ref{Chapter MoLP} and \ref{Chapter Rep}, so let us don't say anything more here. However, the readers are encouraged to do the example of $GL_2$ throughout the paper, which will definitely help to understand the theory. Actually, the author always do the example of $GL_2$ first, and then figure out the theory for general group $G$.
+To illustrate the theory, we do the example of $GL_n$ in Chapter \ref{Chapter GL_n} (Although $GL_n$ is not simply connected, the theory still works without much change). It is quite concise once we have the theories developed in Chapter \ref{Chapter MoLP} and \ref{Chapter Rep}, so let us don't say anything more here. However, the readers are encouraged to do the example of $GL_2$ throughout the paper, which will definitely help to understand the theories in Chapter \ref{Chapter MoLP} and \ref{Chapter Rep}. Actually, the author always do the example of $GL_2$ first, and then figure out the theory for general groups.
 
 \section{The categorical local Langlands conjecture for $GL_n$}
 
-As an application, we could deduce the categorical local Langlands conjecture for depth-zero supercuspidal blocks of $GL_n$ (notice supercuspidal implies regular supercuspidal automatically in the $GL_n$ case) in Chapter \ref{Chapter CLLC}.
+As an application, we could deduce the categorical local Langlands conjecture in Fargues-Scholze's form (See \cite[Conjecture X.3.5]{fargues2021geometrization}) for depth-zero supercuspidal blocks of $GL_n$ (notice supercuspidal implies regular supercuspidal automatically in the $GL_n$ case) in Chapter \ref{Chapter CLLC}. 
+
+The idea is that we could unravel both sides of the categorical conjecture explicitly using our computation in Chapter \ref{Chapter GL_n}. They both turn out to be
+$$\bigoplus_{\mathbb{Z}}\Perf(\mathbb{G}_m \times \mu).$$ 
+We have to show that the spectral action gives an equivalence. This reduces to the degree-zero part (of the $\mathbb{Z}$-grading) by compatibility of the spectral action with the $\mathbb{Z}$-grading (See \ref{Prop Spectral action}). And the degree-zero part reduces to the theory of local Langlands in families (See \cite{helm2018converse}). Fortunately, several technical results we need to do the reductions are already available by \cite{zou2022categorical}.
 
 \section{Acknowledgements}
+
+It is a pleasure to thank my advisor Peter Scholze for giving me this topic and for sharing ideas related to it. Next, I would like to thank my parents for their supporting. I thank Johannes Anschütz, Jean-François Dat, Olivier Dudas, Jessica Fintzen, Linus Hamann, Eugen Hellmann, David Helm, Alexander Ivanov, Tasho Kaletha, David Schwein, Vincent Sécherre, Maarten Solleveld, and Marie-France Vignéras for some nice conversations related to this work. I thank Anne-Marie Aubert for some helpful discussions and for pointing out some errors. Special thanks go to Jiaxi Mo, Xier Ren, Mingjia Zhang, Pengcheng Zhang, Xiaoxiang Zhou and Konrad Zou for their consistent interest in this work as well as emotional support.

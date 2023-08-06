@@ -1,0 +1,684 @@
+
+		
+		\chapter{Depth-zero regular supercuspidal blocks} \label{Chapter Rep}
+		
+		The goal of this chapter is to describe the block $\Rep_{\overline{\mathbb{Z}_{\ell}}}(G(F))_{[\pi]}$ (denoted $\mathcal{C}_{x,1}$ later) of $\Rep_{\overline{\mathbb{Z}_{\ell}}}(G(F))$ containing a  depth-zero regular supercuspidal representation $\pi$.
+		
+		Recall that a depth-zero regular supercuspidal representation $\pi$ is of the form
+		$$\pi=\cInd_{G_x}^{G(F)}\rho,$$
+		where $\rho$ is a representation of $G_x$ whose reduction $\overline{\rho}$ to the finite reductive group
+		$\overline{G_x}=G_x/G_x^+$ is supercuspidal.
+		
+		In the end, assuming that $G$ is simply connected, the block $\Rep_{\overline{\mathbb{Z}_{\ell}}}(G(F))_{[\pi]}$ would be equivalent to the block $\Rep_{\overline{\mathbb{Z}_{\ell}}}(\overline{G_x})_{[\overline{\rho}]}$ (denoted $\mathcal{A}_{x,1}$ later) of $\Rep_{\overline{\mathbb{Z}_{\ell}}}(\overline{G_x})$ containing $\overline{\rho}$. And $\mathcal{A}_{x,1}$ has an explicit description via the Broué equivalence \ref{Thm Broué}.
+		
+		Indeed, let $\Rep_{\overline{\mathbb{Z}_{\ell}}}(G_x)_{[\rho]}$ (denoted $\mathcal{B}_{x,1}$ later) be the block of $\Rep_{\overline{\mathbb{Z}_{\ell}}}(G_x)$ containing $\rho$. It is not hard to see that the inflation along $G_x \to \overline{G_x}$ induces an equivalence of categories 
+		$\mathcal{A}_{x,1} \cong \mathcal{B}_{x,1}$. The main theorem we prove in this chapter is that the compact induction induces an equivalence of categories
+		$$\cInd_{G_x}^{G(F)}: \mathcal{B}_{x,1} \cong \mathcal{C}_{x,1}.$$
+		The proof of this main theorem \ref{Thm Main} would occupy most of this chapter, from Section \ref{Section cInd} to \ref{Section projective generator}. The proof relies on three theorems. In Section \ref{Section cInd}, we prove the main theorem modulo the three theorems. And the proofs of the three theorems are given in Sections \ref{Sec Reg Cusp}, \ref{Sec Pf Thm Hom}, \ref{Section projective generator}, respectively.
+		
+		
+		\section{The compact induction induces an equivalence}\label{Section cInd}
+		In this section, we prove the Main Theorem \ref{Thm Main} modulo Theorem \ref{Thm SC Red} \ref{Thm Hom} \ref{Thm Proj}.
+		
+		Let $G$ be a split reductive group scheme over $\mathbb{Z}$, which is simply connected. Let $F$ be a non-archimedean local field, with ring of integers $\mathcal{O}_F$ and residue field $k_F \cong \mathbb{F}_q$ of characteristic $p$. For simplicity, we assume that $q$ is greater than the Coxeter number of $G$ (See Theorem \ref{Thm Broué} for reason).
+		
+		Let $x$ be a vertex of the Bruhat-Tits building $\mathcal{B}(G, F)$. Let $G_x$ be the parahoric subgroup associated to $x$, and $G_x^+$ be its pro-unipotent radical. Recall that $\overline{G_x}:=G_x/G_x^+$ is a generalized Levi subgroup of $G(k_F)$ with root system $\Phi_x$, see \cite[Theorem 3.17]{rabinoff2003bruhat}. 
+		
+		Let $\Lambda=\overline{\mathbb{Z}_\ell}$, with $\ell \neq p$. Let $\rho \in \Rep_{\Lambda}(G_x)$ be an irreducible representation of $G_x$, which is trivial on $G_x^+$ and whose reduction to the finite group of Lie type $\overline{G_x}=G_x/G_x^+$ is  
+		regular supercuspidal. Here \textbf{regular supercuspidal} (See Definition \ref{Def regular supercuspidal} for precise definition.) means $\rho$ is supercuspidal and lies in a \textbf{regular block} of $\Rep_{\Lambda}(\overline{G_x})$, in the sense of \cite{broue1990isometries}. The reason we want the regularity assumption is that we want to work with a block of $\Rep_{\Lambda}(\overline{G_x})$ which consists purely of supercuspidal representations. See Section \ref{Sec Reg Cusp} for details. We make this a definition for later use.
+		
+		\begin{definition}
+			Let $\rho \in \Rep_{\Lambda}(G_x)$. We say $\rho$ \textbf{has supercuspidal reduction} (resp. \textbf{has regular supercuspidal reduction}), if $\rho$ is trivial on $G_x^+$ and whose reduction to the finite group of Lie type $\overline{G_x}=G_x/G_x^+$ is supercuspidal (resp. regular supercuspidal). Let's denote the reduction of $\rho$ modulo $G_x^+$ by $\overline{\rho} \in \Rep_{\Lambda}(\overline{G_x})$.
+		\end{definition}
+		
+		Let $\mathcal{B}_{x,1}$ be the block of $\Rep_{\Lambda}(G_x)$ containing $\rho$. Let $\mathcal{C}_{x,1}$ be the block of $\Rep_{\Lambda}(G(F))$ containing $\pi:=\cInd_{G_x}^{G(F)}\rho$. Now we can state the main theorem of this chapter.
+		
+		\begin{theorem}[Main Theorem]\label{Thm Main}
+			Let $x$ be a vertex of the Bruhat-Tits building $\mathcal{B}(G, F)$. Let $\rho \in \Rep_{\Lambda}(G_x)$ be a representation which has regular supercuspidal reduction. Let $\mathcal{B}_{x,1}$ be the block of $\Rep_{\Lambda}(G_x)$ containing $\rho$. Let $\mathcal{C}_{x,1}$ be the block of $\Rep_{\Lambda}(G(F))$ containing $\pi:=\cInd_{G_x}^{G(F)}\rho$. Then the compact induction $\cInd_{G_x}^{G(F)}$ induces an equivalence of categories $\mathcal{B}_{x,1} \cong \mathcal{C}_{x,1}$. 
+		\end{theorem}
+		
+		As mentioned before, the reason we want the regular supercuspidal assumption is the following theorem. 
+		
+		\begin{theorem}\label{Thm SC Red}
+			Let $\rho \in \Rep_{\Lambda}(G_x)$ be an irreducible representation of $G_x$, which has regular supercuspidal reduction. Let $\mathcal{B}_{x,1}$ be the block of $\Rep_{\Lambda}(G_x)$ containing $\rho$. Then any $\rho' \in \mathcal{B}_{x,1}$ has supercuspidal reduction.
+		\end{theorem}
+		
+		The proof of the Main Theorem \ref{Thm Main} basically splits into two parts -- fully faithfulness and essentially surjectivity. It is convenient to have the following theorem available at an early stage, which implies fully faithfulness immediately and is also used in the proof of essentially surjectivity.
+		
+		\begin{theorem}\label{Thm Hom}
+			Let $x, y$ be two vertices of the Bruhat-Tits building $\mathcal{B}(G, F)$. Let $\rho_1$ be a representation of the parahoric $G_x$ which is trivial on the pro-unipotent radical $G_x^+$. Let $\rho_2$ be a representation of $G_y$ which is trivial on $G_y^+$. Assume that one of them has supercuspidal reduction. Then exactly one of the following happens:
+			\begin{enumerate}
+				\item If there exists an element $g \in G(F)$ such that $g.x=y$, then
+				$$\Hom_G(\cInd_{G_x}^{G(F)}\rho_1, \cInd_{G_y}^{G(F)}\rho_2)=\Hom_{G_x}(\rho_1, {^g\rho_2}).$$
+				\item If there is no elements $g \in G(F)$ such that $g.x=y$, then
+				$$\Hom_G(\cInd_{G_x}^{G(F)}\rho_1, \cInd_{G_y}^{G(F)}\rho_2)=0.$$
+			\end{enumerate}
+		\end{theorem}
+		
+		The proof of the above theorem is basically a computation using Mackey's formula. See Section \ref{Sec Pf Thm Hom}.
+		
+		\begin{proof}[Proof of Theorem \ref{Thm Main}]
+			
+			Now we proceed by steps towards our goal: The compact induction $\cInd_{G_x}^{G(F)}$ induces an equivalence of categories $\mathcal{B}_{x,1} \cong \mathcal{C}_{x,1}$. 
+			
+			First, we show that $\cInd_{G_x}^{G(F)}: \mathcal{B}_{x,1} \to \mathcal{C}_{x,1}$ is well-defined. We need to show that the image of $\mathcal{B}_{x,1}$ under $\cInd_{G_x}^{G(F)}$ lies in $\mathcal{C}_{x,1}$. By Theorem \ref{Thm SC Red} and Theorem \ref{Thm Hom} above, $$\cInd_{G_x}^{G(F)}|_{\mathcal{B}_{x,1}}: \mathcal{B}_{x,1} \to \Rep_{\Lambda}(G(F))$$
+			is fully faithful (See Lemma \ref{Lem Thm Hom implies fully faithful}, note that here we used Theorem \ref{Thm SC Red} that any representation in $\mathcal{B}_{x,1}$ has supercuspidal reduction, so that we can apply Theorem \ref{Thm Hom}), hence an equivalence onto the essential image. Since $\mathcal{B}_{x,1}$ is indecomposable as an abelian category, so is its essential image (See Lemma \ref{Lem Indec}), hence its essential image is contained in a single block of $\Rep_{\Lambda}(G(F))$. But such a block must be $\mathcal{C}_{x,1}$ since $\cInd_{G_x}^{G(F)}$ maps $\rho$ to $\pi \in \mathcal{C}_{x,1}$. Therefore, $\cInd_{G_x}^{G(F)}: \mathcal{B}_{x,1} \to \mathcal{C}_{x,1}$ is well-defined.
+			
+			Second, we show that $\cInd_{G_x}^{G(F)}: \mathcal{B}_{x,1} \to \mathcal{C}_{x,1}$ is fully faithful. This is already noticed in the proof of ``well-defined" in the last paragraph. Indeed, 
+			$$\Hom_G(\cInd_{G_x}^{G(F)}\rho_1, \cInd_{G_x}^{G(F)}\rho_2)=\Hom_{G_x}(\rho_1, \rho_2)$$
+			by Theorem \ref{Thm SC Red} and Theorem \ref{Thm Hom} (See Lemma \ref{Lem Thm Hom implies fully faithful}.). Therefore, $\cInd_{G_x}^{G(F)}: \mathcal{B}_{x,1} \to \mathcal{C}_{x,1}$ is fully faithful.
+			
+			Finally, we show that $\cInd_{G_x}^{G(F)}: \mathcal{B}_{x,1} \to \mathcal{C}_{x,1}$ is essentially surjective. This will occupy the rest of this section. 
+			
+			The idea is to find a projective generator of $\mathcal{C}_{x,1}$ and show that it is in the essential image. Fix a vertex $x$ of the Bruhat-Tits building $\mathcal{B}(G, F)$ as before. Let $V$ be the set of equivalence classes of vertices of the Bruhat-Tits building $\mathcal{B}(G, F)$ up to $G(F)$-action. For $y \in V$, let $\sigma_y:=\cInd_{G_y^+}^{G_y}\Lambda$. Let $\Pi:=\bigoplus_{y \in V}\Pi_y$ where $\Pi_y:=\cInd_{G_y^+}^{G(F)}\Lambda$. Then $\Pi$ is a projective generator of the category of depth-zero representations $\Rep_{\Lambda}(G(F))_0$, see \cite[Appendix]{dat2009finitude}. Let $\sigma_{x,1}:=(\sigma_x)|_{\mathcal{B}_{x,1}} \in \mathcal{B}_{x,1} \xhookrightarrow{summand} \Rep_{\Lambda}(G_x)$ be the $\mathcal{B}_{x,1}$-summand of $\sigma_x$. And let $\Pi_{x,1}:=\cInd_{G_x}^{G(F)}\sigma_{x,1}$. Note $\Pi_{x,1}$ is a summand of $\Pi_x=\cInd_{G_x}^{G(F)}\sigma_x$, hence a summand of $\Pi$. Using Theorem \ref{Thm Hom}, one can show that the rest of the summands of $\Pi$ don't interfere with $\Pi_{x,1}$ (See Lemma \ref{Lem Ortho} and Lemma \ref{Lem Gen} for precise meaning), hence $\Pi_{x,1}$ is a projective generator of $\mathcal{C}_{x,1}$. Let us state it as a Theorem, see Section \ref{Section projective generator} for details.
+			
+			\begin{theorem}\label{Thm Proj}
+				$\Pi_{x,1}=\cInd_{G_x}^{G(F)}\sigma_{x,1}$ is a projective generator of $\mathcal{C}_{x,1}$.
+			\end{theorem}
+			
+			Now we've found a projective generator $\Pi_{x,1}=\cInd_{G_x}^{G(F)}\sigma_{x,1}$ of $\mathcal{C}_{x,1}$, and it is clear that $\Pi_{x,1}$ is in the essential image of $\cInd_{G_x}^{G(F)}$. We now deduce from this that $\cInd_{G_x}^{G(F)}: \mathcal{B}_{x,1} \to \mathcal{C}_{x,1}$ is essentially surjective. Indeed, for any $\pi' \in \mathcal{C}_{x,1}$, we can resolve $\pi'$ by some copies of $\Pi_{x,1}$:
+			$$\Pi_{x,1}^{\oplus I} \xrightarrow{f} \Pi_{x,1}^{\oplus J} \to \pi' \to 0.$$
+			Using Theorem \ref{Thm Hom} and $\cInd_{G_x}^{G(F)}$ commutes with arbitrary direct sums (See Lemma \ref{Lem Sum}) we see that $f \in \Hom_G(\Pi_{x,1}^{\oplus I}, \Pi_{x,1}^{\oplus J})$ comes from a morphism $g \in \Hom_{G_x}(\sigma_{x,1}^{\oplus I}, \sigma_{x,1}^{\oplus J})$. Using $\cInd_{G_x}^{G(F)}$ is exact we see that $\pi'$ is the image of $\coker(g) \in \mathcal{B}_{x,1}$ under $\cInd_{G_x}^{G(F)}$. Therefore, $\cInd_{G_x}^{G(F)}: \mathcal{B}_{x,1} \to \mathcal{C}_{x,1}$ is essentially surjective.
+			
+		\end{proof}
+		
+		\begin{lemma}\label{Lem Thm Hom implies fully faithful}
+			$\cInd_{G_x}^{G(F)}|_{\mathcal{B}_{x,1}}: \mathcal{B}_{x,1} \to \Rep_{\Lambda}(G(F))$ is fully faithful.
+		\end{lemma}
+		
+		\begin{proof}
+			Let $\rho_1, \rho_2 \in \mathcal{B}_{x,1}$. By the regular supercuspidal assumption and Theorem \ref{Thm SC Red}, $\rho_1, \rho_2$ has supercuspidal reduction. Hence the assumption of Theorem \ref{Thm Hom} is satisfied and we compute using the first case of Theorem \ref{Thm Hom} that
+			$$\Hom_G(\cInd_{G_x}^{G(F)}\rho_1, \cInd_{G_x}^{G(F)}\rho_2) \cong \Hom_{G_x}(\rho_1, \rho_2).$$
+			In other words, $\cInd_{G_x}^{G(F)}|_{\mathcal{B}_{x,1}}: \mathcal{B}_{x,1} \to \Rep_{\Lambda}(G(F))$ is fully faithful.
+		\end{proof}
+		
+		\begin{lemma}\label{Lem Indec}
+			The image of $\mathcal{B}_{x,1}$ under $\cInd_{G_x}^{G(F)}$ is indecomposable as an abelian category.
+		\end{lemma}
+		
+		\begin{proof}
+			The point is that $\cInd_{G_x}^{G(F)}|_{\mathcal{B}_{x,1}}: \mathcal{B}_{x,1} \to \Rep_{\Lambda}(G(F))$ is not only fully faithful, i.e., an equivalence of categories onto the essential image, but also an equivalence of \textbf{abelian} categories onto the essential image. Indeed, it suffices to show that $\cInd_{G_x}^{G(F)}|_{\mathcal{B}_{x,1}}: \mathcal{B}_{x,1} \to \Rep_{\Lambda}(G(F))$ preserves kernels, cokernels, and finite (bi-)products. But this follows from the next Lemma \ref{Lem Sum}.
+			
+			Assume otherwise that the essential image of $\mathcal{B}_{x,1}$ under $\cInd_{G_x}^{G(F)}$ is decomposable, then so is $\mathcal{B}_{x,1}$. But $\mathcal{B}_{x,1}$ is a block, hence indecomposable, contradiction!
+		\end{proof}
+		
+		\begin{lemma}\label{Lem Sum}
+			$\cInd_{G_x}^{G(F)}$ is exact and commutes with arbitrary direct sums.
+		\end{lemma}
+		
+		\begin{proof}
+			For the statement that $\cInd_{G_x}^{G(F)}$ is exact, we refer to \cite[I.5.10]{vigneras1996representations}.
+			
+			We show that $\cInd_{G_x}^{G(F)}$ commutes with arbitrary direct sums. Indeed, $\cInd_{G_x}^{G(F)}$ is a left adjoint (See \cite[I.5.7]{vigneras1996representations}), hence commutes with arbitrary colimits. In particular, it commutes with arbitrary direct sums.
+		\end{proof}
+		
+		
+		
+		
+		\section{Regular supercuspidal blocks for finite groups of Lie type}\label{Sec Reg Cusp}
+		
+		In this section, we prove Theorem \ref{Thm SC Red}. As mentioned before, we made the \textbf{regular} assumption in order that the conclusion of Theorem \ref{Thm SC Red} -- all representations in such a block have supercuspidal reduction -- is true. So the readers are welcome to skip this section for a first reading and pretend that we begin with a block in which all representations have supercuspidal reduction.
+		
+		The main body of this section is to define regular supercuspidal blocks with $\Lambda=\overline{\mathbb{Z}_{\ell}}$-coefficients of a finite group of Lie type, and to show that a regular supercuspidal block consists purely of supercuspidal representations.
+		
+		Let $\Lambda:=\overline{\mathbb{Z}_{\ell}}$ be the coefficients of representations. Fix a prime number $p$. Let $\ell$ be a prime number different from $p$. Let $q$ be a power of $p$.
+		
+		\begin{definition}[{\cite[I.4.1]{vigneras1996representations}}]
+			\begin{enumerate}Let $\Lambda'$ be any ring.
+				\item Let $H$ be a profinite group, a \textbf{representation of $H$ with $\Lambda'$-coefficients} $(\pi, V)$ is a $\Lambda'$-module $V$, together with a $H$-action $\pi: H \to GL_{\Lambda'}(V)$.
+				\item A representation of $H$ with $\Lambda'$-coefficients is called \textbf{smooth} if for any $v \in V$, the stabilizer $Stab_H(v) \subseteq H$ is open.
+			\end{enumerate}
+		\end{definition}
+		
+		From now on, all representations are assumed to be smooth. The category of smooth representations of $H$ with $\Lambda'$-coefficients is denoted by $\Rep_{\Lambda'}(H)$.
+		
+		\subsection{Regular blocks}
+		
+		\textbf{The following notations are used in this subsection only.} Let $\mathcal{G}$ be a split reductive group scheme over $\mathbb{Z}$. Let $\mathbb{G}:=\mathcal{G}(\overline{\mathbb{F}_q})$, $G:=\mathbb{G}^F=\mathcal{G}(\mathbb{F}_q)$, where $F$ is the Frobenius. By abuse of notation, we sometimes identify the group scheme $\mathcal{G}_{\overline{\mathbb{F}_q}}$ with its $\overline{\mathbb{F}_q}$-points $\mathbb{G}$. Let $\mathbb{G}^*$ be the dual group (over $\overline{\mathbb{F}_q}$) of $\mathbb{G}$, and $F^*$ the dual Frobenius (See \cite[Section 4.2]{carter1985finite}). Fix an isomorphism $\overline{\mathbb{Q}_{\ell}} \cong \mathbb{C}$. 
+		
+		The definition of regular supercuspidal blocks and regular supercuspidal representations of a finite group of Lie type $\Gamma$ involves modular Deligne-Lusztig theory and block theory. We refer to \cite{deligne1976representations}, \cite{carter1985finite}, and \cite{digne2020representations} for Deligne-Lusztig theory, \cite{michel1989bloc} and \cite{broue1990isometries} for modular Deligne-Lusztig theory, and \cite[Appendix B]{bonnafe2010representations} for generalities on blocks. 
+		
+		First, let us recall a result in Deligne-Lusztig theory (See \cite[Proposition 11.1.5]{digne2020representations}). 
+		
+		\begin{proposition}\label{Prop dual torus}
+			The set of $\mathbb{G}^F$-conjugacy classes of pairs $(\mathbb{T}, \theta)$, where  $\mathbb{T}$ is a $F$-stable maximal torus of  $\mathbb{G}$ and $\theta \in \widehat{\mathbb{T}^F}$, is in non-canonical bijection to the set of $\mathbb{G^*}^{F^*}$-conjugacy classes of pairs $(\mathbb{T}^*, s)$, where $s$ is a semisimple element of $\mathbb{G}^*$ and $\mathbb{T}^*$ is a $F^*$-stable maximal torus of $\mathbb{G}^*$ such that $s \in {\mathbb{T}^*}^{F^*}$.  Moreover, we could and will fix a compatible system of isomorphisms $\mathbb{F}_{q^n}^* \cong \mathbb{Z}/(q^n-1)\mathbb{Z}$ to pin down this bijection.
+		\end{proposition}
+		
+		Now let $s$ be a \textbf{strongly regular semisimple} 
+		%(\textcolor{red}{Is this the standard terminology?}) 
+		element of $G^*={\mathbb{G}^*}^{F^*}$ (note that we require $s$ to be fixed by $F^*$ here), i.e., the centralizer $C_{\mathbb{G}^*}(s)$ is a $F^*$-stable maximal torus, denoted $\mathbb{T}^*$. Let $\mathbb{T}$ be the dual torus of $\mathbb{T}^*$. Let $T=\mathbb{T}^F$ and $T^*={\mathbb{T}^*}^{F^*}$. Let $T_\ell$ denote the $\ell$-part of $T$.
+		
+		Recall for $s$ strongly regular semisimple, the (rational) Lusztig series $\mathcal{E}(G, (s))$ consists of only one element, namely, $\pm R_T^G(\hat{s})$, where $\hat{s}=\theta$ is such that $(\mathbb{T}, \theta)$ corresponds to $(\mathbb{T}^*, s)$ via the previous bijection in Proposition \ref{Prop dual torus}. Here and after the sign $\pm$ is taken such that it is an honest representation (See \cite[Section 7.5]{carter1985finite}).
+		%	(This follows from, for example, Broué's equivalence. See Theorem \ref{Thm Broué} below.
+		%	% Better explanation?
+		%	)
+		
+		\textbf{From now on, we assume moreover that $s \in {\mathbb{G}^*}^{F^*}$ has order prime to $\ell$.} In other words, we assume that $s \in G^*={\mathbb{G}^*}^{F^*}$ is a \textbf{strongly regular semisimple $\ell'$-element}. We are going to define regular blocks, we refer to \cite[Appendix B]{bonnafe2010representations} for generalities on blocks.
+		
+		Define the \textbf{$\ell$-Lusztig series} 
+		$$\mathcal{E}_\ell(G, (s)):=\{\pm R_T^G(\hat{s}\eta)\;|\; \eta \in \widehat{T_\ell}\}.$$ Note the notation $\mathcal{E}_\ell(T, (s))$ also makes sense by putting $G=T$.
+		
+		By \cite{michel1989bloc}, $\mathcal{E}_\ell(G, (s))$ is a union of $\ell$-blocks of $\Rep_{\overline{\mathbb{Q}_\ell}}(G)$. Such a block (or more precisely, a union of blocks) is called a \textbf{($\ell$-)regular block}. Let $e_s^G \in \overline{\mathbb{Z}_\ell}G$ denotes the corresponding central idempotent. Note $e_s^T$ also makes sense by putting $G=T$. We shall see later that a regular block is indeed a block, i.e., indecomposible. (This follows from, for example, Broué's equivalence. See Theorem \ref{Thm Broué} below.)
+		
+		\begin{definition}[Regular blocks]\label{Def Regular Block}
+			Let $s \in G^*={\mathbb{G}^*}^{F^*}$ be a strongly regular semisimple $\ell'$-element.
+			We call the block $\overline{\mathbb{Z}_\ell}Ge_s^G$ of the group algebra $\overline{\mathbb{Z}_\ell}G$ corresponding to the central idempotent $e_s^G$ the \textbf{regular block} associated to $s$. Let $\mathcal{A}_s:=\overline{\mathbb{Z}_\ell}Ge_s^G\Modl$ be the corresponding category of modules, this is also referred to as a regular block, by abuse of notation.
+			
+%			Similarly, the block $\overline{\mathbb{F}_\ell}Ge_s^G$ is called a $\overline{\mathbb{F}_{\ell}}$-block. (However, this notion won't be used later.)
+			
+		\end{definition}
+		
+%		\begin{remark}
+%			Above all, ``a block" could have three different meanings: $\ell$-block, $\overline{\mathbb{Z}_{\ell}}$-block, and $\overline{\mathbb{F}_{\ell}}$-block. But they are in one-one correspondence to each other, so we often abuse the notation and simply call it ``a block".
+%		\end{remark}
+		
+		
+		
+%		\begin{remark}
+%			We will see later in Theorem \ref{Theorem Pure Cuspidality} that a regular supercuspidal block consists only of supercuspidal representations. In the end, the above definition is equivalent to requiring the torus $\mathbb{T}^F$ to be elliptic, i.e., not contained in any proper parabolic subgroup of $\mathbb{G}^F$ (See Lemma \ref{Lemma Q_l-bar cuspidal}). This is because $\overline{\mathbb{Z}_{\ell}}$-cuspidality could be checked over $\overline{\mathbb{Q}_{\ell}}$ (See the proof of Theorem \ref{Theorem Pure Cuspidality}).
+%		\end{remark}
+		
+		Thanks to \cite{broue1990isometries}, we understand the category $\mathcal{A}_s=\overline{\mathbb{Z}_\ell}Ge_s^G\Modl$ quite well. Roughly speaking, it is equivalent to the category of representations of a torus, via Deligne-Lusztig induction. This is what we are going to explain now.
+		
+		Let $\mathbb{B} \subseteq \mathbb{G}$ be a Borel subgroup containing our torus $\mathbb{T}$, let $\mathbb{U}$ be the unipotent radical of $\mathbb{B}$. Let $X_{\mathbb{U}}$ be the Deligne-Lusztig variety defined by
+		$$X_{\mathbb{U}}:=\{g \in \mathbb{G} \;|\; g^{-1}F(g) \in \mathbb{U}\}.$$
+		
+		The main result of \cite{broue1990isometries} is the following: The Deligne-Lusztig induction 
+		$$\pm R_T^G: \overline{\mathbb{Z}_\ell}T\Modl \to \overline{\mathbb{Z}_\ell}G\Modl$$ induces an equivalence of categories between the blocks $\overline{\mathbb{Z}_\ell}Te_s^T\Modl$ and $\overline{\mathbb{Z}_\ell}Ge_s^G\Modl$. In particular, one could deduce that the irreducible objects in $\overline{\mathbb{F}_\ell}Ge_s^G\Modl$ lifts to $\overline{\mathbb{Z}_\ell}$. More precisely, let us state it as the following theorem.
+		
+		\begin{theorem}[Broué's equivalence, {\cite[Theorem 3.3]{broue1990isometries}}]\label{Thm Broué}
+			With the previous assumptions and notations, assume that $X_{\mathbb{U}}$ is affine of dimension $d$ (which is the case if $q$ is greater than the Coxeter number of $\mathbb{G}$.). Then the cohomology complex $R\Gamma_c(X_{\mathbb{U}}, \overline{\mathbb{Z}_\ell})=R\Gamma_c(X_{\mathbb{U}}, {\mathbb{Z}_\ell}) \otimes_{\mathbb{Z}_\ell}$$\overline{\mathbb{Z}_\ell}$ is concentrated in degree $d=dimX_{\mathbb{U}}$. And the $(\overline{\mathbb{Z}_\ell}Ge_s^G, \overline{\mathbb{Z}_\ell}Te_s^T)$-bimodule $e_s^GH_c^d(X_{\mathbb{U}}, \overline{\mathbb{Z}_\ell})e_s^T$ induces an equivalence of categories
+			$$e_s^GH_c^d(X_{\mathbb{U}}, \overline{\mathbb{Z}_\ell})e_s^T \otimes_{\overline{\mathbb{Z}_\ell}Te_s^T}-: \overline{\mathbb{Z}_\ell}Te_s^T\Modl \to \overline{\mathbb{Z}_\ell}Ge_s^G\Modl.$$
+		\end{theorem}
+		
+		\textbf{From now on, we assume that the above theorem holds for all finite groups of Lie type we encountered in this paper.} we hope this is not a severe restriction. This is the case at least when $q$ is greater than the Coxeter number of $\mathbb{G}$.
+		
+		Note also that the category $\overline{\mathbb{Z}_\ell}Te_s^T\Modl$ is equivalent to the category $\overline{\mathbb{Z}_\ell}T_{\ell}\Modl$, where $T_{\ell}$ is the order-$\ell$-part of $T$, this is essentially the category of representations of some product of $\mathbb{Z}/\ell^{k_i}\mathbb{Z}$. In particular, it has a unique irreducible representation (simple object), which is already defined over $\overline{\mathbb{F}_{\ell}}$. Let us denote its corresponding character by $\theta_s: T \to \overline{\mathbb{F}_{\ell}}^*$. Accordingly, $\overline{\mathbb{Z}_\ell}Ge_s^G\Modl$ has a unique simple object $\pm R_T^G(\theta_s)$.
+		
+%		We now define regular supercuspidal representations as those representations that occur in some regular cuspidal block. The term ``cuspidal" in the name ``regular cuspidal" shall be justified later by Theorem \ref{Theorem Pure Cuspidality}.
+		
+
+		\subsection{Regular supercuspidal blocks}
+		
+		Let us first recall the definition of supercuspidal representations.
+		
+		\begin{definition}\label{Def supercuspidal}
+			
+			\begin{enumerate}
+				\item An irreducible representation is called \textbf{supercuspidal} if it does not occur as a subquotient of any proper parabolic induction.
+				\item A representation is called \textbf{supercuspidal} if all its irreducible subquotients are supercuspidal.
+			\end{enumerate}
+		\end{definition}
+		
+		Now let us define regular supercuspidal blocks and regular supercuspidal representations.
+		
+		\begin{definition}\label{Definition regular supercuspidal block}
+			%			By a \textbf{regular cuspidal block}, we mean a regular block which contains a cuspidal representation.
+			By a \textbf{regular supercuspidal block}, we mean a regular block $\mathcal{A}_s$ whose unique simple object $\pm R_T^G(\theta_s)$ (See the explanations after Theorem \ref{Thm Broué} for definition) is supercuspidal.
+		\end{definition}
+		
+		\begin{definition}\label{Def regular supercuspidal}\
+			
+			\begin{enumerate}
+				\item An irreducible representation is called \textbf{regular supercuspidal} if it lies in a regular supercuspidal block.
+				\item A representation is called \textbf{regular supercuspidal} if all its irreducible subquotients are regular supercuspidal.
+			\end{enumerate}
+			%			Let $G$ be a finite group of Lie type. Let $\Lambda=\overline{\mathbb{Z}_{\ell}}$. Let $\rho \in \Rep_{\Lambda}(G)$. Then $\rho$ is called \textbf{regular supercuspidal} if each of its irreducible subquotient $\rho_i$ is cuspidal (See Definition \ref{Def Cuspidal}) and lies in a regular supercuspidal $\overline{\mathbb{Z}_{\ell}}$-block $\mathcal{A}_{s_i}$ of $G$.
+		\end{definition}
+		
+        It is clear from the definitions that we have the following proposition.
+		
+		\begin{proposition}\label{Theorem Pure SC}
+			Let $\mathcal{A}_s$ be a regular supercuspidal block. Then any representation in this block is supercuspidal.
+		\end{proposition}
+		
+		\begin{proof}
+			By definition of supercuspidality, it suffices to check that any irreducible representation in this block is supercuspidal. But as we noted before in the explanations after Theorem \ref{Thm Broué}, $\mathcal{A}_s$ has only one irreducible representation -- $\pm R_T^G(\theta_s)$, which we assumed to be supercuspidal in the definition of regular supercuspidal block. So we win!
+		\end{proof}
+		
+		
+		
+		
+		
+%		\subsection{Pure Cuspidality}
+%		
+%		\subsubsection{A digression on cuspidality}
+%		
+%		Before stating the theorem of pure cuspidality, let us define cuspidality for representations with arbitrary coefficients. Let $\Lambda'$ be any ring. For example, $\Lambda'$ can be $\overline{\mathbb{Q}_{\ell}}$, $\overline{\mathbb{Z}_{\ell}}$, or $\overline{\mathbb{F}_{\ell}}$.
+%		
+%		First, we define two functors.
+%		
+%		\begin{definition}[Parabolic induction and restriction] 
+%			Let $G$ be a finite group of Lie type. Let $P$ be a parabolic subgroup and $M$ the corresponding Levi subgroup.
+%			\begin{enumerate}
+%				\item The \textbf{parabolic induction functor} is defined to be the composition 
+%				$$i_M^G:= \Ind_P^G \circ f^*,$$ where 
+%				$$f^*: \Rep_{\Lambda'}(M) \to \Rep_{\Lambda'}(P)$$
+%				is the inflation along the natural projection $f: P \to M$. 
+%				\item The \textbf{parabolic restriction functor} is defined to be the composition 
+%				$$r_M^G:= (-)_U \circ \Res_P^G,$$ where 
+%				$$(-)_U: \Rep_{\Lambda'}(P) \to \Rep_{\Lambda'}(M), V \mapsto V/\left<\{u.v-v | u \in U, v \in V\}\right>_{\Lambda'U\Modl}$$
+%				is the functor of taking coinvariance.
+%			\end{enumerate}
+%		\end{definition}
+		
+%		We recall that $r_M^G$ is left adjoint to $i_M^G$ and they are both exact under our assumption $\ell \neq p$ (See \cite[II.2.1]{vigneras1996representations}).
+%		
+%		\begin{definition}[Cuspidal]\label{Def Cuspidal}
+%			Let $G$ be a finite group of Lie type. Let $\rho \in \Rep_{\Lambda'}(G)$ be a representation of $G$. Then $\rho$ is called \textbf{($\Lambda'$-)cuspidal} if $\rho$ is not a subrepresentation of any proper parabolic induction, i.e., 
+%			$$\Hom_{G}(\rho, i_P^G(\sigma))=0$$ 
+%			for any proper parabolic subgroup $P$ of $G$ and any representation $\sigma \in \Rep_{\Lambda'}(M)$, where $M$ is the Levi subgroup corresponding to $P$.
+%		\end{definition}
+%		
+%		For example, let $s \in G^*$ strongly regular semisimple and $T$ is not contained in any proper parabolic subgroup, then 
+%		$$\pm R_T^G(\hat{s})$$ 
+%		is cuspidal in $\Rep_{\overline{\mathbb{Q}_{\ell}}}(G)$ (See \cite[Theorem 8.3]{deligne1976representations}). 
+		%	Moreover, reduction modulo $\ell$ preserves cuspidality (\textcolor{red}{See ?}), hence each irreducible component of the reduction $$r_{\ell}(R_T^G(\hat{s})):=R\Gamma_c(X_{\mathbb{U}}, \overline{\mathbb{F}_\ell})\otimes \hat{s}$$
+		%	is cuspidal in $\Rep_{\overline{\mathbb{F}_{\ell}}}(G)$. 
+		
+%		we record the following equivalent definition of cuspidality for later use.
+%		
+%		\begin{lemma}\cite[II.2.3]{vigneras1996representations}\label{Lemma Cuspidal}
+%			$\rho \in \Rep_{\Lambda'}(G)$ is cuspidal if and only if $r_M^G\rho=0$, for any proper Levi subgroup $M$ of $G$.
+%		\end{lemma}
+		
+		%	Can cuspidality be checked on irreducible subquotients? Let's define subquotient first.
+		%	
+		%	\begin{definition}[subquotient]
+			%		Let $\pi$ be a representation of $G$, a \textbf{subquotient} of $\pi$ is a representation of the form $\pi_1/\pi_2$ for some chain of subrepresentations $\pi_2 \subseteq \pi_1 \subseteq \pi$.
+			%	\end{definition}
+		
+		%	\begin{question}
+			%		\textcolor{red}{Let $(\pi, V) \in \Rep_{\Lambda}(G(F))$. If all irreducible subquotients of $\pi$ are cuspidal, is $\pi$ cuspidal?}
+			%	\end{question}
+		
+		
+		
+		
+%		\subsubsection{The theorem of pure cuspidality}
+%		
+%		We can now state the theorem of pure cuspidality. 
+%		
+%		As in Broué's paper \cite{broue1990isometries}, we fix a finite integral extension $\mathcal{O}$ of $\mathbb{Z}_{\ell}$, which is big enough. One good thing to work with $\mathcal{O}$ instead of $\overline{\mathbb{Z}_{\ell}}$ is that $\mathcal{O}$ is a discrete valuation ring, while $\overline{\mathbb{Z}_{\ell}}$ is not (even not Noetherian). We assume $\mathcal{O}$ to be big enough (for example, $\mathcal{O}$ contains all roots of unity we encounter) so that all things we need to do representation theory are available without change.
+%		
+%		\begin{theorem}[Pure Cuspidality]\label{Theorem Pure Cuspidality}
+%			Let $G$ be a finite group of Lie type. Let $s \in G^*=\mathbb{G^*}^{F^*}$ be a strongly regular semisimple $\ell'$-element, with corresponding torus $T=\mathbb{T}^F$ and character $\hat{s} \in \hat{T}$ as in Proposition \ref{Prop dual torus}. Assume that $\pm R_T^G(\hat{s})$ is $\overline{\mathbb{Q}_{\ell}}$-cuspildal. Then the $\overline{\mathbb{Z}_{\ell}}$-block $\mathcal{A}_s=\overline{\mathbb{Z}_{\ell}}Ge_s^G\Modl$ consists purely of cuspidal representations.
+%		\end{theorem}
+%		
+%		\begin{proof}
+%			%		\textcolor{red}{Minor technical issue: Broué's paper works with a Dedekind ring $\mathcal{O}$, but $\overline{\mathbb{Z}_{\ell}}$ is not Dedekind. So you need to be careful about the results cited from Broué's paper, for example, Lemma 3.4 of Broué's paper.}
+%			%    	Let $V:=\overline{\mathbb{Z}_{\ell}}Ge_s^G \in \overline{\mathbb{Z}_{\ell}}G\Modl=\Rep_{\overline{\mathbb{Z}_{\ell}}}(G)$. Let's first show that $V$ is $\overline{\mathbb{Z}_{\ell}}$-cuspidal.
+%			
+%			Recall Broué's equivalence \ref{Thm Broué}: For $\mathcal{O}$ a finite integral extension of $\mathbb{Z}_{\ell}$, big enough, we have
+%			$$F:=e_s^GH^d_c(X_{\mathbb{U}}, \mathcal{O})e_s^T\otimes_{\mathcal{O}Te_s^T}-: \mathcal{O}Te_s^T\Modl \to \mathcal{O}Ge_s^G\Modl$$ is an equivalence of categories. This is moreover an equivalence of abelian categories (See Lemma \ref{Lem abelian}). Let $V:=F(\mathcal{O}Te_s^T)=e_s^GH^d_c(X_{\mathbb{U}}, \mathcal{O})e_s^T$ %(\textcolor{red}{$=\mathcal{O}Ge_s^G$?} \textcolor{blue}{No, not true. Otherwise this is contained in the Harish-Chandler induction.})
+%			. Then $V$ is a projective generator of $\mathcal{A}_s$, since $\mathcal{O}Te_s^T$ is a projective generator of $\mathcal{O}Te_s^T\Modl$. We first show that $V$ is $\mathcal{O}$-cuspidal.
+%			
+%			By classical Deligne-Lusztig theory, $\overline{\mathbb{Q}_{\ell}}V \cong \bigoplus_{\eta \in \hat{T_{\ell}}}\pm R_T^G(\hat{s}\eta)$ 
+%			%(\textcolor{red}{Is this right?} \textcolor{blue}{Yes.}) 
+%			is $\overline{\mathbb{Q}_{\ell}}$-cuspidal (For details, see Lemma \ref{Lem Q_l-bar cuspidal} below.). 
+%			%    In other words, 
+%			%    $$dim_{\overline{\mathbb{Q}_{\ell}}}\overline{\mathbb{Q}_{\ell}}V=dim_{\overline{\mathbb{Q}_{\ell}}}(\overline{\mathbb{Q}_{\ell}}V)(U)=dim_{\overline{\mathbb{Q}_{\ell}}}\overline{\mathbb{Q}_{\ell}}V(U).$$ 
+%			%    Since $V$ is free $\overline{\mathbb{Z}_{\ell}}$-module, we thus have
+%			%    $$rank_{\overline{\mathbb{Z}_{\ell}}}V=rank_{\overline{\mathbb{Z}_{\ell}}}V(U).$$
+%			In other words, 
+%			$$r^G_{M, \overline{\mathbb{Q}_{\ell}}}(\overline{\mathbb{Q}_{\ell}}V):=\overline{\mathbb{Q}_{\ell}}V/\left<\{u.v-v | u \in U, v \in \overline{\mathbb{Q}_{\ell}}V\}\right>_{\overline{\mathbb{Q}_{\ell}}U\Modl}=0.$$
+%			However, note  
+%			$$\left<\{u.v-v | u \in U, v \in \overline{\mathbb{Q}_{\ell}}V\}\right>_{\overline{\mathbb{Q}_{\ell}}U\Modl}=\left<\{u.v-v | u \in U, v \in \overline{\mathbb{Q}_{\ell}}V\}\right>_{\mathcal{O}U\Modl}.$$
+%			So we have 
+%			$$r^G_{M, \mathcal{O}}(\overline{\mathbb{Q}_{\ell}}V):=\overline{\mathbb{Q}_{\ell}}V/\left<\{u.v-v | u \in U, v \in \overline{\mathbb{Q}_{\ell}}V\}\right>_{\mathcal{O}U\Modl}=0.$$
+%			
+%			Note $V$ is finitely presented and projective over $\mathcal{O}Te_s^T$ (See \cite[Proof of Theorem 3.3]{broue1990isometries}), hence projective over $\mathcal{O}$ (because the restriction functor $\mathcal{O}T\Modl \to \mathcal{O}\Modl$ preserves projectivity, since it's left adjoint to an exact functor, the induction functor), which is a local ring 
+%			%(\textcolor{blue}{See Lemma 3 from last manuscript ``Week 24-25"})
+%			, hence $V$ is free over $\mathcal{O}$ (See \cite[Theorem 24.4.5]{vakil2017rising}). We thus have an inclusion
+%			$$V \xhookrightarrow[]{} \overline{\mathbb{Q}_{\ell}}V:=\overline{\mathbb{Q}_{\ell}}\otimes_{\mathcal{O}}V %\text{(\textcolor{red}{Is this true?} \textcolor{blue}{Yes.})}
+%			$$
+%			as $\mathcal{O}G$-modules.
+%			Recall that the parabolic restriction $r^G_{M, \mathcal{O}}$ is exact (See \cite[II.2.1]{vigneras1996representations}), hence 
+%			$$r^G_{M, \mathcal{O}}(\overline{\mathbb{Q}_{\ell}}V)=0$$
+%			implies that 
+%			$$r^G_{M, \mathcal{O}}(V)=0,$$
+%			i.e., $V$ is $\mathcal{O}$-cuspidal. 
+%			%(\textcolor{red}{Did we use $U$ pro-$p$ somewhere?} \textcolor{blue}{No. But one can also argue using invariance instead of coinvariance, and for ``invariance = coinvariance" we need $U$ to be a $p$-group.})
+%			
+%			Moreover, base change to $\overline{\mathbb{Z}_{\ell}}$ we see that $\overline{\mathbb{Z}_{\ell}}V$ is $\overline{\mathbb{Z}_{\ell}}$-cuspidal. Indeed, 
+%			$$r^G_{M, \overline{\mathbb{Z}_{\ell}}}(\overline{\mathbb{Z}_{\ell}}V)=\overline{\mathbb{Z}_{\ell}}V/\overline{\mathbb{Z}_{\ell}}V(U)=\overline{\mathbb{Z}_{\ell}}\otimes_{\mathcal{O}}(V/V(U))=\overline{\mathbb{Z}_{\ell}}\otimes_{\mathcal{O}}r^G_{M, \mathcal{O}}(V)=0.$$
+%			
+%			For general $V' \in \mathcal{A}_s$, we can resolve it by some direct sum of $V$'s, and we see that
+%			$$r^G_{M, \overline{\mathbb{Z}_{\ell}}}(V')=0,$$
+%			(using $r^G_{M, \overline{\mathbb{Z}_{\ell}}}$ is exact and commutes with arbitrary direct sum) i.e., $V'$ is $\overline{\mathbb{Z}_{\ell}}$-cuspidal.
+%		\end{proof}
+%		
+		
+		
+		
+		
+%		\begin{lemma}\label{Lem abelian}
+%			$$F:=e_s^GH^d_c(X_{\mathbb{U}}, \mathcal{O})e_s^T\otimes_{\mathcal{O}Te_s^T}-: \mathcal{O}Te_s^T\Modl \to \mathcal{O}Ge_s^G\Modl$$ is an equivalence of abelian categories.
+%		\end{lemma}
+%		
+%		\begin{proof}
+%			We already know that $F$ is an equivalence of categories. It remains to show that $F$ is exact and commutes with product.
+%			
+%			Now $e_s^GH^d_c(X_{\mathbb{U}}, \mathcal{O})e_s^T$ is projective over ${\mathcal{O}Te_s^T}$ (See \cite[Proof of Theorem 3.3]{broue1990isometries}), hence flat over ${\mathcal{O}Te_s^T}$. Hence $F:=e_s^GH^d_c(X_{\mathbb{U}}, \mathcal{O})e_s^T\otimes_{\mathcal{O}Te_s^T}-$ is exact.
+%			
+%			It is clear that $F:=e_s^GH^d_c(X_{\mathbb{U}}, \mathcal{O})e_s^T\otimes_{\mathcal{O}Te_s^T}-$ commutes with product.
+%		\end{proof}
+		
+%		\begin{lemma}\label{Lem Q_l-bar cuspidal}\label{Lemma Q_l-bar cuspidal}
+%			Let $G$ be a finite group of Lie type. Let $s \in G^*=\mathbb{G^*}^{F^*}$ be a strongly regular semisimple $\ell'$-element, with corresponding torus $T=\mathbb{T}^F$ and character $\hat{s} \in \hat{T}$ as before. Assume that $\pm R_T^G(\hat{s})$ is $\overline{\mathbb{Q}_{\ell}}$-cuspildal. Then $\pm R_T^G(\hat{s}\eta)$ is $\overline{\mathbb{Q}_{\ell}}$-cuspidal for any $\eta \in \hat{T_{\ell}}$.
+%		\end{lemma}
+%		
+%		\begin{proof}
+%			Broué's equivalence \ref{Thm Broué} makes sure that $\pm R_T^G(\hat{s}\eta)$ is irreducible, hence $\hat{s}\eta$ is in general position. And $\pm R_T^G(\hat{s})$ being cuspidal implies that $T$ is not contained in any proper parabolic subgroup, hence $\pm R_T^G(\hat{s}\eta)$ is $\overline{\mathbb{Q}_{\ell}}$-cuspidal for any $\eta \in \hat{T_{\ell}}$ (See \cite[Theorem 9.3.2]{carter1985finite}).
+%		\end{proof}
+
+
+        
+		
+		
+		
+		
+		
+		
+		
+    \subsection{Proof of Theorem \ref{Thm SC Red} on supercuspidal reduction}
+		
+		We now apply the previous results on finite groups of Lie type to representations of the parahoric subgroups of a $p$-adic group. For this, we show that the inflation induces an equivalence of categories between (certain summand of) the category of representations of a finite reductive group and the corresponding parahoric subgroup (See Subsection \ref{Subsection_inflation}). 
+		
+		Let us get back to the notation at the beginning of this chapter.
+		
+		Let $G$ be a split reductive group scheme over $\mathbb{Z}$, which is simply connected. Let $F$ be a non-archimedean local field, with ring of integers $\mathcal{O}_F$ and residue field $k_F \cong \mathbb{F}_q$ of residue characteristic $p$. Let $x$ be a vertex of the Bruhat-Tits building $\mathcal{B}(G, F)$, $G_x$ the parahoric subgroup associated to $x$, $G_x^+$ its pro-unipotent radical. Recall that $\overline{G_x}:=G_x/G_x^+$ is a generalized Levi subgroup of $G(k_F)$ with root system $\Phi_x$, see \cite[Theorem 3.17]{rabinoff2003bruhat}.
+		
+		Let $\Lambda=\overline{\mathbb{Z}_\ell}$, with $\ell \neq p$. Let $\rho \in \Rep_{\Lambda}(G_x)$ be an irreducible representation of $G_x$, which is trivial on $G_x^+$ and whose reduction to the finite group of Lie type $\overline{G_x}=G_x/G_x^+$ is regular supercuspidal. 
+		%We make this a definition for later use.
+		
+		%	\begin{definition}
+			%		Let $\rho \in \Rep_{\Lambda}(G_x)$. We say $\rho$ \textbf{has cuspidal reduction} (resp. \textbf{has regualr cuspidal reduction}), if $\rho$ is trivial on $G_x^+$ and whose reduction to the finite group of Lie type $\overline{G_x}=G_x/G_x^+$ is cuspidal (resp. regular cuspidal). Let's denote the reduction of $\rho$ modulo $G_x^+$ by $\overline{\rho} \in \Rep_{\Lambda}(\overline{G_x})$.
+			%	\end{definition}
+		
+		In other words, we start with an irreducible representation $\rho \in \Rep_{\Lambda}(G_x)$ which has regular supercuspidal reduction. Let $\mathcal{B}_{x,1}$ be the ($\overline{\mathbb{Z}_{\ell}}$-)block of $\Rep_{\Lambda}(G_x)$ containing $\rho$. We can now prove Theorem \ref{Thm SC Red}, which we restate as follows.
+		
+		\begin{theorem} \label{Thm SC Red restate}
+			Let $\rho \in \Rep_{\Lambda}(G_x)$ be an irreducible representation of $G_x$, which has regular supercuspidal reduction. Let $\mathcal{B}_{x,1}$ be the $\overline{\mathbb{Z}_{\ell}}$-block of $\Rep_{\Lambda}(G_x)$ containing $\rho$. Then any $\rho' \in \mathcal{B}_{x,1}$ has supercuspidal reduction.
+		\end{theorem}
+		
+		\begin{proof}
+			Let $\overline{\rho} \in \Rep_{\Lambda}(\overline{G_x})$ be the reduction of $\rho$ modulo $G_x^+$. $\overline{\rho}$ is irreducible (since $\rho$ is) and regular supercuspidal by assumption, so it is of the form $\pm R_T^G(\theta_s)$, for some strongly regular semisimple $\ell'$-element $s$ of the finite dual group $\overline{G_x}^*$ (See Definition \ref{Def regular supercuspidal}).  
+			
+			Let $\Rep_{\Lambda}(G_x)_0$ be the full subcategory of $\Rep_{\Lambda}(G_x)$ consists of representations of $G_x$ that are trivial on $G_x^+$. The key observation is that $\Rep_{\Lambda}(G_x)_0$ is a summand (as abelian category) of $\Rep_{\Lambda}(G_x)$ (See Lemma \ref{Lem Summand}).
+			
+			Then since $\rho \in \Rep_{\Lambda}(G_x)_0$, its block $\mathcal{B}_{x,1}$ is a summand of $\Rep_{\Lambda}(G_x)_0$.
+			
+			On the other hand, notice that the inflation induces an equivalence of categories between $\Rep_{\Lambda}(\overline{G_x})$ and $\Rep_{\Lambda}(G_x)_0$, with inverse the reduction modulo $G_x^+$.
+			So the blocks of $\Rep_{\Lambda}(\overline{G_x})$ and $\Rep_{\Lambda}(G_x)_0$ are in one-one correspondence. Let $\mathcal{A}_{x,1}$ be the corresponding block of $\Rep_{\Lambda}(\overline{G_x})$ to $\mathcal{B}_{x,1}$. Then $\mathcal{A}_{x,1}$ is the regular supercuspidal block $\mathcal{A}_s$ corresponding to $s$ (recall $\overline{\rho}=\pm R_T^G(\theta_s)$). By Theorem \ref{Theorem Pure SC}, $\mathcal{A}_s$ consists purely of supercuspidal representation. Therefore, $\mathcal{B}_{x,1}$ consists purely of representations that have supercuspidal reductions. 
+		\end{proof}
+		
+		
+     \subsection{Inflation induces an equivalence}  \label{Subsection_inflation} 		
+		
+		
+		\begin{lemma}\label{Lem Summand}
+			Let $\Rep_{\Lambda}(G_x)_0$ be the full subcategory of $\Rep_{\Lambda}(G_x)$ consists of representations of $G_x$ that are trivial on $G_x^+$. Then $\Rep_{\Lambda}(G_x)_0$ is a summand as abelian category of $\Rep_{\Lambda}(G_x)$.
+		\end{lemma}
+		
+		\begin{remark}
+			A similar proof as \cite[Appendix]{dat2009finitude} should work. Nevertheless, I include here an alternative computational proof. 
+		\end{remark}
+		
+		\begin{proof}
+			Note $G_x^+$ is pro-$p$ (See \cite[II.5.2.(b)]{vigneras1996representations}), in particular, it has pro-order invertible in $\Lambda$. So we have a normalized Haar measure $\mu$ on $G_x$ such that $\mu(G_x^+)=1$ (See \cite[I.2.4]{vigneras1996representations}). The characteristic function $e:=1_{G_x^+}$ is an idempotent of the Hecke algebra $\mathcal{H}_{\Lambda}(G_x)$ under convolution with respect to the Haar measure $\mu$. We shall show that $e=1_{G_x^+}$ cuts out $\Rep_{\Lambda}(G_x)_0$ as a summand of $\Rep_{\Lambda}(G_x) \cong \mathcal{H}_{\Lambda}(G_x)\Modl$.
+			
+			Let's first check that $e=1_{G_x^+}$ is central. This can be done by an explicit computation. Recall that we have a descending filtration $\{G_{x,r} | r\in \mathbb{R}_{>0}\}$ of $G_x$ such that 
+			\begin{enumerate}
+				\item $\forall r \in \mathbb{R}_{>0}, G_{x,r}$ is an open compact pro-$p$ subgroup of $G_x$.
+				\item $\forall r \in \mathbb{R}_{>0}, G_{x,r}$ is a normal subgroup of $G_x$.
+				\item $G_{x,r}$ form a neighborhood basis of $1$ inside $G_x$. 
+			\end{enumerate}
+			(See \cite[II.5.1]{vigneras1996representations}.) Therefore, to check $e \ast f=f \ast e$, for all $f \in \mathcal{H}_{\Lambda}(G_x)$, it suffices to check for all $f$ of the form $1_{gG_{x,r}}$, the characteristic function of the (both left and right) coset $gG_{x,r}$($=G_{x,r}g$, by normality) for some $g \in G(F)$ and $r \in \mathbb{R}_{>0}$. Indeed, one can compute that $(e \ast 1_{gG_{x,r}})(y)=\mu(G_x^+\cap G_{x,r}yg^{-1})$ and that $(1_{gG_{x,r}} \ast e)(y)=\mu(gG_{x,r}\cap yG_x^+)$, for any $y \in G_x$. Note that $G_{x,r} \subseteq G_x^+$, we get that $\mu(G_x^+\cap G_{x,r}yg^{-1})=\mu(G_{x,r})$ if $yg^{-1} \in G_x^+$ and $0$ otherwise. Same for $\mu(gG_{x,r}\cap yG_x^+)$. Therefore, $e$ is central.
+			%(\textcolor{red}{See ? for details.})
+			
+			
+			Next, under the isomorphism $\Rep_{\Lambda}(G_x) \cong \mathcal{H}_{\Lambda}(G_x)\Modl$, $\Rep_{\Lambda}(G_x)_0$ corresponds to the subcategory  $\mathcal{H}_{\Lambda}(G_x, G_x^+)\Modl=e\mathcal{H}_{\Lambda}(G_x)e\Modl$ corresponding to the central idempotent $e:=1_{G_x^+} \in \mathcal{H}_{\Lambda}(G_x)$ of $\mathcal{H}_{\Lambda}(G_x)\Modl$. 
+			
+			Finally, note that $G_x$ is compact, so its Hecke algebra $\mathcal{H}(G_x)$ is unital with unit $1$ the normalized characteristic function of $G_x$. Hence
+			$$\mathcal{H}_{\Lambda}(G_x)\Modl \cong e\mathcal{H}_{\Lambda}(G_x)e\Modl \oplus (1-e)\mathcal{H}_{\Lambda}(G_x)(1-e)\Modl.$$
+			Therefore, $\Rep_{\Lambda}(G_x)_0 \cong e\mathcal{H}_{\Lambda}(G_x)e\Modl$ is a summand of $\Rep_{\Lambda}(G_x) \cong \mathcal{H}_{\Lambda}(G_x)\Modl$. 
+		\end{proof}
+		
+		\begin{lemma}\label{Lemma A to B}
+			The inflation induces an equivalence of categories between $\Rep_{\Lambda}(\overline{G_x})$ and $\Rep_{\Lambda}(G_x)_0$. In particular, let $\rho$ be as in Theorem \ref{Thm SC Red restate} and let $\mathcal{A}_{x,1}$ be the block of $\Rep_{\Lambda}(\overline{G_x})$ containing $\overline{\rho}$, then the inflation induces an equivalence of categories 
+			$$\mathcal{A}_{x,1} \cong \mathcal{B}_{x,1}.$$
+		\end{lemma}
+		
+		\begin{proof}
+			The inverse functor is given by the reduction modulo $G_x^+$. One could check by hand that they are equivalences of categories.
+		\end{proof}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		\section{$\Hom$ between compact inductions}\label{Sec Pf Thm Hom}
+		
+		Let's now prove Theorem \ref{Thm Hom} which computes the $\Hom$ between compact inductions of $\rho_1$ and $\rho_2$, assuming that one of them has supercuspidal reduction.
+		
+		\begin{proof}[Proof of Theorem \ref{Thm Hom}]
+			\begin{equation*}
+				\begin{aligned}
+					&\Hom_G(\cInd_{G_x}^{G(F)}\rho_1, \cInd_{G_y}^{G(F)}\rho_2)\\
+					=\;&\Hom_{G_x}\left(\rho_1,(\cInd_{G_y}^{G(F)}\rho_2)|_{G_x}\right)\\
+					=\;& \Hom_{G_x}\left(\rho_1, \bigoplus_{g \in {G_y\backslash G(F)/G_x}}\cInd_{G_x \cap g^{-1}G_yg}^{G_x}\rho_2(g-g^{-1})\right)
+				\end{aligned}
+			\end{equation*}
+			
+			Recall that $g^{-1}G_yg=G_{g^{-1}.y}$. So it suffices to show that for $g \in G(F)$ with $G_x \cap g^{-1}G_yg \neq G_x$, or equivalently, for $g \in G(F)$ with $g.x \neq y$ (since $x$ and $y$ are vertices), it holds that
+			$$\Hom_{G_x}\left(\rho_1, \cInd_{G_x \cap g^{-1}G_yg}^{G_x}\rho_2(g-g^{-1})\right)=0.$$
+			
+			Note $G_x/(G_x \cap g^{-1}G_yg)$ is compact, hence $\cInd_{G_x \cap g^{-1}G_yg}^{G_x}=\operatorname{Ind}_{G_x \cap g^{-1}G_yg}^{G_x}$, and we have Frobenius reciprocity in the other direction
+			$$\Hom_{G_x}\left(\rho_1, \cInd_{G_x \cap g^{-1}G_yg}^{G_x}\rho_2(g-g^{-1})\right) \cong \Hom_{G_x \cap g^{-1}G_yg}\left(\rho_1, \rho_2(g-g^{-1})\right).$$
+			
+			So it suffices to show that for $g \in G(F)$ with $g.x \neq y$,
+			$$\Hom_{G_x \cap g^{-1}G_yg}\left(\rho_1, \rho_2(g-g^{-1})\right)=0.$$
+			Note now this expression is symmetric with respect to $\rho_1$ and $\rho_2$, so is the following argument.
+			
+			First, if $\rho_2$ has supercuspidal reduction (denoted $\overline{\rho_2}$),
+			\begin{align*}    	
+				& \Hom_{G_x \cap g^{-1}G_yg}\left(\rho_1, \rho_2(g-g^{-1})\right) \\
+				=\;& \Hom_{G_x \cap G_{g^{-1}.y}}\left(\rho_1, \rho_2(g-g^{-1})\right) \\
+				\subseteq\;& \Hom_{G_x^+ \cap G_{g^{-1}.y}}\left(\rho_1, \rho_2(g-g^{-1})\right) && %\text{By \eqref{eq:1}}
+				\\
+				=\;& \Hom_{G_x^+ \cap G_{g^{-1}.y}}(1^{\oplus d_1}, \rho_2(g-g^{-1})) && \text{$\rho_1$ is trivial on $G_x^+$ }\\
+				=\;& \Hom_{G_{g.x}^+ \cap G_y}(1^{\oplus d_1}, \rho_2) && \text{Conjugate by $g^{-1}$}\\
+				=\;& \Hom_{U_y(g.x)}(1^{\oplus d_1}, \overline{\rho_2}) && \text{Reduction modulo $G_y^+$. See below.}\\
+				=\;& 0 && \text{$\overline{\rho_2}$ is supercuspidal. See below.}
+			\end{align*}
+			
+			The last two equalities need some explanation. 
+			
+			The former one uses the following consequence from Bruhat-Tits theory: If $x_1$ and $x_2$ are two different vertices of the Bruhat-Tits building, then $\overline{G_{x_i}}:=G_{x_i}/G_{x_i}^+$ is a generalized Levi subgroup of $\overline{G}=G(\mathbb{F}_q)$, for $i=1, 2$. Moreover, $G_{x_1} \cap G_{x_2}$ projects onto a proper parabolic subgroup $P_{x_1}(x_2)$ of $\overline{G_{x_1}}$ under the reduction map $G_{x_1} \to \overline{G_{x_1}}$. And $G_{x_1} \cap G_{x_2}^+$ projects onto $U_{x_1}(x_2)$, the unipotent radical of $P_{x_1}(x_2)$, under the reduction map $G_{x_1} \to \overline{G_{x_1}}$. For details, see Lemma \ref{Lem Passage to Residue Field} below. Note that the assumption of Lemma \ref{Lem Passage to Residue Field} is satisfied since without loss of generality we may assume that $x_1=x$ and $x_2=y$ lie in the closure of a common alcove (since $G$ acts simply transitively on the set of alcoves).
+			
+			The latter one uses that for a supercuspidal representation $\rho$ of a finite group of Lie type $\Gamma$, 
+			$$\Hom_U(1, \rho|_U)=\Hom_U(\rho|_U, 1)=0,$$
+			for the unipotent radical $U$ of $P$, where $P$ is any proper parabolic subgroup of $\Gamma$. For details, see Lemma \ref{Lem Hom_U(1_U, SC)} below.
+			
+			Symmetrically, a similar argument works if $\rho_1$ has supercuspidal reduction. Indeed, if $\rho_1$ has supercuspidal reduction (denoted $\overline{\rho_1}$),
+			\begin{align*}    	
+				& \Hom_{G_x \cap g^{-1}G_yg}\left(\rho_1, \rho_2(g-g^{-1})\right) \\
+				=\;& \Hom_{gG_xg^{-1} \cap G_y}\left(\rho_1(g^{-1}-g), \rho_2\right) && \text{Conjugate by $g^{-1}$}\\ 
+				\subseteq\;& \Hom_{gG_xg^{-1} \cap G_y^+}\left(\rho_1(g^{-1}-g), \rho_2\right) && %\text{By \eqref{eq:1}}
+				\\
+				=\;& \Hom_{gG_xg^{-1} \cap G_y^+}(\rho_1(g^{-1}-g), 1^{\oplus d_2}) && \text{$\rho_2$ is trivial on $G_y^+$ }\\
+				=\;& \Hom_{G_x \cap g^{-1}G_y^+g}(\rho_1, 1^{\oplus d_2}) && \text{Conjugate by $g$}\\
+				=\;& \Hom_{G_x \cap G_{g^{-1}.y}^+}(\rho_1, 1^{\oplus d_2}) && \\
+				=\;& \Hom_{U_x(g^{-1}.y)}(\overline{\rho_1}, 1^{\oplus d_2}) && \text{Reduction modulo $G_x^+$}\\
+				=\;& 0 && \text{$\overline{\rho_1}$ is supercuspidal. }
+			\end{align*}
+			
+		\end{proof}
+		
+		
+		
+		\begin{lemma}\label{Lem Passage to Residue Field}
+			Let $x_1$ and $x_2$ be two points of the Bruhat-Tits building $\mathcal{B}(G, F)$. Assume that they lie in the closure of a same alcove.
+			\begin{enumerate}
+				\item[(i)]   The image of $G_{x_1} \cap G_{x_2}$ in $\overline{G_{x_1}}$ is a parabolic subgroup of $\overline{G_{x_1}}$. Let's denote it by $P_{x_1}(x_2)$. Moreover, the image of $G_{x_1} \cap G_{x_2}^+$ in $\overline{G_{x_1}}$ is the unipotent radical of $P_{x_1}(x_2)$. Let's denote it by $U_{x_1}(x_2)$.
+				\item[(ii)] 	Assume moreover that $x_1$ and $x_2$ are two different vertices of the building. Then $P_{x_1}(x_2)$ is a proper parabolic subgroup of $\overline{G_{x_1}}$.
+			\end{enumerate}
+		\end{lemma}
+		
+		\begin{proof}
+			(i) is \cite[II.5.1.(k)]{vigneras1996representations}.
+			
+			Let's prove (ii). It suffices to show that $G_{x_1} \neq G_{x_2}$. Assume otherwise that $G_{x_1}=G_{x_2}$, then $x_1$ and $x_2$ lie in the same facet, which contradicts with the assumption that $x_1$ and $x_2$ are two different vertices.
+		\end{proof}
+		
+		\begin{lemma}\label{Lem Hom_U(1_U, SC)}
+			Let $\overline{\rho}$ be a supercuspidal representation of a finite group of Lie type $\Gamma$. Let $P$ be a proper parabolic subgroup of $\Gamma$, with unipotent radical $U$. Then
+			$$Hom_U(1_U, \overline{\rho})=Hom_U(\overline{\rho}, 1_U)=0.$$
+		\end{lemma}
+		
+		\begin{proof}
+			$\Hom_U(\overline{\rho}|_U, 1_U)=\Hom_{\Gamma}(\overline{\rho}, Ind_P^{\Gamma}(\sigma))=0$, where $\sigma=Ind_U^P(1_U)$. The last equality holds because $\overline{\rho}$ is assumed to be supercuspidal. A similar argument shows that $Hom_U(1_U, \overline{\rho})=0$.  
+			
+%			Moreover, since $U$ is a successive extension of additive groups, $U$ is of order a power of $p$. In particular, $\ell$ does not divide the order of $U$. Hence the category of representations of $U$ with $\Lambda=\overline{\mathbb{Z}_{\ell}}$-coefficients is semisimple \textcolor{red}{No! Even $\overline{\mathbb{Z}_{\ell}}$ is not semisimple as a $\overline{\mathbb{Z}_{\ell}}$ module.}, and
+%			$$\Hom_U(1_U, \overline{\rho})=\Hom_U(\overline{\rho}, 1_U)=0.$$
+%			\textcolor{red}{No! $\Hom_1(\overline{\mathbb{Z}_\ell}, \overline{\mathbb{F}_{\ell}}) \neq \Hom_1(\overline{\mathbb{F}_{\ell}}, \overline{\mathbb{Z}_{\ell}})$, where $1$: trivial group.}
+		\end{proof}
+		
+		
+		
+		
+		\section{$\Pi_{x,1}$ is a projective generator}\label{Section projective generator}
+		
+		In this subsection, we prove Theorem \ref{Thm Proj}: $\Pi_{x,1}$ is a projective generator of $\mathcal{C}_{x,1}$. Before doing this, let us recall the setting. Fix a vertex $x$ of the building of $G$. Let $\rho \in \Rep_{\Lambda}(G_x)$ be a representation which is trivial on $G_x^+$ and whose reduction to $\overline{G_x}=G_x/G_x^+$ is regular supercuspidal, $\pi=\cInd_{G_x}^{G(F)}\rho$ as before. Let $\mathcal{B}_{x,1}$ be the block of $\Rep_{\Lambda}(G_x)$ containing $\rho$, and $\mathcal{C}_{x,1}$ the block of $\Rep_{\Lambda}(G(F))$ containing $\pi$. 
+		
+		Let $V$ be the set of equivalence classes of vertices of the Bruhat-Tits building $\mathcal{B}(G, F)$ up to $G(F)$-action. For $y \in V$, let $\sigma_y:=\cInd_{G_y^+}^{G_y}\Lambda$. Let $\Pi:=\bigoplus_{y \in V}\Pi_y$ where $\Pi_y:=\cInd_{G_y^+}^{G(F)}\Lambda$. Then $\Pi$ is a projective generator of the category of depth-zero representations $\Rep_{\Lambda}(G(F))_0$, see \cite[Appendix]{dat2009finitude}. Let $\sigma_{x,1}:=(\sigma_x)|_{\mathcal{B}_{x,1}} \in \mathcal{B}_{x,1} \xhookrightarrow{summand} \Rep_{\Lambda}(G_x)$ be the $\mathcal{B}_{x,1}$-summand of $\sigma_x$. And let $\Pi_{x,1}:=\cInd_{G_x}^{G(F)}\sigma_{x,1}$.
+		
+		Let's summarize the setting in the following diagram.
+		
+		\begin{tikzcd}
+			{\Rep_{\Lambda}(G_x)} & {\Rep_{\Lambda}(G(F))} \\
+			{\Rep_{\Lambda}(G_x)_0} & {\Rep_{\Lambda}(G(F))_0} \\
+			{\mathcal{B}_{x,1}} & {\mathcal{C}_{x,1}} \\
+			{\text{block of } \rho} & {\text{block of }\pi}
+			\arrow[from=2-1, to=2-2]
+			\arrow["{\cInd_{G_x}^{G(F)}}", from=1-1, to=1-2]
+			\arrow["\subseteq"{description}, sloped, draw=none, from=2-1, to=1-1]
+			\arrow["\subseteq"{description}, sloped, draw=none, from=3-1, to=2-1]
+			\arrow["\subseteq"{description}, sloped, draw=none, from=3-2, to=2-2]
+			\arrow["\subseteq"{description}, sloped, draw=none, from=2-2, to=1-2]
+			\arrow["{=:}"{description}, sloped, draw=none, from=4-1, to=3-1]
+			\arrow["{:=}"{description}, sloped, draw=none, from=3-2, to=4-2]
+			\arrow[from=3-1, to=3-2]
+		\end{tikzcd}
+		
+		\begin{theorem}
+			$\Pi_{x,1}=\cInd_{G_x}^{G(F)}\sigma_{x,1}$ is a projective generator of $\mathcal{C}_{x,1}$.
+		\end{theorem}
+		
+		\begin{proof}
+			First, let $\Rep_{\Lambda}(G_x)_0$ be the full subcategory of $\Rep_{\Lambda}(G_x)$ consisting of representations that are trivial on $G_x^+$ (Don't confuse with $\Rep_{\Lambda}(G(F))_0$, the depth-zero category of $G$). Note that $\Rep_{\Lambda}(G_x)_0$ is a summand of $\Rep_{\Lambda}(G_x)$ (see Lemma \ref{Lem Summand}).
+			
+			Second, note that $\Rep_{\Lambda}(G_x)_0 \cong \Rep_{\Lambda}(\overline{G_x})$. We may assume that $$\Rep_{\Lambda}(G_x)_0=\mathcal{B}_{x,1} \oplus ... \oplus \mathcal{B}_{x,m}$$
+			is its block decomposition. So that $\sigma_x=\sigma_{x,1}\oplus...\oplus\sigma_{x,m}$ accordingly. Write $\sigma_x^1:=\sigma_{x,2}\oplus...\oplus\sigma_{x,m}$. Then $\sigma_x=\sigma_{x,1} \oplus \sigma_x^1$, and $\Pi_x=\Pi_{x,1} \oplus \Pi_x^1$ accordingly, where $\Pi_x^1:=\cInd_{G_x}^{G(F)}\sigma_x^1$. And
+			$$\Pi=\Pi_{x,1}\oplus \Pi_x^1 \oplus \Pi^x,$$
+			where $\Pi^x:=\bigoplus_{y \in V, y \neq x}\Pi_y$. Let $\Pi^{x,1}:=\Pi_x^1 \oplus \Pi^x$, then we have
+			$$\Pi=\Pi_{x,1} \oplus \Pi^{x,1}.$$
+			
+			Recall that $\Pi$ is a projective generator of the category of depth-zero representations $\Rep_{\Lambda}(G(F))_0$. This implies that 
+			$$\Hom_G(\Pi, -): \Rep_{\Lambda}(G(F))_0 \to \Modr\End_G(\Pi)$$
+			is an equivalence of categories. See \cite[Lemma 22]{bernsteindraft}.
+			
+			Next, it is not hard to see that Theorem \ref{Thm Hom} implies that 
+			$$\Hom_G(\Pi_{x,1}, \Pi^{x,1})=\Hom_G(\Pi^{x,1}, \Pi_{x,1})=0,$$
+			see Lemma \ref{Lem Ortho}. This implies that $$\Modr\End_G(\Pi) \cong \Modr\End_G(\Pi_{x,1}) \oplus \Modr\End_G(\Pi^{x,1})$$ is an equivalence of categories.
+			
+			Now we can combine the above to show that $\Pi^{x,1}$ does not interfere with $\Pi_{x,1}$, i.e.,
+			$$\Hom_G(\Pi^{x,1}, X)=0,$$
+			for any object $X \in \mathcal{C}_{x,1}$ (see Importent Lemma \ref{Lem Gen}).
+			
+			However, since $\Pi$ is a projective generator of $\Rep_{\Lambda}(G(F))_0$, we have
+			$$\Hom_G(\Pi, X) \neq 0,$$
+			for any $X \in \mathcal{C}_{x,1}$. This together with the last paragraph implies that 
+			$$\Hom_G(\Pi_{x,1}, X) \neq 0,$$
+			for any $X \in \mathcal{C}_{x,1}$, i.e. $\Pi_{x,1}$ is a generator of $\mathcal{C}_{x,1}$.
+			
+			Finally, note that $\Pi_{x,1}$ is projective in $\Rep_{\Lambda}(G(F))_0$ since it is a summand of the projective object $\Pi$. Hence $\Pi_{x,1}$ is projective in $\mathcal{C}_{x,1}$. This together with the last paragraph implies that $\Pi_{x,1}$ is a projective generator of $\mathcal{C}_{x,1}$.
+			
+			
+		\end{proof}
+		
+		
+		
+		
+		
+		\begin{lemma}\label{Lem Ortho}
+			$$\Hom_G(\Pi_{x,1}, \Pi^{x,1})=\Hom_G(\Pi^{x,1}, \Pi_{x,1})=0.$$
+		\end{lemma}
+		
+		\begin{proof}
+			Recall that
+			$\Pi^{x,1}:=\Pi_x^1 \oplus \Pi^x$.
+			
+			First, we compute
+			$$\Hom_G(\Pi_{x,1}, \Pi_x^1)=\Hom_{G_x}(\sigma_{x,1}, \sigma_x^1)=0,$$
+			where the first equality is the first case of Theorem \ref{Thm Hom} (note that $\sigma_{x,1} \in \mathcal{B}_{x,1}$, hence has supercuspidal reduction by Theorem \ref{Thm SC Red}, and hence the condition of Theorem \ref{Thm Hom} is satisfied), and the second equality is because $\sigma_{x,1}$ and $\sigma_x^1$ lie in different blocks of $\Rep_{\Lambda}(G_x)$ by definition.
+			
+			Second, recall that $\Pi_{x,1}=\cInd_{G_x}^{G(F)}\sigma_{x,1}$ with $\sigma_{x,1}$ having supercuspidal reduction, and $\Pi_y=\cInd_{G_y}^{G(F)}\sigma_y$. We compute 
+			$$\Hom_G(\Pi_{x,1}, \Pi^x)=\bigoplus_{y \in V, y \neq x}\Hom_G(\Pi_{x,1}, \Pi_y)=0,$$
+			by the second case of Theorem \ref{Thm Hom}.
+			
+			Combining the above three paragraphs, we get $\Hom_G(\Pi_{x,1}, \Pi^{x,1})=0$.
+			
+			A same argument shows that $\Hom_G(\Pi^{x,1}, \Pi_{x,1})=0$.
+		\end{proof}
+		
+		\begin{lemma}[Important Lemma]\label{Lem Gen}
+			$\Hom_G(\Pi^{x,1}, X)=0,$
+			for any object $X \in \mathcal{C}_{x,1}$.
+		\end{lemma}
+		
+		\begin{proof}
+			Recall that 
+			$$\Hom_G(\Pi, -): \Rep_{\Lambda}(G(F))_0 \to \Modr\End_G(\Pi) \cong \Modr\End_G(\Pi_{x,1}) \oplus \Modr\End_G(\Pi^{x,1})$$ 
+			is an equivalence of categories. It is even an equivalence of abelian categories since $\Hom_G(\Pi, -)$ is exact and commutes with direct product. Hence the image of $\mathcal{C}_{x,1}$ must be indecomposable as $\mathcal{C}_{x,1}$ is indecomposable, i.e., 
+			$$\Hom_G(\Pi, -)=\Hom_G(\Pi_{x,1}, -) \oplus \Hom_G(\Pi^{x,1}, -)$$
+			can map $\mathcal{C}_{x,1}$ nonzeroly to only one of $\Modr\End_G(\Pi_{x,1})$ and $\Modr\End_G(\Pi^{x,1})$ (See the diagram below). 
+			
+			\begin{tikzcd}
+				{\Rep_{\Lambda}(G(F))_0} &&&& {\Modr \End_G(\Pi)} \\
+				\\
+				{\mathcal{C}_{x,1}} &&&& {\Modr \End_G(\Pi_{x,1}) \oplus \Modr \End_G(\Pi^{x,1})}
+				\arrow["{\Hom_G(\Pi, -)}", from=1-1, to=1-5]
+				\arrow["{\Hom_G(\Pi_{x,1}, -) \oplus \Hom_G(\Pi^{x,1}, -)}", from=3-1, to=3-5]
+				\arrow["\subseteq", sloped, from=3-1, to=1-1]
+				\arrow["\cong", sloped, from=3-5, to=1-5]
+			\end{tikzcd}
+			
+			Then it must be $\Modr\End_G(\Pi_{x,1})$ (that $\Hom_G(\Pi, -)$ maps $\mathcal{C}_{x,1}$ nonzeroly to) since 
+			$$\Hom_G(\Pi_{x,1}, \pi)=\Hom_{G_x}(\sigma_{x,1}, \rho)=\Hom_{G_x}(\sigma_x, \rho) \neq 0.$$
+			In other words, $\Hom_G(\Pi^{x,1}, -)$ is zero on $\mathcal{C}_{x,1}$.
+			
+		\end{proof}
+		
+		
+		\section{Application: description of the block $\Rep_{\Lambda}(G(F))_{[\pi]}$}\label{Section rep application}
+		
+		Recall we denote $\mathcal{A}_{x,1}=\Rep_{\Lambda}(\overline{G_x})_{[\overline{\rho}]}$, $\mathcal{B}_{x,1}=\Rep_{\Lambda}(G_x)_{[\rho]}$, and $\mathcal{C}_{x,1}=\Rep_{\Lambda}(G(F))_{[\pi]}$.
+		
+		We have proven that the inflation along $G_x \to \overline{G_x}$ induces an equivalence of categories 
+		$$\mathcal{A}_{x,1} \cong \mathcal{B}_{x,1},$$
+		see Lemma \ref{Lemma A to B}. And we have also proven that the compact induction induces an equivalence of categories
+		$$\cInd_{G_x}^{G(F)}: \mathcal{B}_{x,1} \cong \mathcal{C}_{x,1}.$$
+		
+		Hence $\mathcal{C}_{x,1} \cong \mathcal{A}_{x,1}$, where the latter is isomorphic to the block of a finite torus via Broué's equivalence \ref{Thm Broué}.
+		
+		We will see in the example (See Chapter \ref{Chapter GL_n}) of $GL_n$ that (up to central characters) such a block of a finite torus corresponds to $\QCoh(\mu)$, where $\mu$ is the group scheme of roots of unity appearing in the computation of the $L$-parameter side (See Theorem \ref{Thm X/G}).
+		
+
+	
