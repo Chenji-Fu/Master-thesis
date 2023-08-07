@@ -12,33 +12,33 @@
 \contentsline {section}{\numberline {2.1}The connected component $X_{\varphi }$ containing a TRSELP $\varphi $}{9}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Recollections on the moduli space of Langlands parameters}{9}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}Tame regular semisimple elliptic $L$-parameters}{11}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}Description of the component}{12}{subsection.2.1.3}%
-\contentsline {subsection}{\numberline {2.1.4}The $T$-action on $(\hat {G} \times T \times \mu )$}{14}{subsection.2.1.4}%
-\contentsline {subsection}{\numberline {2.1.5}Some lemmas}{16}{subsection.2.1.5}%
-\contentsline {section}{\numberline {2.2}Main Theorem: description of $[X_{\varphi }/\hat {G}]$}{17}{section.2.2}%
-\contentsline {chapter}{\numberline {3}Depth-zero regular supercuspidal blocks}{23}{chapter.3}%
-\contentsline {section}{\numberline {3.1}The compact induction induces an equivalence}{23}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Regular supercuspidal blocks for finite groups of Lie type}{26}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Regular blocks}{27}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Regular supercuspidal blocks}{28}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Proof of Theorem \ref {Thm SC Red} on supercuspidal reduction}{29}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Inflation induces an equivalence}{30}{subsection.3.2.4}%
-\contentsline {section}{\numberline {3.3}$\Hom $ between compact inductions}{31}{section.3.3}%
-\contentsline {section}{\numberline {3.4}$\Pi _{x,1}$ is a projective generator}{33}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Application: description of the block $\Rep _{\Lambda }(G(F))_{[\pi ]}$}{36}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Example: $GL_n(F)$}{37}{chapter.4}%
-\contentsline {section}{\numberline {4.1}$L$-parameter side}{37}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Representation side}{38}{section.4.2}%
-\contentsline {chapter}{\numberline {5}The categorical local Langlands conjecture}{41}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Unraveling definitions}{41}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}$L$-parameter side}{41}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}$\Bun _G$ side}{42}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}The nilpotent singular support condition}{43}{subsection.5.1.3}%
-\contentsline {section}{\numberline {5.2}The spectral action induces an equivalence of categories}{44}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Definition of the functor}{44}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Equivalence on degree zero part}{44}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}The full equivalence}{47}{subsection.5.2.3}%
-\contentsline {chapter}{\numberline {6}Conclusions and questions}{49}{chapter.6}%
-\contentsline {section}{\numberline {6.1}How do Chapters \ref {Chapter MoLP}, \ref {Chapter Rep} help?}{49}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Relation to Bernstein's projective generator}{49}{section.6.2}%
-\contentsline {section}{\numberline {6.3}The categorical conjecture for general groups}{50}{section.6.3}%
+\contentsline {subsection}{\numberline {2.1.3}Description of the component}{13}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}The $T$-action on $(\hat {G} \times T \times \mu )$}{16}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}Some lemmas}{17}{subsection.2.1.5}%
+\contentsline {section}{\numberline {2.2}Main Theorem: description of $[X_{\varphi }/\hat {G}]$}{19}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Depth-zero regular supercuspidal blocks}{25}{chapter.3}%
+\contentsline {section}{\numberline {3.1}The compact induction induces an equivalence}{25}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Regular supercuspidal blocks for finite groups of Lie type}{28}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Regular blocks}{29}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Regular supercuspidal blocks}{30}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Proof of Theorem \ref {Thm SC Red} on supercuspidal reduction}{31}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Inflation induces an equivalence}{32}{subsection.3.2.4}%
+\contentsline {section}{\numberline {3.3}$\Hom $ between compact inductions}{33}{section.3.3}%
+\contentsline {section}{\numberline {3.4}$\Pi _{x,1}$ is a projective generator}{35}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Application: description of the block $\Rep _{\Lambda }(G(F))_{[\pi ]}$}{38}{section.3.5}%
+\contentsline {chapter}{\numberline {4}Example: $GL_n(F)$}{39}{chapter.4}%
+\contentsline {section}{\numberline {4.1}$L$-parameter side}{39}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Representation side}{40}{section.4.2}%
+\contentsline {chapter}{\numberline {5}The categorical local Langlands conjecture}{43}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Unraveling definitions}{43}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}$L$-parameter side}{43}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}$\Bun _G$ side}{44}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}The nilpotent singular support condition}{45}{subsection.5.1.3}%
+\contentsline {section}{\numberline {5.2}The spectral action induces an equivalence of categories}{46}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Definition of the functor}{46}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Equivalence on degree zero part}{46}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}The full equivalence}{49}{subsection.5.2.3}%
+\contentsline {chapter}{\numberline {6}Conclusions and questions}{51}{chapter.6}%
+\contentsline {section}{\numberline {6.1}How do Chapters \ref {Chapter MoLP}, \ref {Chapter Rep} help?}{51}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Relation to Bernstein's projective generator}{51}{section.6.2}%
+\contentsline {section}{\numberline {6.3}The categorical conjecture for general groups}{52}{section.6.3}%

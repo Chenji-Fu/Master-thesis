@@ -561,21 +561,21 @@
 		
 		Let's summarize the setting in the following diagram.
 		
-		\begin{tikzcd}
+		\[\begin{tikzcd}
 			{\Rep_{\Lambda}(G_x)} & {\Rep_{\Lambda}(G(F))} \\
 			{\Rep_{\Lambda}(G_x)_0} & {\Rep_{\Lambda}(G(F))_0} \\
 			{\mathcal{B}_{x,1}} & {\mathcal{C}_{x,1}} \\
-			{\text{block of } \rho} & {\text{block of }\pi}
+%			{\text{block of } \rho} & {\text{block of }\pi}
 			\arrow[from=2-1, to=2-2]
 			\arrow["{\cInd_{G_x}^{G(F)}}", from=1-1, to=1-2]
 			\arrow["\subseteq"{description}, sloped, draw=none, from=2-1, to=1-1]
 			\arrow["\subseteq"{description}, sloped, draw=none, from=3-1, to=2-1]
 			\arrow["\subseteq"{description}, sloped, draw=none, from=3-2, to=2-2]
 			\arrow["\subseteq"{description}, sloped, draw=none, from=2-2, to=1-2]
-			\arrow["{=:}"{description}, sloped, draw=none, from=4-1, to=3-1]
-			\arrow["{:=}"{description}, sloped, draw=none, from=3-2, to=4-2]
+%			\arrow["{=:}"{description}, sloped, draw=none, from=4-1, to=3-1]
+%			\arrow["{:=}"{description}, sloped, draw=none, from=3-2, to=4-2]
 			\arrow[from=3-1, to=3-2]
-		\end{tikzcd}
+		\end{tikzcd}\]
 		
 		\begin{theorem}
 			$\Pi_{x,1}=\cInd_{G_x}^{G(F)}\sigma_{x,1}$ is a projective generator of $\mathcal{C}_{x,1}$.
@@ -650,15 +650,15 @@
 			$$\Hom_G(\Pi, -)=\Hom_G(\Pi_{x,1}, -) \oplus \Hom_G(\Pi^{x,1}, -)$$
 			can map $\mathcal{C}_{x,1}$ nonzeroly to only one of $\Modr\End_G(\Pi_{x,1})$ and $\Modr\End_G(\Pi^{x,1})$ (See the diagram below). 
 			
-			\begin{tikzcd}
+			\[\begin{tikzcd}
 				{\Rep_{\Lambda}(G(F))_0} &&&& {\Modr \End_G(\Pi)} \\
 				\\
 				{\mathcal{C}_{x,1}} &&&& {\Modr \End_G(\Pi_{x,1}) \oplus \Modr \End_G(\Pi^{x,1})}
 				\arrow["{\Hom_G(\Pi, -)}", from=1-1, to=1-5]
 				\arrow["{\Hom_G(\Pi_{x,1}, -) \oplus \Hom_G(\Pi^{x,1}, -)}", from=3-1, to=3-5]
-				\arrow["\subseteq", sloped, from=3-1, to=1-1]
-				\arrow["\cong", sloped, from=3-5, to=1-5]
-			\end{tikzcd}
+				\arrow["\subseteq", sloped, draw=none, from=3-1, to=1-1]
+				\arrow["\cong", sloped, draw=none, from=3-5, to=1-5]
+			\end{tikzcd}\]
 			
 			Then it must be $\Modr\End_G(\Pi_{x,1})$ (that $\Hom_G(\Pi, -)$ maps $\mathcal{C}_{x,1}$ nonzeroly to) since 
 			$$\Hom_G(\Pi_{x,1}, \pi)=\Hom_{G_x}(\sigma_{x,1}, \rho)=\Hom_{G_x}(\sigma_x, \rho) \neq 0.$$
