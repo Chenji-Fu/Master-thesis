@@ -1,73 +1,74 @@
 \chapter{Introduction}
 
-Let $F$ be a non-archimedean local field. Let $G$ be a reductive group over $F$. For simplicity, we assume that $G$ is split and simply connected (in particular, semisimple). Let $\Lambda=\overline{\mathbb{Z}_{\ell}}$. The categorical local Langlands conjecture predicts that there is a fully faithful embedding
+Let $F$ be a non-archimedean local field. Assume that the residue field of $F$ is $\mathbb{F}_q$, with characteristic $p$. Let $G$ be a connected reductive group over $F$. For simplicity, we assume that $G$ is split, semisimple, and simply connected. Let $\Lambda=\overline{\mathbb{Z}}_{\ell}$, the integral closure of $\mathbb{Z}_{\ell}$ in $\overline{\mathbb{Q}}_{\ell}$, with $\ell \neq p$. Let $W_F$ be the Weil group of $F$ and $\hat{G}$ the Langlands dual group of $G$. The categorical local Langlands conjecture predicts that there is a fully faithful embedding
 $$\Rep_{\Lambda}(G(F)) \longrightarrow \QCoh(Z^1(W_F, \hat{G})_{\Lambda}/\hat{G})$$
-from the category of smooth representations of the $p$-adic group $G(F)$ to the category of quasi-coherent sheaves on the stack of Langlands parameters. In this paper, we compute the two sides explicitly for depth-zero regular supercuspidal part of a split simply connected group $G$ and verify the categorical local Langlands conjecture for depth-zero supercuspidal part of $GL_n$.
+from the category of smooth representations of the $p$-adic group $G(F)$ to the category of quasi-coherent sheaves on the stack of Langlands parameters. In this paper, we compute the two sides explicitly for depth-zero regular supercuspidal part of the group $G$ and verify the categorical local Langlands conjecture for depth-zero supercuspidal part of $GL_n$.\footnote{We will see that although $GL_n$ is not simply connected, the theory still works without much change. Also, we do not need to assume $G$ is simply connected for the results on the $L$-parameter side.}
 
-Fixing an irreducible depth-zero regular supercuspidal representation $\pi \in \Rep_{\overline{\mathbb{F}_{\ell}}}(G(F))$, the (classical) local Langlands conjecture predicts that it should correspond to a tame, regular semisimple, elliptic $L$-parameter (TRSELP for short) $\varphi \in Z^1(W_F, \hat{G}(\overline{\mathbb{F}_{\ell}}))$ (See \cite{debacker2009depth}). As mentioned above, this paper focuses on the depth-zero regular supercuspidal part of the categorical local Langlands conjecture, which predicts a fully faithful embedding
+Fixing an irreducible depth-zero regular supercuspidal representation $\pi \in \Rep_{\overline{\mathbb{F}}_{\ell}}(G(F))$,\footnote{Note that we really want to start with a representation with $\overline{\mathbb{F}}_{\ell}$-coefficients instead of $\overline{\mathbb{Q}}_{\ell}$-coefficients, because we are interested in describing the ($\overline{\mathbb{Z}}_{\ell}$-)block of 
+$\Rep_{\Lambda}(G(F))$.} the (classical) local Langlands conjecture predicts that it should correspond to a tame, regular semisimple, elliptic $L$-parameter (TRSELP for short) $\varphi \in Z^1(W_F, \hat{G}(\overline{\mathbb{F}}_{\ell}))$ (see \cite{debacker2009depth}). As mentioned above, this paper focuses on the depth-zero regular supercuspidal part of the categorical local Langlands conjecture, which predicts a fully faithful embedding
 $$\Rep_{\Lambda}(G(F))_{[\pi]} \longrightarrow \QCoh([X_{\varphi}/\hat{G}])$$
-from the block of $\Rep_{\Lambda}(G(F))$ containing $\pi$ to the category of quasi-coherent sheaves on the connected component $[X_{\varphi}/\hat{G}]$ of the stack of $L$-parameters.
+from the block of $\Rep_{\Lambda}(G(F))$ containing $\pi$ to the category of quasi-coherent sheaves on the connected component $[X_{\varphi}/\hat{G}]$ of the stack of $L$-parameters $Z^1(W_F, \hat{G})_{\Lambda}/\hat{G}$.
 
 \section{$L$-parameter side}
-In this section, we explain Chapter \ref{Chapter MoLP} on how to compute $\QCoh([X_{\varphi}/\hat{G}])$. 
+Let $G$ be a connected split reductive group over $F$. Let $\varphi \in Z^1(W_F, \hat{G}(\overline{\mathbb{F}}_{\ell}))$ be a TRSELP (see Definition \ref{Def TRSELP}). In this section, we explain Chapter \ref{Chapter MoLP} on how to compute $\QCoh([X_{\varphi}/\hat{G}])$. 
 
-This is done by describing $[X_{\varphi}/\hat{G}]$ explicitly as a quotient stack over $\Lambda=\overline{\mathbb{Z}_{\ell}}$. 
+This is done by describing $[X_{\varphi}/\hat{G}]$ explicitly as a quotient stack over $\Lambda=\overline{\mathbb{Z}}_{\ell}$. 
 
 \subsection{Heuristics on the component $[X_{\varphi}/\hat{G}]$}
 
 In this subsection, we describe some heuristics on the component $[X_{\varphi}/\hat{G}]$ which help us to guess what this component should look like.
 
-First, let us recall what is known over $\overline{\mathbb{Q}_{\ell}}$ instead of $\Lambda=\overline{\mathbb{Z}_{\ell}}$. Indeed, assuming that $G$ is simply connected, the connected component of the stack of $L$-parameters over $\overline{\mathbb{Q}_{\ell}}$ containing an elliptic $L$-parameter $\varphi'$ is known to be one point. More precisely, it is isomorphic to the quotient stack $[*/S_{\varphi'}]$, where $S_{\varphi'}=C_{\hat{G}}(\varphi')$ is the centralizer of $\varphi'$ (See \cite[Section X.2]{fargues2021geometrization}).
+First, let us recall what is known over $\overline{\mathbb{Q}}_{\ell}$ instead of $\Lambda=\overline{\mathbb{Z}}_{\ell}$. Indeed, assuming that the center $Z(\hat{G})$ of $\hat{G}$ is finite, the connected component of the stack of $L$-parameters $Z^1(W_F, \hat{G})_{\overline{\mathbb{Q}}_{\ell}}/\hat{G}$ over $\overline{\mathbb{Q}}_{\ell}$ containing an elliptic $L$-parameter $\varphi'$ is known to be one point. More precisely, it is isomorphic to the quotient stack $[*/S_{\varphi'}]$, where $S_{\varphi'}=C_{\hat{G}}(\varphi')$ is the centralizer of $\varphi'$ (see \cite[Section X.2]{fargues2021geometrization}).
 
-Second, let us explain the difference between the geometry of the connected components of the stack of $L$-parameters over $\overline{\mathbb{Q}_{\ell}}$ and $\overline{\mathbb{Z}_{\ell}}$. This can be seen from the example $G=GL_1$. Indeed, 
+Second, let us explain the difference between the geometry of the connected components of the stack of $L$-parameters over $\overline{\mathbb{Q}}_{\ell}$ and $\overline{\mathbb{Z}}_{\ell}$. This can be seen from the example $G=GL_1$. Indeed, 
 $$Z^1(W_F, \widehat{GL_1}) \cong \mu_{q-1} \times \mathbb{G}_m,$$
-both over $\overline{\mathbb{Q}_{\ell}}$ and $\overline{\mathbb{Z}_{\ell}}$ (See Example \ref{Example GL_1}). However, $\mu_{q-1}$ is just $q-1$ discrete points over $\overline{\mathbb{Q}_{\ell}}$, while
-the connected components of $\mu_{q-1}$ are isomorphic to $\mu_{\ell^k}$ (over $\overline{\mathbb{F}_{\ell}}$, hence also) over $\overline{\mathbb{Z}_{\ell}}$, where $k$ is the maximal integer such that $\ell^k$ divides $q-1$. So when describing the connected components of the stack of $L$-parameters over $\overline{\mathbb{Z}_{\ell}}$, there will be possibly some non-reduced part $\mu$ appearing.
+both over $\overline{\mathbb{Q}}_{\ell}$ and $\overline{\mathbb{Z}}_{\ell}$ (see Example \ref{Example GL_1}). However, $\mu_{q-1}$ is just $q-1$ discrete points over $\overline{\mathbb{Q}}_{\ell}$, while
+the connected components of $\mu_{q-1}$ are isomorphic to $\mu_{\ell^k}$ (over $\overline{\mathbb{F}}_{\ell}$, hence also) over $\overline{\mathbb{Z}}_{\ell}$, where $k$ is the maximal integer such that $\ell^k$ divides $q-1$. So when describing the connected components of the stack of $L$-parameters over $\overline{\mathbb{Z}}_{\ell}$, there will be possibly some non-reduced part $\mu$ appearing.
 
 These two features come together in the description of $[X_{\varphi}/\hat{G}]$, the connected component of $Z^1(W_F, \hat{G})/\hat{G}$ containing $\varphi$. Under mild assumptions, we prove that
 $$[X_{\varphi}/\hat{G}] \cong [*/S_{\varphi}]\times \mu,$$
-where $S_{\varphi}=C_{\hat{G}}(\varphi)$ (See Theorem \ref{Thm X/G}).
+where $S_{\varphi}=C_{\hat{G}}(\varphi)$ and $\mu$ is some product of $\mu_{\ell^{k_i}}$'s (see Theorem \ref{Thm X/G}).
 
 \subsection{Ingredients of the computation}
 
-The computation follows the theory of moduli space of Langlands parameters developed in \cite[Section 2, 4]{dhkm2020moduli} (See also \cite[Section 3, 4]{dat2022ihes} for a more gentle introduction). It is very helpful to do the example of $GL_2$ first (See Chapter \ref{Chapter GL_n}).
+The computation follows the theory of moduli space of Langlands parameters developed in \cite[Section 2, 4]{dhkm2020moduli} (see also \cite[Section 3, 4]{dat2022ihes} for a more gentle introduction). It is very helpful to do the example of $GL_2$ first (see Chapter \ref{Chapter GL_n}).
 
-To compute the component $[X_{\varphi}/\hat{G}]$ over $\overline{\mathbb{Z}_{\ell}}$, let us fix a lift $\psi \in Z^1(W_F, \hat{G}(\overline{\mathbb{Z}_{\ell}}))$ of $\varphi \in Z^1(W_F, \hat{G}(\overline{\mathbb{F}_{\ell}}))$.
+To compute the component $[X_{\varphi}/\hat{G}]$ over $\overline{\mathbb{Z}}_{\ell}$, let us fix a lift $\psi \in Z^1(W_F, \hat{G}(\overline{\mathbb{Z}}_{\ell}))$ of $\varphi \in Z^1(W_F, \hat{G}(\overline{\mathbb{F}}_{\ell}))$.
 
 Recall by \cite[Subsection 4.6]{dat2022ihes},
 $$X_{\varphi}=X_{\psi} \cong \left(\hat{G} \times Z^1(W_F, N_{\hat{G}}(\psi_{\ell}))_{\psi_{\ell}, \overline{\psi}}\right)/C_{\hat{G}}(\psi_{\ell})_{\overline{\psi}},$$
 where $Z^1(W_F, N_{\hat{G}}(\psi_{\ell}))_{\psi_{\ell}, \overline{\psi}}$  denotes the space of cocycles whose restriction to $I_F^{\ell}$ equals $\psi_{\ell}$ and whose image in $Z^1(W_F, \pi_0(N_{\hat{G}}(\psi_{\ell})))$ is $\overline{\psi}$. 
 
 Here, $Z^1(W_F, N_{\hat{G}}(\psi_{\ell}))_{\psi_{\ell}, \overline{\psi}}$ is essentially the space of cocycles of the torus $$T:=N_{\hat{G}}(\psi_{\ell})^0=C_{\hat{G}}(\psi_{\ell})$$
-by our TRSELP assumption (See Definition \ref{Def TRSELP}) and that $C_{\hat{G}}(\psi_{\ell})$ is generalized reductive, hence split over $\overline{\mathbb{Z}_{\ell}}$ (See Lemma \ref{Lem gen red}). Since it's not hard to compute the space of tame cocycles of a commutative group scheme using the explicit presentation of the tame Weil group (See \ref{Equation presentation of the tame Weil group} and \ref{Equation space of tame cocycle}), we obtain that 
+by our TRSELP assumption (see Definition \ref{Def TRSELP}) and that $C_{\hat{G}}(\psi_{\ell})$ is generalized reductive, hence split over $\overline{\mathbb{Z}}_{\ell}$ (see Lemma \ref{Lem gen red}). Since it is not hard to compute the space of tame cocycles of a commutative group scheme using the explicit presentation of the tame Weil group (see \eqref{Equation presentation of the tame Weil group} and \eqref{Equation space of tame cocycle}), we obtain that 
 $$Z^1(W_F, N_{\hat{G}}(\psi_{\ell}))_{\psi_{\ell}, \overline{\psi}} \cong T \times \mu,$$
-where $\mu$ is a product of $\mu_{\ell^{k_i}}$'s (See Theorem \ref{Thm X} for details).
+where $\mu$ is a product of $\mu_{\ell^{k_i}}$'s (see Theorem \ref{Thm X} for details).
 And it is not hard to see that
 $$C_{\hat{G}}(\psi_{\ell})_{\overline{\psi}}=C_{\hat{G}}(\psi_{\ell})=T.$$
 
 Therefore, we get 
 $$X_{\varphi} \cong \left(\hat{G} \times T \times \mu\right)/T.$$
-One needs to be a bit careful about the $T$ action on $T$, because here a twist by $\psi(\Fr)$ is involved. Then one could compute that 
+One needs to be a bit careful about the $T$ action on $T$, because here a twist by $\psi(\Fr)$ is involved. One can compute that 
 $$[X_{\varphi}/\hat{G}] \cong [\left(T \times \mu\right)/T] \cong [T/T] \times \mu,$$
-where $T$ acts on $T$ via twisted conjugacy. After that, we could work in the category of diagonalizable group schemes (whose structure is clear, see \cite[p70, Section 5]{brochard2014autour}) to identify $[T/T]$ with $[*/S_{\varphi}]$ under mild conditions.
+where $T$ acts on $T$ via twisted conjugacy.\footnote{Note that so far, we do not assume $Z(\hat{G})$ to be finite, hence the result also applies for $GL_n$.} After that, assuming that $Z(\hat{G})$ is finite, we can work in the category of diagonalizable group schemes (whose structure is clear, see \cite[p70, Section 5]{brochard2014autour}) to identify $[T/T]$ with $[*/S_{\varphi}]$ under mild conditions.
 
 \section{Representation side}
-In this section, we explain Chapter \ref{Chapter Rep} on how to compute $\Rep_{\Lambda}(G(F))_{[\pi]}$.
+Let $G$ be a connected reductive group over $F$. We assume that $G$ is split, semisimple, and simply connected. Let $\pi \in \Rep_{\overline{\mathbb{F}}_{\ell}}(G(F))$ be an irreducible depth-zero regular supercuspidal representation. In this section, we explain Chapter \ref{Chapter Rep} on how to compute the block $\Rep_{\Lambda}(G(F))_{[\pi]}$ of $\Rep_{\Lambda}(G(F))$ containing $\pi$.
 
 \subsection{Equivalence to the block of a finite group of Lie type}
 
-Recall that a depth-zero regular supercuspidal representation is of the form
+Recall that a depth-zero regular supercuspidal representation of $G(F)$ is of the form
 $$\pi=\cInd_{G_x}^{G(F)}\rho$$
 for some representation $\rho$ of the parahoric subgroup $G_x$ corresponding to a vertex $x$ in the Bruhat-Tits building of $G$ over $F$. Moreover, $\rho$ is the inflation of some regular supercuspidal representation $\overline{\rho}$ of the finite group of Lie type $\overline{G_x}:=G_x/G_x^+$.
 
 Let $\mathcal{A}_{x,1}$ denote the block $\Rep_{\Lambda}(\overline{G_x})_{[\overline{\rho}]}$ of $\Rep_{\Lambda}(\overline{G_x})$ containing $\overline{\rho}$. Similarly, let 
 $$\mathcal{B}_{x,1}:=\Rep_{\Lambda}(G_x)_{[\rho]},\qquad \mathcal{C}_{x,1}:=\Rep_{\Lambda}(G(F))_{[\pi]}.$$
 
-Assume that the residue field of $F$ is $\mathbb{F}_q$. For simplicity, we assume that $q$ is greater than the Coxeter number of $G$ (See Theorem \ref{Thm Broué} for reason). Then $\mathcal{A}_{x,1}$ is equivalent to a block of a finite torus via Broué's equivalence \ref{Thm Broué}. And it is not hard to show that the inflation induces an equivalence of categories $\mathcal{A}_{x,1} \cong \mathcal{B}_{x,1}$.
+Assume that the residue field of $F$ is $\mathbb{F}_q$. For simplicity, we assume that $q$ is greater than the Coxeter number of $\overline{G_x}$ (see Theorem \ref{Thm Broué} for reason). Then $\mathcal{A}_{x,1}$ is equivalent to a block of a finite torus via Broué's equivalence \ref{Thm Broué}. And it is not hard to show that the inflation induces an equivalence of categories $\mathcal{A}_{x,1} \cong \mathcal{B}_{x,1}$.
 
 The main theorem we will prove for the representation side is Theorem \ref{Thm Main}: Assume that $q$ is greater than the Coxeter number of $\overline{G_x}$. Then the compact induction induces an equivalence of categories
 $$\cInd_{G_x}^{G(F)}: \mathcal{B}_{x,1} \to \mathcal{C}_{x,1}.$$
-Once this is proven, $\mathcal{C}_{x,1}$ is equivalent to $\mathcal{A}_{x,1}$, hence admits an explicit description. The proof of the Theorem \ref{Thm Main} occupies the most part of Chapter \ref{Chapter Rep}. 
+Once this is proven, $\mathcal{C}_{x,1}$ is equivalent to $\mathcal{A}_{x,1}$, hence admits an explicit description. The proof of the Theorem \ref{Thm Main} occupies the most of Chapter \ref{Chapter Rep}. 
 
 \subsection{Proof of the main theorem for the representation side}
 
@@ -77,25 +78,23 @@ The fully faithfulness of
 $$\cInd_{G_x}^{G(F)}: \mathcal{B}_{x,1} \to \mathcal{C}_{x,1}$$
 is a usual computation by Frobenius reciprocity and Mackey's formula. Since a similar computation will be used later, we record it in Theorem \ref{Thm Hom}. The key point is that 
 $$\Hom_G\left(\cInd_{G_x}^{G(F)}\rho_1, \cInd_{G_y}^{G(F)}\rho_2\right)$$
-could be computed explicitly assuming that one of $\rho_1, \rho_2$ has supercuspidal reduction (i.e. $\overline{\rho_1}$ or $\overline{\rho_2}$ is supercuspidal). 
-
-There is a little subtlety that we want not only $\rho$ to have supercuspidal reduction, but also any representation $\rho' \in \mathcal{B}_{x,1}$ to have supercuspidal reduction. This subtlety is dealt with in Theorem \ref{Thm SC Red}. And this is why we need the \textbf{regular} supercuspidal assumption. 
+can be computed explicitly assuming that one of $\rho_1, \rho_2$ has supercuspidal reduction (i.e. $\overline{\rho_1}$ or $\overline{\rho_2}$ is supercuspidal).\footnote{There is a little subtlety that we want not only $\rho$ to have supercuspidal reduction but also any representation $\rho' \in \mathcal{B}_{x,1}$ to have supercuspidal reduction. This subtlety is dealt with in Theorem \ref{Thm SC Red}. And this is why we need the \textbf{regular} supercuspidal assumption. }
 
 %\begin{remark}
 %	Although supercuspidal representations of $G(F)$ come from \textbf{supercuspidal} representation $\overline{\rho}$ of the finite group of Lie type $\overline{G_x}$, only the \textbf{cuspidality} of $\overline{\rho}$ is relevant in our proof of Theorem \ref{Thm Hom}. That's why we analyze cuspidality instead of supercuspidality in detail for finite group of Lie types in Chapter \ref{Chapter Rep}.
 %\end{remark}
 
-The difficulty for proving Theorem \ref{Thm Main} lies in proving that
+The difficulty lies in proving that
 $$\cInd_{G_x}^{G(F)}: \mathcal{B}_{x,1} \to \mathcal{C}_{x,1}$$
 is essentially surjective. For this, we prove that the compact induction $$\Pi_{x,1}:=\cInd_{G_x}^{G(F)}\sigma_{x,1}$$ 
 is a projective generator of $\mathcal{C}_{x,1}$. 
 
 The first key is that $\Pi_{x,1}$ is a summand of a projective generator of a larger category. Indeed, $\Pi_{x,1}$ is a summand of
 $$\Pi:=\cInd_{G_x^+}^{G(F)}\Lambda,$$
-which is known to be a projective generator of the category $\Rep_{\Lambda}(G(F))_0$ of depth-zero representations, i.e., 
+where $G_x^+$ is the pro-unipotent radical of the parahoric subgroup $G_x$; and $\Pi$ is known to be a projective generator of the category $\Rep_{\Lambda}(G(F))_0$ of depth-zero representations, i.e., 
 $$\Pi=\Pi_{x,1} \oplus \Pi^{x,1}.$$
 
-The second key is that the complement $\Pi^{x,1}$ doesn't interfere with $\Pi_{x,1}$. More precisely, we could compute using Theorem \ref{Thm Hom} that 
+The second key is that the complement $\Pi^{x,1}$ does not interfere with $\Pi_{x,1}$. More precisely, we can compute using Theorem \ref{Thm Hom} that 
 $$\Hom_{G}(\Pi^{x,1}, \Pi_{x,1})=\Hom_{G}(\Pi_{x,1}, \Pi^{x,1})=0.$$
 
 The above two keys allow us to conclude that $\Pi_{x,1}$ is a projective generator of $\mathcal{C}_{x,1}$. 
@@ -105,16 +104,27 @@ The above two keys allow us to conclude that $\Pi_{x,1}$ is a projective generat
 
 \section{The example of $GL_n$}
 
-To illustrate the theory, we do the example of $GL_n$ in Chapter \ref{Chapter GL_n} (Although $GL_n$ is not simply connected, the theory still works without much change). It is quite concise once we have the theories developed in Chapter \ref{Chapter MoLP} and \ref{Chapter Rep}, so let us don't say anything more here. However, the readers are encouraged to do the example of $GL_2$ throughout the paper, which will definitely help to understand the theories in Chapter \ref{Chapter MoLP} and \ref{Chapter Rep}. Actually, the author always do the example of $GL_2$ first, and then figure out the theory for general groups.
+To illustrate the theory, we do the example of $GL_n$ in Chapter \ref{Chapter GL_n}.\footnote{Although $GL_n$ is not simply connected, the theory still works without much change} It is quite concise once we have the theories developed in Chapter \ref{Chapter MoLP} and \ref{Chapter Rep}, so let us do not say anything more here. However, the readers are encouraged to do the example of $GL_2$ throughout the paper, which will help to understand the theories in Chapter \ref{Chapter MoLP} and \ref{Chapter Rep}. 
 
 \section{The categorical local Langlands conjecture for $GL_n$}
 
-As an application, we could deduce the categorical local Langlands conjecture in Fargues-Scholze's form (See \cite[Conjecture X.3.5]{fargues2021geometrization}) for depth-zero supercuspidal blocks of $GL_n$ \footnote{Notice that supercuspidal implies regular supercuspidal automatically in the $GL_n$ case.} in Chapter \ref{Chapter CLLC}. 
+As an application, we will deduce the categorical local Langlands conjecture in Fargues-Scholze's form (see \cite[Conjecture X.3.5]{fargues2021geometrization}) for depth-zero supercuspidal blocks of $GL_n$ in Chapter \ref{Chapter CLLC}.\footnote{Notice that supercuspidal implies regular supercuspidal automatically in the $GL_n$ case.}
 
-The idea is that we could unravel both sides of the categorical conjecture explicitly using our computation in Chapter \ref{Chapter GL_n}. They both turn out to be
+The idea is that we can unravel both sides of the categorical conjecture explicitly using our computation in Chapter \ref{Chapter GL_n}. They both turn out to be
 $$\bigoplus_{\mathbb{Z}}\Perf(\mathbb{G}_m \times \mu).$$ 
-We want to show that the spectral action gives an equivalence. This reduces to the degree-zero part (of the $\mathbb{Z}$-grading) by compatibility of the spectral action with the $\mathbb{Z}$-grading (See Proposition \ref{Prop Spectral action}). And the degree-zero part reduces to the theory of local Langlands in families (See \cite{helm2018converse}). Fortunately, several technical results we need to do the reductions are already available by \cite{zou2022categorical}.
+We want to show that the spectral action gives an equivalence. This reduces to the degree-zero part (of the $\mathbb{Z}$-grading) by compatibility of the spectral action with the $\mathbb{Z}$-grading (see Proposition \ref{Prop Spectral action}). And the degree-zero part reduces to the theory of local Langlands in families (see \cite{helm2018converse}). Fortunately, several technical results we need to do the reductions are already available by \cite{zou2022categorical}.
+
+\section{Preliminaries and notations}
+Although the main chapters \ref{Chapter MoLP}, \ref{Chapter Rep}, \ref{Chapter CLLC} are almost logically independent of each other, let us introduce some notations that are used throughout the thesis.
+\begin{enumerate}
+	\item Let $G$ be a connected split reductive group.\footnote{The assumption ``split" is intended for simplicity. It is expected that the results generalize to more general reductive groups.} In Chapter \ref{Chapter Rep}, we moreover assume that $G$ is simply connected.\footnote{Again, the assumption ``simply connected" is intended for simplicity. So that we do not need to consider the extension from $G_x$ to its normalizer when doing compact induction.}
+	\item Let $\overline{\mathbb{Z}}_{\ell}$ be the integral closure of $\mathbb{Z}_{\ell}$ in $\overline{\mathbb{Q}}_{\ell}$. $\overline{\mathbb{Z}}_{\ell}$ is also the valuation ring of  $\overline{\mathbb{Q}}_{\ell}$, i.e., it consists of the elements with valuations $\geq 0$. $\overline{\mathbb{Z}}_{\ell}$ is a local ring with the unique maximal ideal consisting of elements with valuations $> 0$. $\overline{\mathbb{Z}}_{\ell}$ is strictly henselian, hence all finite étale covers of $\overline{\mathbb{Z}}_{\ell}$ split. An important fact is that any reductive group scheme over $\overline{\mathbb{Z}}_{\ell}$ is split.\footnote{One drawback of $\overline{\mathbb{Z}}_{\ell}$ is that it is not Neotherian. However, in practice, things defined over $\overline{\mathbb{Z}}_{\ell}$ are already defined over some finite extension $\mathcal{O}$ of $\mathbb{Z}_{\ell}$. So we can first argue for $\mathcal{O}$ and then base change to $\overline{\mathbb{Z}}_{\ell}$. As an aside, the author believes that it does not make a difference if we replace $\overline{\mathbb{Z}}_{\ell}$ by $W(\overline{\mathbb{F}}_{\ell})$, the ring of Witt vectors of $\overline{\mathbb{F}}_{\ell}$, which is the unique complete discrete valuation ring with residue field $\overline{\mathbb{F}}_{\ell}$.}
+\end{enumerate}
+
+
+\section{Logical dependence and suggestions for reading}
+Chapter \ref{Chapter MoLP} and \ref{Chapter Rep} are logically independent of each other. Chapter \ref{Chapter CLLC} needs the description of $[X_{\varphi}/\hat{G}]$ for $G=GL_n$ obtained in Chapter \ref{Chapter GL_n}, by applying the theory in Chapter \ref{Chapter MoLP} to the case $G=GL_n$. Also, it might be easier to assume $G=GL_2$ or $SL_2$ throughout the paper, and one would not miss many essential points in doing so.
 
 \section{Acknowledgements}
 
-It is a pleasure to thank my advisor Peter Scholze for giving me this topic and for sharing ideas related to it. Next, I would like to thank my families and friends for their love and support. I thank Johannes Anschütz, Jean-François Dat, Olivier Dudas, Jessica Fintzen, Linus Hamann, Eugen Hellmann, David Helm, Alexander Ivanov, Tasho Kaletha, David Schwein, Vincent Sécherre, Maarten Solleveld, and Marie-France Vignéras for some nice conversations related to this work. I thank Anne-Marie Aubert for some helpful discussions and for pointing out some errors. Special thanks go to Jiaxi Mo, Mingjia Zhang, Pengcheng Zhang, Xiaoxiang Zhou and Konrad Zou for their consistent interest in this work as well as emotional support.
+It is a pleasure to thank my advisor Peter Scholze for giving me this topic to study and for sharing ideas related to it. Next, I would like to thank my families and friends for their love and support. I thank Johannes Anschütz, Jean-François Dat, Olivier Dudas, Jessica Fintzen, Linus Hamann, Eugen Hellmann, David Helm, Alexander Ivanov, Tasho Kaletha, David Schwein, Vincent Sécherre, Maarten Solleveld, and Marie-France Vignéras for some nice conversations related to this work. I thank my bachelor advisors Kei Yuen Chan and Haining Wang for some helpful suggestions. I thank Anne-Marie Aubert for some helpful discussions and for pointing out some errors. Special thanks go to Jiaxi Mo, Mingjia Zhang, Pengcheng Zhang, Xiaoxiang Zhou, and Konrad Zou for their consistent interest in this work as well as emotional support.

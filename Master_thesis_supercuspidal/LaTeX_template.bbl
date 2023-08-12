@@ -65,6 +65,11 @@ Brian Conrad.
   ``Sch\'emas en groupes''. Volume I}, pages 93--444. Paris: Soci{\'e}t{\'e}
   Math{\'e}matique de France (SMF), 2014.
 
+\bibitem[CS19]{chan2019bernstein}
+Kei~Yuen Chan and Gordan Savin.
+\newblock Bernstein-{Zelevinsky} derivatives: a {Hecke} algebra approach.
+\newblock {\em Int. Math. Res. Not.}, 2019(3):731--760, 2019.
+
 \bibitem[Dat09]{dat2009finitude}
 Jean-Fran{\c{c}}ois Dat.
 \newblock Finiteness of smooth representations of {{\(p\)}}-adic groups.
@@ -113,6 +118,13 @@ David Helm and Gilbert Moss.
 \newblock Converse theorems and the local {Langlands} correspondence in
   families.
 \newblock {\em Invent. Math.}, 214(2):999--1022, 2018.
+
+\bibitem[Jan03]{jantzen2003representation}
+Jens~Carsten Jantzen.
+\newblock {\em Representations of algebraic groups.}, volume 107 of {\em Math.
+  Surv. Monogr.}
+\newblock Providence, RI: American Mathematical Society (AMS), 2nd ed. edition,
+  2003.
 
 \bibitem[Rab03]{rabinoff2003bruhat}
 Joseph Rabinoff.
